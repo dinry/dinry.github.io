@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://dinry.github.io/generate-model/</loc>
+        <lastmod>2019-06-18T05:11:45.715Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://dinry.github.io/hexo-theme-beantech/</loc>
         <lastmod>2019-06-17T08:36:04.666Z</lastmod>
         <changefreq>weekly</changefreq>

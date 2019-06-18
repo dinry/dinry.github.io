@@ -147,16 +147,36 @@
 
 
 
-  <meta name="description" content="路漫漫其修远兮，吾将上下而求索">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dinry">
-<meta property="og:url" content="http://dinry.github.io/index.html">
+  <meta name="description" content="生成模型 生成模型(generative model)描述的是这一类的模型：接收了从分布 $p_{data}$ 取样的若干样本构成我们的训练集，然后让模型学习到一个模拟这一分布的概率分布$p_{model}$.  在有些情况下，我们可以直接的估计概率分布，如下图所示的密度概率分布模型：  有些情况，我们需要从中生成一些样本，如下图所示训练数据为ImageNet中的样本，训练的生成模型可以生成以假乱">
+<meta name="keywords" content="GAN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="generate model">
+<meta property="og:url" content="http://dinry.github.io/generate-model/index.html">
 <meta property="og:site_name" content="Dinry">
-<meta property="og:description" content="路漫漫其修远兮，吾将上下而求索">
+<meta property="og:description" content="生成模型 生成模型(generative model)描述的是这一类的模型：接收了从分布 $p_{data}$ 取样的若干样本构成我们的训练集，然后让模型学习到一个模拟这一分布的概率分布$p_{model}$.  在有些情况下，我们可以直接的估计概率分布，如下图所示的密度概率分布模型：  有些情况，我们需要从中生成一些样本，如下图所示训练数据为ImageNet中的样本，训练的生成模型可以生成以假乱">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p5.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p1.jpg">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p2.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p3.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p4.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p7.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p6.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p8.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p9.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p10.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p11.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p12.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p13.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p14.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p15.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p16.JPG">
+<meta property="og:image" content="http://dinry.github.io/blog/source/img/generate-model/p17.JPG">
+<meta property="og:updated_time" content="2019-06-18T05:11:45.715Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dinry">
-<meta name="twitter:description" content="路漫漫其修远兮，吾将上下而求索">
+<meta name="twitter:title" content="generate model">
+<meta name="twitter:description" content="生成模型 生成模型(generative model)描述的是这一类的模型：接收了从分布 $p_{data}$ 取样的若干样本构成我们的训练集，然后让模型学习到一个模拟这一分布的概率分布$p_{model}$.  在有些情况下，我们可以直接的估计概率分布，如下图所示的密度概率分布模型：  有些情况，我们需要从中生成一些样本，如下图所示训练数据为ImageNet中的样本，训练的生成模型可以生成以假乱">
+<meta name="twitter:image" content="http://dinry.github.io/blog/source/img/generate-model/p5.JPG">
 
 
 
@@ -166,7 +186,7 @@
 
   
   
-  <link rel="canonical" href="http://dinry.github.io/">
+  <link rel="canonical" href="http://dinry.github.io/generate-model/">
 
 
 
@@ -176,7 +196,7 @@
   };
 </script>
 
-  <title>Dinry</title>
+  <title>generate model | Dinry</title>
   
 
 
@@ -224,8 +244,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/dinry" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -268,7 +287,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -391,9 +410,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -425,10 +444,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/generate-model/" class="post-title-link" itemprop="url">generate model</a>
+          <h1 class="post-title" itemprop="name headline">generate model
+
               
             
           </h1>
@@ -492,9 +509,7 @@
       
 
       
-        
-          
-            <h1><span id="生成模型">生成模型</span></h1>
+        <h1><span id="生成模型">生成模型</span></h1>
 <p>生成模型(generative model)描述的是这一类的模型：接收了从分布 $p_{data}$ 取样的若干样本构成我们的训练集，然后让模型学习到一个模拟这一分布的概率分布$p_{model}$.</p>
 <p><img src="/blog/source/img/generate-model/p5.JPG" alt="Image of gen models"></p>
 <p>在有些情况下，我们可以直接的估计概率分布，如下图所示的密度概率分布模型：</p>
@@ -588,8 +603,6 @@
 <p>近两年关于GAN的研究和应用非常多，比如图像风格迁移，根据文字生成图像等等。 另一方面，GAN也由于训练过程的不稳定性常受诟病，为了增强GAN的稳定性，也有Wasserstein GAN, LSGAN等改进模型方面的研究。这些将在下一篇博客中介绍。
 总结一下，做为深度学习花书的最后一部分，GAN是近些年生成模型研究比较活跃的方向，它的原理不再是对显性概率分布做直接计算或近似处理，而是利用了生成网络与判别网络的相互博弈，是一种新颖而有效的思路。希望这方面的模型能够更加稳定，得到更多的应用。</p>
 
-          
-        
       
     </div>
 
@@ -600,6 +613,38 @@
     
 
     <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/generate-model/">generate model</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 dinry 的个人博客">dinry</a></p>
+  <p><span>发布时间:</span>2019年06月18日 - 12:06</p>
+  <p><span>最后更新:</span>2019年06月18日 - 13:06</p>
+  <p><span>原始链接:</span><a href="/generate-model/" title="generate model">http://dinry.github.io/generate-model/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://dinry.github.io/generate-model/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          icon: "success",
+          showConfirmButton: true
+          });
+	});
+    });
+</script>
+
+
       
     </div>
     
@@ -613,315 +658,39 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dinry.github.io/article-title/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dinry">
-      <meta itemprop="description" content="路漫漫其修远兮，吾将上下而求索">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dinry">
-    </span>
-
-    
-      <header class="post-header">
-
         
+          
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/article-title/" class="post-title-link" itemprop="url">article title</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-06-17 16:07:53 / Modified: 16:09:36" itemprop="dateCreated datePublished" datetime="2019-06-17T16:07:53+08:00">2019-06-17</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/GAN/" rel="tag"># GAN</a>
           
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dinry.github.io/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dinry">
-      <meta itemprop="description" content="路漫漫其修远兮，吾将上下而求索">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dinry">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/article-title/" rel="next" title="article title">
+                <i class="fa fa-chevron-left"></i> article title
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-06-17 15:49:58" itemprop="dateCreated datePublished" datetime="2019-06-17T15:49:58+08:00">2019-06-17</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2><span id="quick-start">Quick Start</span></h2>
-<h3><span id="create-a-new-post">Create a new post</span></h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3><span id="run-server">Run server</span></h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3><span id="generate-static-files">Generate static files</span></h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -931,225 +700,15 @@
   </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dinry.github.io/hexo-theme-beantech/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dinry">
-      <meta itemprop="description" content="路漫漫其修远兮，吾将上下而求索">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dinry">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/hexo-theme-beantech/" class="post-title-link" itemprop="url">[Hexo] Theme BeanTech</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2017-03-18 10:51:24" itemprop="dateCreated datePublished" datetime="2017-03-18T10:51:24+08:00">2017-03-18</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-06-17 16:36:04" itemprop="dateModified" datetime="2019-06-17T16:36:04+08:00">2019-06-17</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>Ported Theme of <a href="https://github.com/Huxpro/huxpro.github.io" target="_blank" rel="noopener">Hux Blog</a>, Thank <a href="https://github.com/Huxpro" target="_blank" rel="noopener">Huxpro</a> for designing such a flawless theme.</p>
-<p>This BeanTech theme created by <a href="http://beantech.org" target="_blank" rel="noopener">YuHsuan</a> modified from the original Porter <a href="http://kaijun.rocks/hexo-theme-huxblog/" target="_blank" rel="noopener">Kaijun</a></p>
-</blockquote>
-<h1><span id="live-demo"></span></h1>
-<hr>
-<p><img src="http://beantech.org/img/beantech-desktop.png" alt="BeanTech Desktop"></p>
-<h1><span id="usage">Usage</span></h1>
-<hr>
-<p>I publish the whole project for your convenience, so you can just follow the instruction down below, then you can easily customiz your own blog!</p>
-<p>Let's begin!!!</p>
-<h2><span id="init">Init</span></h2>
-<hr>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/YenYuHsuan/hexo-theme-beantech.git ./hexo-beantech</span><br><span class="line"><span class="built_in">cd</span> hexo-beantech</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
-<h2><span id="modify">Modify</span></h2>
-<hr>
-<p>Modify <code>_config.yml</code> file with your own info.
-Especially the section:</p>
-<h3><span id="deployment">Deployment</span></h3>
-<p>Replace to your own repo!
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/&lt;yourAccount&gt;/&lt;repo&gt;</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">&lt;your-branch&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3><span id="sidebar-settings">Sidebar settings</span></h3>
-<p>Copy your avatar image to <code>&lt;root&gt;/img/</code> and modify the <code>_config.yml</code>:
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sidebar:</span> <span class="literal">true</span>    <span class="comment"># whether or not using Sidebar.</span></span><br><span class="line"><span class="attr">sidebar-about-description:</span> <span class="string">"&lt;your description&gt;"</span></span><br><span class="line"><span class="attr">sidebar-avatar:</span> <span class="string">img/&lt;your</span> <span class="string">avatar</span> <span class="string">path&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>and activate your personal widget you like
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">widgets:</span>         <span class="comment"># here are widget you can use, you can comment out</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">featured-tags</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">short-about</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">recent-posts</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">friends-blog</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">archive</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">category</span></span><br></pre></td></tr></table></figure></p>
-<p>if you want to add sidebar widget, please add at <code>layout/_widget</code>.</p>
-<h3><span id="signature-setup">Signature Setup</span></h3>
-<p>Copy your signature image to <code>&lt;root&gt;/img/signature</code> and modify the <code>_config.yml</code>:
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">signature:</span> <span class="literal">true</span>   <span class="comment"># show signature</span></span><br><span class="line"><span class="attr">signature-img:</span> <span class="string">img/signature/&lt;your-signature-ID&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3><span id="go-to-top-icon-setup">Go to top icon Setup</span></h3>
-<p>My icon is using iron man, you can change to your own icon at <code>css/image</code>.</p>
-<h3><span id="post-tag">Post tag</span></h3>
-<p>You can decide to show post tags or not.
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">home_posts_tag:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="home_posts_tag-true.png" alt="home_posts_tag-true">
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">home_posts_tag:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="home_posts_tag-false.png" alt="home_posts_tag-false"></p>
-<h3><span id="markdown-render">Markdown render</span></h3>
-<p>My markdown render engine plugin is <a href="https://github.com/celsomiranda/hexo-renderer-markdown-it" target="_blank" rel="noopener">hexo-renderer-markdown-it</a>.
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="comment">## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki</span></span><br><span class="line"><span class="attr">markdown:</span></span><br><span class="line"><span class="attr">  render:</span></span><br><span class="line"><span class="attr">    html:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    xhtmlOut:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    breaks:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    linkify:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    typographer:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    quotes:</span> <span class="string">'“”‘’'</span></span><br></pre></td></tr></table></figure></p>
-<p>and if you want to change the header anchor 'ℬ', you can go to <code>layout/post.ejs</code> to change it.
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span>(<span class="string">"https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        anchors.options = &#123;</span><br><span class="line">          visible: <span class="string">'hover'</span>,</span><br><span class="line">          placement: <span class="string">'left'</span>,</span><br><span class="line">          icon: ℬ <span class="comment">// this is the header anchor "unicode" icon</span></span><br><span class="line">        &#125;;</span><br></pre></td></tr></table></figure></p>
-<h2><span id="hexo-basics">Hexo Basics</span></h2>
-<hr>
-<p>Some hexo command:
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new post <span class="string">"&lt;post name&gt;"</span> <span class="comment"># you can change post to another layout if you want</span></span><br><span class="line">hexo clean &amp;&amp; hexo generate <span class="comment"># generate the static file</span></span><br><span class="line">hexo server <span class="comment"># run hexo in local environment</span></span><br><span class="line">hexo deploy <span class="comment"># hexo will push the static files automatically into the specific branch(gh-pages) of your repo!</span></span><br></pre></td></tr></table></figure></p>
-<h1><span id="have-fun-_">Have fun ^_^</span></h1>
-<hr>
-<p>&lt;!-- Place this tag in your head or just before your close body tag. --&gt;
-&lt;script async defer src=&quot;https://buttons.github.io/buttons.js&quot;&gt;&lt;/script&gt;
-&lt;!-- Place this tag where you want the button to render. --&gt;</p>
-<p>Please &lt;a class=&quot;github-button&quot; href=&quot;https://github.com/YenYuHsuan/hexo-theme-beantech&quot; data-icon=&quot;octicon-star&quot; aria-label=&quot;Star YenYuHsuan/hexo-theme-beantech on GitHub&quot;&gt;Star&lt;/a&gt; this Project if you like it! &lt;a class=&quot;github-button&quot; href=&quot;https://github.com/YenYuHsuan&quot; aria-label=&quot;Follow @YenYuHsuan on GitHub&quot;&gt;Follow&lt;/a&gt; would also be appreciated!
-Peace!</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -1169,8 +728,17 @@ Peace!</p>
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1271,6 +839,23 @@ Peace!</p>
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">生成模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">为什么研究生成模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">生成模型分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.1.</span> <span class="nav-text">玻尔兹曼机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.2.</span> <span class="nav-text">生成随机网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.3.</span> <span class="nav-text">自回归网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.4.</span> <span class="nav-text">变分自编码器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.5.</span> <span class="nav-text">生成对抗网络</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1418,6 +1003,10 @@ Peace!</p>
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
 
   
 
@@ -1433,6 +1022,8 @@ Peace!</p>
 
   
 
+
+  
 
 
   
