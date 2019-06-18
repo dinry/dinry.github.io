@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>http://dinry.github.io/gans-problem/</loc>
+        <lastmod>2019-06-18T13:34:29.985Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/GAN-theory/</loc>
+        <lastmod>2019-06-18T13:27:41.404Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://dinry.github.io/generate-model/</loc>
         <lastmod>2019-06-18T13:20:25.827Z</lastmod>
         <changefreq>weekly</changefreq>
