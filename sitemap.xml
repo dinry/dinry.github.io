@@ -3,17 +3,22 @@
 
     <sitemap>
         <loc>http://dinry.github.io/post-sitemap.xml</loc>
-        <lastmod>2019-06-18T12:00:15.859Z</lastmod>
+        <lastmod>2019-06-18T12:24:48.320Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://dinry.github.io/page-sitemap.xml</loc>
-        <lastmod>2019-06-18T09:10:24.947Z</lastmod>
+        <lastmod>2019-06-18T12:23:02.116Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>http://dinry.github.io/category-sitemap.xml</loc>
+        <lastmod>2019-06-18T12:24:48.320Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://dinry.github.io/tag-sitemap.xml</loc>
-        <lastmod>2019-06-18T12:00:15.859Z</lastmod>
+        <lastmod>2019-06-18T12:24:48.320Z</lastmod>
     </sitemap>
 
 </sitemapindex>
