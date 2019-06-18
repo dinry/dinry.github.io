@@ -28,14 +28,14 @@
     </url>
     
     <url>
-        <loc>http://github.com/dinry/about/</loc>
+        <loc>http://github.com/dinry/archive/</loc>
         <lastmod>2019-06-17T08:36:04.666Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://github.com/dinry/archive/</loc>
+        <loc>http://github.com/dinry/about/</loc>
         <lastmod>2019-06-17T08:36:04.666Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
