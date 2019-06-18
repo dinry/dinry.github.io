@@ -147,17 +147,18 @@
 
 
 
-  <meta name="description" content="生成模型 生成模型(generative model)描述的是这一类的模型：接收了从分布 $p_{data}$ 取样的若干样本构成我们的训练集，然后让模型学习到一个模拟这一分布的概率分布$p_{model}$.  在有些情况下，我们可以直接的估计概率分布，如下图所示的密度概率分布模型：  有些情况，我们需要从中生成一些样本，如下图所示训练数据为ImageNet中的样本，训练的生成模型可以生成以假乱">
+  <meta name="description" content="生成模型 生成模型(generative model)描述的是这一类的模型：接收了从分布 $p_{data}$ 取样的若干样本构成我们的训练集，然后让模型学习到一个模拟这一分布的概率分布$p_{model}$.  lalala ddddddddddddddddddd  在有些情况下，我们可以直接的估计概率分布，如下图所示的密度概率分布模型：  有些情况，我们需要从中生成一些样本，如下图所示训练数据">
 <meta name="keywords" content="GAN">
 <meta property="og:type" content="article">
 <meta property="og:title" content="generate model">
 <meta property="og:url" content="http://dinry.github.io/generate-model/index.html">
 <meta property="og:site_name" content="Dinry">
-<meta property="og:description" content="生成模型 生成模型(generative model)描述的是这一类的模型：接收了从分布 $p_{data}$ 取样的若干样本构成我们的训练集，然后让模型学习到一个模拟这一分布的概率分布$p_{model}$.  在有些情况下，我们可以直接的估计概率分布，如下图所示的密度概率分布模型：  有些情况，我们需要从中生成一些样本，如下图所示训练数据为ImageNet中的样本，训练的生成模型可以生成以假乱">
+<meta property="og:description" content="生成模型 生成模型(generative model)描述的是这一类的模型：接收了从分布 $p_{data}$ 取样的若干样本构成我们的训练集，然后让模型学习到一个模拟这一分布的概率分布$p_{model}$.  lalala ddddddddddddddddddd  在有些情况下，我们可以直接的估计概率分布，如下图所示的密度概率分布模型：  有些情况，我们需要从中生成一些样本，如下图所示训练数据">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://dinry.github.io/generate-model/p5.JPG">
-<meta property="og:image" content="http://dinry.github.io/generate-model/p1.jpg">
-<meta property="og:image" content="http://dinry.github.io/generate-model/p2.JPG">
+<meta property="og:image" content="http://dinry.github.io/generate-model/source/img/generate-model/p5.JPG">
+<meta property="og:image" content="http://dinry.github.io/generate-model/source/img/generate-model/p1.jpg">
+<meta property="og:image" content="http://dinry.github.io/generate-model/source/img/generate-model/p2.JPG">
 <meta property="og:image" content="http://dinry.github.io/generate-model/source/img/generate-model/p3.JPG">
 <meta property="og:image" content="http://dinry.github.io/generate-model/source/img/generate-model/p4.JPG">
 <meta property="og:image" content="http://dinry.github.io/generate-model/source/img/generate-model/p7.JPG">
@@ -173,10 +174,10 @@
 <meta property="og:image" content="http://dinry.github.io/generate-model/source/img/generate-model/p16.JPG">
 <meta property="og:image" content="http://dinry.github.io/generate-model/source/img/generate-model/p17.JPG">
 <meta property="og:image" content="http://dinry.github.io/generate-model/blog/source/_posts/Generate-model-0/p1.jpg">
-<meta property="og:updated_time" content="2019-06-18T08:29:17.826Z">
+<meta property="og:updated_time" content="2019-06-18T05:56:11.798Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="generate model">
-<meta name="twitter:description" content="生成模型 生成模型(generative model)描述的是这一类的模型：接收了从分布 $p_{data}$ 取样的若干样本构成我们的训练集，然后让模型学习到一个模拟这一分布的概率分布$p_{model}$.  在有些情况下，我们可以直接的估计概率分布，如下图所示的密度概率分布模型：  有些情况，我们需要从中生成一些样本，如下图所示训练数据为ImageNet中的样本，训练的生成模型可以生成以假乱">
+<meta name="twitter:description" content="生成模型 生成模型(generative model)描述的是这一类的模型：接收了从分布 $p_{data}$ 取样的若干样本构成我们的训练集，然后让模型学习到一个模拟这一分布的概率分布$p_{model}$.  lalala ddddddddddddddddddd  在有些情况下，我们可以直接的估计概率分布，如下图所示的密度概率分布模型：  有些情况，我们需要从中生成一些样本，如下图所示训练数据">
 <meta name="twitter:image" content="http://dinry.github.io/generate-model/p5.JPG">
 
 
@@ -471,7 +472,7 @@
                 
               
 
-              <time title="Created: 2019-06-18 13:54:41 / Modified: 16:29:17" itemprop="dateCreated datePublished" datetime="2019-06-18T13:54:41+08:00">2019-06-18</time>
+              <time title="Created: 2019-06-18 13:54:41 / Modified: 13:56:11" itemprop="dateCreated datePublished" datetime="2019-06-18T13:54:41+08:00">2019-06-18</time>
             
 
             
@@ -513,10 +514,12 @@
         <h1><span id="生成模型">生成模型</span></h1>
 <p>生成模型(generative model)描述的是这一类的模型：接收了从分布 $p_{data}$ 取样的若干样本构成我们的训练集，然后让模型学习到一个模拟这一分布的概率分布$p_{model}$.</p>
 <p><img src="/generate-model/p5.JPG" alt></p>
+<p>lalala ddddddddddddddddddd</p>
+<p><img src="/generate-model/source/img/generate-model/p5.JPG" alt="Image of gen models"></p>
 <p>在有些情况下，我们可以直接的估计概率分布，如下图所示的密度概率分布模型：</p>
-<p><img src="/generate-model/p1.jpg" alt="Image of gen models"></p>
+<p><img src="/generate-model/source/img/generate-model/p1.jpg" alt="Image of gen models"></p>
 <p>有些情况，我们需要从中生成一些样本，如下图所示训练数据为ImageNet中的样本，训练的生成模型可以生成以假乱真的图片：</p>
-<p><img src="/generate-model/p2.JPG" alt="Image of gen models"></p>
+<p><img src="/generate-model/source/img/generate-model/p2.JPG" alt="Image of gen models"></p>
 <h1><span id="为什么研究生成模型">为什么研究生成模型</span></h1>
 <p>那么研究生成模型的意义何在呢？尤其是对于非直接密度估计而只能从模型中生成样本的一类情况，特别是对于图像，这类模型只能提供更多的图像，而我们并不缺少海量的图像。</p>
 <p>主要原因如下：</p>
@@ -627,7 +630,7 @@
   <p><span>本文标题:</span><a href="/generate-model/">generate model</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 dinry 的个人博客">dinry</a></p>
   <p><span>发布时间:</span>2019年06月18日 - 13:06</p>
-  <p><span>最后更新:</span>2019年06月18日 - 16:06</p>
+  <p><span>最后更新:</span>2019年06月18日 - 13:06</p>
   <p><span>原始链接:</span><a href="/generate-model/" title="generate model">http://dinry.github.io/generate-model/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://dinry.github.io/generate-model/" aria-label="复制成功！"></i></span>
   </p>
@@ -679,15 +682,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019-06-2019-06-18-generate-model/" rel="next" title="generate model">
+                <i class="fa fa-chevron-left"></i> generate model
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019-06-2019-06-18-generate-model/" rel="prev" title="generate model">
-                generate model <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
