@@ -8,7 +8,15 @@
 
     <url>
         <loc>http://dinry.github.io/generate-model/</loc>
-        <lastmod>2019-06-18T05:44:09.358Z</lastmod>
+        <lastmod>2019-06-18T05:56:11.798Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/generate-model/index/</loc>
+        <lastmod>2019-06-18T05:44:21.967Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,22 +25,6 @@
     <url>
         <loc>http://dinry.github.io/hexo-theme-beantech/</loc>
         <lastmod>2019-06-17T08:36:04.666Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://dinry.github.io/article-title/</loc>
-        <lastmod>2019-06-17T08:09:36.808Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://dinry.github.io/hello-world/</loc>
-        <lastmod>2019-06-17T07:49:58.132Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
