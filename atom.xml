@@ -5,9 +5,9 @@
   <subtitle>notebook</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://github.com/dinry/"/>
   <updated>2019-06-17T08:09:36.808Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://github.com/dinry/</id>
   
   <author>
     <name>dinry</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>article title</title>
-    <link href="http://yoursite.com/article-title/"/>
-    <id>http://yoursite.com/article-title/</id>
+    <link href="http://github.com/dinry/article-title/"/>
+    <id>http://github.com/dinry/article-title/</id>
     <published>2019-06-17T08:07:53.000Z</published>
     <updated>2019-06-17T08:09:36.808Z</updated>
     
@@ -40,8 +40,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/hello-world/"/>
-    <id>http://yoursite.com/hello-world/</id>
+    <link href="http://github.com/dinry/hello-world/"/>
+    <id>http://github.com/dinry/hello-world/</id>
     <published>2019-06-17T07:49:58.132Z</published>
     <updated>2019-06-17T07:49:58.132Z</updated>
     
@@ -61,8 +61,8 @@
   
   <entry>
     <title>[Hexo] Theme BeanTech</title>
-    <link href="http://yoursite.com/hexo-theme-beantech/"/>
-    <id>http://yoursite.com/hexo-theme-beantech/</id>
+    <link href="http://github.com/dinry/hexo-theme-beantech/"/>
+    <id>http://github.com/dinry/hexo-theme-beantech/</id>
     <published>2017-03-18T02:51:24.000Z</published>
     <updated>2019-06-17T08:36:04.666Z</updated>
     
@@ -79,9 +79,9 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://github.com/dinry/tags/Hexo/"/>
     
-      <category term="Blog" scheme="http://yoursite.com/tags/Blog/"/>
+      <category term="Blog" scheme="http://github.com/dinry/tags/Blog/"/>
     
   </entry>
   
