@@ -3,7 +3,7 @@
   <title>Dinry</title>
   
   <subtitle>notebook</subtitle>
-  <link href="http://dinry.github.io/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
   <link href="http://dinry.github.io/"/>
   <updated>2019-06-17T08:09:36.808Z</updated>
