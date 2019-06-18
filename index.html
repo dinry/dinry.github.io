@@ -318,7 +318,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">3</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">2</span></a>
 
   </li>
         
@@ -356,7 +356,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">5</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">4</span></a>
 
   </li>
 
@@ -392,147 +392,6 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dinry.github.io/Generate-model-0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dinry">
-      <meta itemprop="description" content="路漫漫其修远兮，吾将上下而求索">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Dinry">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/Generate-model-0/" class="post-title-link" itemprop="url">Generate-model</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-06-18 13:17:17" itemprop="dateCreated datePublished" datetime="2019-06-18T13:17:17+08:00">2019-06-18</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
     
       
 
@@ -594,13 +453,9 @@
                 
               
 
-              <time title="Created: 2019-06-18 12:52:31 / Modified: 13:26:17" itemprop="dateCreated datePublished" datetime="2019-06-18T12:52:31+08:00">2019-06-18</time>
+              <time title="Created: 2019-06-18 13:38:25" itemprop="dateCreated datePublished" datetime="2019-06-18T13:38:25+08:00">2019-06-18</time>
             
 
-            
-              
-
-              
             
           </span>
 
@@ -635,102 +490,7 @@
       
         
           
-            <h1><span id="生成模型">生成模型</span></h1>
-<p>生成模型(generative model)描述的是这一类的模型：接收了从分布 $p_{data}$ 取样的若干样本构成我们的训练集，然后让模型学习到一个模拟这一分布的概率分布$p_{model}$.</p>
-<p><img src="/generate-model/source/img/generate-model/p5.JPG" alt="Image of gen models"></p>
-<p>在有些情况下，我们可以直接的估计概率分布，如下图所示的密度概率分布模型：</p>
-<p><img src="/generate-model/source/img/generate-model/p1.jpg" alt="Image of gen models"></p>
-<p>有些情况，我们需要从中生成一些样本，如下图所示训练数据为ImageNet中的样本，训练的生成模型可以生成以假乱真的图片：</p>
-<p><img src="/generate-model/source/img/generate-model/p2.JPG" alt="Image of gen models"></p>
-<h1><span id="为什么研究生成模型">为什么研究生成模型</span></h1>
-<p>那么研究生成模型的意义何在呢？尤其是对于非直接密度估计而只能从模型中生成样本的一类情况，特别是对于图像，这类模型只能提供更多的图像，而我们并不缺少海量的图像。</p>
-<p>主要原因如下：</p>
-<ul>
-<li>这是对我们能够表示和操控高维概率分布的能力的有效检验。</li>
-<li>我们可以将生成模型结合到强化学习(reinforcement learning)中，例如对于model-based RL可用生成模型来模拟可能发生的未来情况，以便RL算法进行规划(planning)，例如 Deep Visual Foresight for Planning Robot Motion。</li>
-<li>生成模型可以用有损失（部分样本无标记）的数据进行训练，进行半监督学习(semi-supervised learning)，降低了我们获得数据样本的难度。</li>
-<li>生成模型可以处理多峰值(multi-modal)的输出。对于很多任务，一个输入可能对应多个可能的输出，一些传统的机器学习模型只能学到一种输出而无法学习多种可能的输出。</li>
-<li>还有一些任务需要产生看起来真实的样本。如由低分辨率图片产生高分辨率图片，图像转换等等。</li>
-</ul>
-<p><img src="/generate-model/source/img/generate-model/p3.JPG" alt="Image of gen models"></p>
-<p>输入低分辨率图片，生成模型产生接近原分辨率的图片。</p>
-<p><img src="/generate-model/source/img/generate-model/p4.JPG" alt="Image of gen models"></p>
-<p>从街道轮廓图生成真实图，从卫星图片生成地图，从草图生成真实图片</p>
-<h1><span id="生成模型分类">生成模型分类</span></h1>
-<p>那么生成模型是如何工作的呢？为了简化讨论，我们这里考虑符合最大似然(maximum likelihood)原则(可参考最大似然法与最大后验概率估计——深度学习花书第五章（三）)的生成模型。其基本思想是模型是带有参数 $\theta$ 的概率分布的估计，则模型给予m个训练样本的似然率为 $\prod_{i=1}^m p_{model}(c^{(i)};\theta)$, 最大似然原则就是选择使该概率最大的参数。即</p>
-<p>$\theta^* = \mathop{argmax}\limits_{\theta}\prod_{i=1}^m p_{model}(c^{(i)};\theta)$</p>
-<p>$=\mathop{argmax}\limits_{\theta} log \prod_{i=1}^m p_{model}(c^{(i)};\theta)$</p>
-<p>$=\mathop{argmax}\limits_{\theta}\sum_{i=1}^m log p_{model}(c^{(i)};\theta)$</p>
-<p>其过程如下图所示，模型会逐渐将训练数据所处的概率增大。</p>
-<p><img src="/generate-model/source/img/generate-model/p7.JPG" alt="Image of gen models"></p>
-<p>另一方面，我们也可以将最大似然近似看做是使模型与数据分布KL divergence（可参考概率论——深度学习花书第三章）最小的参数,即：</p>
-<p>$\theta^* = \mathop{argmin}\limits_{\theta}D_{KL}(p_{data}(x) \mid\mid p_{model}(x;\theta))$</p>
-<p><img src="/generate-model/source/img/generate-model/p6.JPG" alt></p>
-<p>先来看看左边一支Explicit density显性密度模型，即显性的定义密度分布 $p_{model}(x;\theta)$ ，对于这类模型，似然率最大化的过程比较直接：我们将密度分布代入到似然率的表达式中，然后沿着梯度上升的方向更新模型即可，但其难点在于如何定义模型使得其既能表达数据的复杂度同时又方便计算。大致有两种方式：</p>
-<ul>
-<li>
-<p>Tractable explicit model（易解显性模型），即定义一个方便计算的密度分布，主要一类模型是Fully visible belief nets，简称FVBN，也被称作Auto-Regressive Network，这一类模型利用了概率的链式法则，转化为条件概率的联乘积形式,NADE,PixelRNN,PixelCNN都属于这一类模型，许多更复杂的模型也是基于这一类模型，例如DeepMind的语音合成模型WaveNet。这类模型一大缺点是模型之后的元素值值得生成依赖于之前的元素值，即我们需要先生成$x_1$再生成$x_2$，其效率较低。其优点是由于直接定义了可解的密度分布，我们可直接应用基于训练数据对数似然率的优化模型，但同时这也限制了可供选择的密度分布类型。</p>
-</li>
-<li>
-<p>Approximate explicit model（近似显性模型）可以避免需要设定可解的密度分布的限制，其密度分布可以是那一计算的，但可用一些近似方法来求最大似然率。这又可以分为两类，即确定性近似（deterministic approximation），通常是指变分近似（可参考变分推断——深度学习第十九章），即转化为Evidence lower bound的极值问题，之后会详细总结变分自编码器VAE。这一方法的缺点是现在VAE生成的图片都比较模糊，对于这一现象暂时还没有很好的解释。另一类是随机近似(stochastic approximation)，如MCMC方法（可参考蒙特卡罗方法——深度学习第十七章），如果样本可以较快的产生且各样本之间的方差较小，可以利用MCMC，但我们之前在第十七章也看到这一方法混合时间较长且没有很好的方法判断是否已经converge，所以效率较低。</p>
-</li>
-</ul>
-<p>再来看右边一支Implicit density model隐性密度模型，即不明确定义模型密度分布，而是非直接的与  作用，即从中取样，也可以分为两类：</p>
-<ul>
-<li>也是利用达到平稳分布后的马尔科夫链来取样，如generative stochastic network(生成随机网络)，简称GSN。马尔科夫链的缺点如难以拓展到高维空间，巨大的计算量等缺点也适用于这种模型。</li>
-<li>Generative Adversarial Network(生成对抗网络)，简称GAN，这一模型取样时只需要进行一步，而不需要利用马尔科夫链运行若干次直至达到平稳分布，所以采样效率很高。其基本思想是利用生成神经网络和鉴别神经网络两个网络相互对抗，达到纳什均衡。其优点是可以并行的产生样本，不需要马尔科夫链，效率高；生成函数没有限制，可以表达很多种分布；实际中GAN生成的样本视觉上较其他方法好。当然，由于它不再是优化问题，而是需要找到纳什均衡，所以训练过程不够稳定。</li>
-</ul>
-<p>现在比较常用的是FVBN，VAE与GAN</p>
-<h2><span id="玻尔兹曼机">玻尔兹曼机</span></h2>
-<p>玻尔兹曼机是一种基于能量函数的概率模型，其联合分布概率可表示为 $p(\overline{v},\overline{h}) = \frac {exp(-E(\overline{v},\overline{h}))}{Z}$, 其中$\overline{v}$ 代表了输入的观察到的变量，$\overline{h}$代表了隐藏变量，Z是分配函数，Restricted Boltzmann machine对这一能量函数进一步简化，假定了网络中仅有隐藏变量与观察变量的连接，而观察变量间没有连接，隐藏变量间也没有连接，且隐藏变量可用$n_h$个二进制随机变量表示，如下图的无向图所示:</p>
-<p><img src="/generate-model/source/img/generate-model/p8.JPG" alt></p>
-<h2><span id="生成随机网络">生成随机网络</span></h2>
-<p>再来看看另一种利用马尔科夫链采样的生成模型，生成随机网络GSN，与玻尔兹曼机相比，它不是显性的定义观察量与隐藏量的联合分布，而是在马尔科夫链中利用了两个条件概率分布：</p>
-<p>1.$p(x^k\mid h^k)$ 指导如何根据现在的隐藏变量产生下一个观察量。</p>
-<p>2.$p(h^k\mid h^{k-1},x^{k-1})$ 根据前一个状态的隐藏变量和观察量更新隐藏变量。</p>
-<p>联合概率分布只是隐性定义的，是马尔科夫链的稳态分布。</p>
-<h2><span id="自回归网络">自回归网络</span></h2>
-<p>自回归网络Auto-Regressive Networks，又叫做Fully-visible Bayes networks(FVBN)，是一种有向概率图，其中条件概率用神经网络来表示，利用概率的链式法则，它将关于观察量的联合概率分布，分为一系列条件概率$p(x_i\mid x_{i-1},...,x_1)$ 的乘积形式</p>
-<p>$p(x)=\prod_{i=1}^{n_i} p(x_i\mid x_{i-1},...,x_1)$</p>
-<p>简单的线性自回归网络结构没有隐藏变量，也不共享特征或参数，如下图所示</p>
-<p><img src="/generate-model/source/img/generate-model/p9.JPG" alt="上图是FVBN的有向图表示，下图是相应的计算图"></p>
-<p>如果我们想增大模型的容量，使其可以近似任意联合概率分布，则可以加入隐藏变量，另外还可以通过特征或参数共享使得泛化效果更好，其计算图如下所示:</p>
-<p><img src="/generate-model/source/img/generate-model/p10.JPG" alt></p>
-<p>其优点有在可以表述随机变量的高阶依赖关系的同时减少了模型所需要的参数，例如假设变量可取离散的k种不同的值，则每个$p(x_i\mid x_{i-1},...,x_1)$ 可用有$(i-1)*k$ 个输入及k个输出的神经网络表示，而不需要指数级别的参数。另一个优点是我们不需要对于每一个$x_i$ 都采用一个不同的神经网络，而是将它们合并为一个神经网络，即用来预测$x_i$ 的隐藏特征可以被重复利用来对$x_{i+k}(k&gt;0)$ 进行预测，这些隐藏单位的参数因此可以通过联合优化使得序列中所有变量的预测都得到改善。</p>
-<p>在生成图像时，FVBN类模型通常能够得到更高质量的图片，由于其直接模拟概率分布，更容易评估训练效果，其训练过程也较GAN稳定，但是由于其训练过程的序列性，训练过程较为缓慢。</p>
-<p>FVBN有两类模型PixelRNN和PixelCNN.在图像合成方面应用广泛，尤其是由残缺图像补全完整图像的应用。
-其基本思想是从某个角落里开始，依据之前的像素信息利用RNN或CNN来预测下一个位置的像素值。
-对于PixelRNN其过程如下图所示，其中与之前变量的依赖关系用RNN如LSTM结构来模拟：</p>
-<p><img src="/generate-model/source/img/generate-model/p11.JPG" alt></p>
-<p>另外在语音合成领域，FVBN也有较好的效果，例如DeepMind的WaveNet模型就是基于FVBN的原理。</p>
-<h2><span id="变分自编码器">变分自编码器</span></h2>
-<p>自编码器的结构如下，利用神经网络将输入信息编码到其特征空间，再利用神经网络将这些特征重构为与输入类似的信息。通常特征z相较输入x的维度要小，只包含重要特征。</p>
-<p><img src="/generate-model/source/img/generate-model/p12.JPG" alt></p>
-<p>而为了从模型中生成新的样本，我们只需要从分布$p_{model}(z)$ 中采样z,再经过解码网络得到样本x, 其概率分布表示为<img src="/generate-model/source/img/generate-model/p13.JPG" alt>，但是这个积分是难以计算的，其后验概率$p_{model}(z\mid x)=p_{model}(x\mid z)p_{model}(z)/p_{model}(x)$ 同样是难以计算的，所以我们就要利用变分近似来求其lower bound，而我们就是利用加码网络$q(z\mid x)$ 来近似$p_{model}(z\mid x)$.</p>
-<p>可以做如下推导：</p>
-<p><img src="/generate-model/source/img/generate-model/p14.JPG" alt></p>
-<p>其中第一项我们可以通过从加码网络中采样来近似，而第二项由于$q(z\mid x)$ 和$p_{model}(z)$ 我们均可以选取可适的函数使其有闭合的解析形式，也是容易计算的。这两项合起来就是我们之前在变分推断中定义的evidence lower bound，简称ELBO函数，我们可以用梯度上升方法来逐渐优化它。</p>
-<p>总结一下，VAE就是在训练时利用加码网络和解码网络利用变分法来极大化evidence lower bound，这样使得  的下限提高，在要利用模型生成样本时则可从解码网络取样得到生成样本。VAE的理论原理比较自然，实现也比较容易，而且中间学习到的特征空间也可以用来迁移到其他的任务，但是虽然它显性的定义了概率分布，但并不是精确的求解概率分布，而是用lower bound来近似其概率分布，所以在做模型评估时不如上一篇总结的PixelRNN/PixelCNN好，而且其生成的样本较之之后要总结的GAN的样本通常要更模糊些，一些例子如下图所示：</p>
-<p><img src="/generate-model/source/img/generate-model/p15.JPG" alt></p>
-<p>当然关于VAE为何生成样本模糊，如何改善VAE的研究仍然很有意义，而且还有将VAE与GAN相结合的研究也可以同时利用二者的优势.</p>
-<h2><span id="生成对抗网络">生成对抗网络</span></h2>
-<p>我们之前总结的两个主要的模型FVBN与VAE都是显性的定义了概率密度分布，假如我们并不需要求密度分布，而只是希望模型能产生合理的样本，那么我就可以放弃对密度分布的定义，而GAN就是这样一种模型，它采取了博弈论的解决方法：通过两个神经网络的相互博弈，其中一个叫做生成网络Generator Network，一个叫做判别网络Discriminator Network，生成网络尽力产生可以以假乱真的样本来迷惑判别网络，判别网络尽力区分真实样本与生成网络生成的假样本，通过不断的交替学习，两个网络的准确度都越来越高，最后生成网络可以模拟与训练集分布相同的样本分布，如下图所示。</p>
-<p><img src="/generate-model/source/img/generate-model/p16.JPG" alt></p>
-<p>详细来说，用D来表示判别函数，$\theta^{(D)}$ 来表示该网络的参数，用$J^{(D)}(\theta^{(D)},\theta^{(G)})$ 来表示其损失函数，用G来表示生成网络，用 $\theta^{(G)}$ 来表示该网络的参数，用$J^{(G)}(\theta^{(D)},\theta^{(G)})$ 来表示其损失函数。生成网络的作用是在只能控制 $\theta^{(G)}$ 的情况下尽量减少 $J^{(G)}(\theta^{(D)},\theta^{(G)})$ ，而判别网络的作用是在只能控制$\theta^{(D)}$ 的情况下尽量减小$J^{(D)}(\theta^{(D)},\theta^{(G)})$ 。把这两个网络看做两个玩家，每个玩家都只能控制自己的参数，而不能改变另一个玩家的参数，所以相较于将该问题看做一个优化问题，更自然的是当做博弈论中的博弈问题，而该问题的解就是纳什均衡(Nash equilibrium)状态，即 $(\theta^{(D)},\theta^{(G)})$ 使得 $J^{(D)}$ 相对于 $\theta^{(D)}$ 极小同时  $J^{G}$ 相对于 $\theta^{(G)}$ 极小。</p>
-<p>对于判别网络，其损失函数就是经典的二元分类器的交叉熵损失</p>
-<p><img src="/generate-model/source/img/generate-model/p17.JPG" alt>
-其中来自于真实分布的样本标记是1，而来自于生成网络的样本标记为0。</p>
-<p>对于生成网络的损失函数，最简单的假设就是假设这是一个零和博弈 zero-sum game。由于它与判别网络损失恰恰相反，所以我们可以用minmax的形式表示我们希望得到的解</p>
-<p>$\theta^*=\mathop{argmin}\limits_{\theta_{(G)}} \mathop{max}\limits_{\theta_{(D)}}V(\theta^{(D)},\theta^{(G)})$</p>
-<p>其中 $V(\theta^{(D)},\theta^{(G)})$ 为上文提到的交叉熵损失。</p>
-<p>上表达可以做如下解释：判别器的目的是令  $V(\theta^{(D)},\theta^{(G)})$ 尽量大就是使真实样本 $D_{\theta_D}(x)$ 接近1，而伪造样本 $D_{\theta_D}(G(<em>{\theta_G}(z)))$ 接近0。
-而生成网络的目的是令 $V(\theta^{(D)},\theta^{(G)})$ 尽量小，即使伪造样本 $D</em>{\theta_{D}}(G(<em>{\theta</em>{G}}(z)))$ 也接近1.</p>
-<p>以上就是GAN的基本原理，即从博弈的角度来使生成网络与判别网络共同进步，最后使生成网络可以以假乱真。而GAN的变种模型也很多，可以参考hindupuravinash/the-gan-zoo中列举的各种GAN模型。</p>
-<p>近两年关于GAN的研究和应用非常多，比如图像风格迁移，根据文字生成图像等等。 另一方面，GAN也由于训练过程的不稳定性常受诟病，为了增强GAN的稳定性，也有Wasserstein GAN, LSGAN等改进模型方面的研究。这些将在下一篇博客中介绍。
-总结一下，做为深度学习花书的最后一部分，GAN是近些年生成模型研究比较活跃的方向，它的原理不再是对显性概率分布做直接计算或近似处理，而是利用了生成网络与判别网络的相互博弈，是一种新颖而有效的思路。希望这方面的模型能够更加稳定，得到更多的应用。</p>
-<p><img src="/generate-model/blog/source/_posts/Generate-model-0/p1.jpg" alt="ddd"></p>
-<p></p>
-
+            
           
         
       
@@ -1330,7 +1090,7 @@ Peace!</p>
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1349,9 +1109,7 @@ Peace!</p>
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">tags</span>
                   
                 </div>
