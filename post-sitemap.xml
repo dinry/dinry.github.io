@@ -8,6 +8,14 @@
 
     <url>
         <loc>http://dinry.github.io/generate-model/</loc>
+        <lastmod>2019-06-18T08:29:17.826Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/2019-06-2019-06-18-generate-model/</loc>
         <lastmod>2019-06-18T05:56:11.798Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
