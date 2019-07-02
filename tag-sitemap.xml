@@ -10,7 +10,14 @@
 
     <url>
         <loc>http://dinry.github.io/tags/%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87%EF%BC%88Rec%EF%BC%89/</loc>
-        <lastmod>2019-06-24T11:52:25.045Z</lastmod>
+        <lastmod>2019-06-24T11:54:46.854Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/tags/machine-learning/</loc>
+        <lastmod>2019-07-02T05:47:00.271Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

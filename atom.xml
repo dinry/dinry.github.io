@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dinry.github.io/"/>
-  <updated>2019-06-24T11:52:25.045Z</updated>
+  <updated>2019-07-02T05:47:00.271Z</updated>
   <id>http://dinry.github.io/</id>
   
   <author>
@@ -17,13 +17,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>machine learning(1)</title>
+    <link href="http://dinry.github.io/machine-learning-1/"/>
+    <id>http://dinry.github.io/machine-learning-1/</id>
+    <published>2019-07-02T01:36:05.000Z</published>
+    <updated>2019-07-02T05:47:00.271Z</updated>
+    
+    <content type="html"><![CDATA[<h1><span id="机器学习的四大应用领域及其应用">机器学习的四大应用领域及其应用</span></h1><h2><span id="数据挖掘发现数据之间的关系">数据挖掘：发现数据之间的关系</span></h2><p>1.回归问题</p><p>2.分类问题</p><p>根据已知数据，学习函数。</p><h2><span id="计算机视觉像人一样看懂世界">计算机视觉：像人一样看懂世界</span></h2><p>图像分类</p><p>目标检测（无人驾驶）</p><p>语义分割（无人驾驶）</p><p>场景理解（无人驾驶）</p><h2><span id="nlp像人一样看懂文字">NLP：像人一样看懂文字</span></h2><p>文本分类（新闻分类）</p><p>自动生成文本摘要</p><p>翻译</p><p>QA</p><p>人机对话（小冰）</p><p>image to text</p><p>end to end级自动驾驶</p><h2><span id="机器人决策像人一样具有决策能力">机器人决策：像人一样具有决策能力</span></h2><p>TORCS平台（玩赛车游戏）：增强学习（agent,action）</p><p>机器人开门（自动执行）：增强学习</p><h1><span id="机器学习理论分类">机器学习理论分类</span></h1><p>常用的三类：</p><p>1.传统的监督学习（分类，回归）</p><p>2.深度学习（视觉，NLP）</p><p>3.强化学习（机器人）</p><p>三种分类学习按标号顺序循序渐进</p><h1><span id="先重点再难点">先重点，再难点</span></h1><p><img src="/machine-learning-1/1.jpg" alt></p><p><img src="/machine-learning-1/2.jpg" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1&gt;&lt;span id=&quot;机器学习的四大应用领域及其应用&quot;&gt;机器学习的四大应用领域及其应用&lt;/span&gt;&lt;/h1&gt;
+&lt;h2&gt;&lt;span id=&quot;数据挖掘发现数据之间的关系&quot;&gt;数据挖掘：发现数据之间的关系&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;1.回归问题&lt;/p&gt;
+&lt;p&gt;2.分类问题&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="http://dinry.github.io/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>调参技巧汇总</title>
+    <link href="http://dinry.github.io/%E8%B0%83%E5%8F%82%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/"/>
+    <id>http://dinry.github.io/调参技巧汇总/</id>
+    <published>2019-06-28T02:33:02.000Z</published>
+    <updated>2019-06-28T03:31:40.553Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>推荐系统评估指标(Rank)</title>
     <link href="http://dinry.github.io/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/"/>
     <id>http://dinry.github.io/推荐系统评估指标/</id>
     <published>2019-06-24T11:09:54.000Z</published>
-    <updated>2019-06-24T11:52:25.045Z</updated>
+    <updated>2019-06-24T11:54:46.854Z</updated>
     
-    <content type="html"><![CDATA[<h1><span id="mean-average-precision-map">Mean Average Precision (MAP)</span></h1><p>$AP=\frac {\sum_{j=1}^{n_i}P(j)\cdot y_{i,j}}{\sum_{j=1}^{n_i}y_{i,j}}$</p><p>其中，$y_{i,j}$: 排序中第j个元素对于查询i是否是相关的；相关为1，不相关为0。</p><p>$P(j)=\frac {\sum_{k:\pi_{i}(k)\leq\pi_{i}(j)}y_{i,k}}{\pi_{i}(j)}$</p><p>其中，$\pi_{i}(j)$为J的排序位置。</p><p>例如：</p><table><thead><tr><th>rank_no</th><th>是否相关</th></tr></thead><tbody><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>0</td></tr><tr><td>3</td><td>1</td></tr><tr><td>4</td><td>0</td></tr><tr><td>5</td><td>1</td></tr><tr><td>6</td><td>0</td></tr></tbody></table><p>则根据AP计算公式：$AP=(1*1 + (1/2) *0+ (2/3)*1 + (2/4)*0 + (3/5)*0 + (3/6)*0) /3$</p><p>AP的最大值是1，MAP就是对所有user求均值。</p><h1><span id="mean-reciprocal-rank-mrr">Mean Reciprocal Rank (MRR)</span></h1><p>$MRR=\frac{1}{\mid Q \mid} \sum_{i=1}^{\mid Q \mid} \frac{1}{rank_i}$</p><p>其中|Q|是查询个数，ranki是第i个查询，第一个相关的结果所在的排列位置。</p><p>例如：</p><table><thead><tr><th>Query</th><th>Result</th><th>Correct response</th><th>Rank</th><th>Reciprocal rank</th></tr></thead><tbody><tr><td>cat</td><td>catten,cati,cats</td><td>cats</td><td>3</td><td>1/3</td></tr><tr><td>tori</td><td>torii,tori,toruses</td><td>tori</td><td>2</td><td>1/2</td></tr><tr><td>virus</td><td>viruses,virii,viri</td><td>viruses</td><td>1</td><td>1</td></tr></tbody></table><p>对于三个查询，每个查询的ranki分别为3、2、1。所以，MRR=1/3∗(1/3+1/2+1/1)</p><h1><span id="ndcgprerec的计算较为简单已在csdn中介绍这里省略">NDCG，pre,rec的计算较为简单，已在CSDN中介绍，这里省略。</span></h1>]]></content>
+    <content type="html"><![CDATA[<h1><span id="mean-average-precision-map">Mean Average Precision (MAP)</span></h1><p>$AP=\frac {\sum_{j=1}^{n_i}P(j)\cdot y_{i,j}}{\sum_{j=1}^{n_i}y_{i,j}}$</p><p>其中，$y_{i,j}$: 排序中第j个元素对于查询i是否是相关的；相关为1，不相关为0。</p><p>$P(j)=\frac {\sum_{k:\pi_{i}(k)\leq\pi_{i}(j)} y_{i,k}}{\pi_{i}(j)}$</p><p>其中，$\pi_{i}(j)$为J的排序位置。</p><p>例如：</p><table><thead><tr><th>rank_no</th><th>是否相关</th></tr></thead><tbody><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>0</td></tr><tr><td>3</td><td>1</td></tr><tr><td>4</td><td>0</td></tr><tr><td>5</td><td>1</td></tr><tr><td>6</td><td>0</td></tr></tbody></table><p>则根据AP计算公式：$AP=(1*1 + (1/2) *0+ (2/3)*1 + (2/4)*0 + (3/5)*0 + (3/6)*0) /3$</p><p>AP的最大值是1，MAP就是对所有user求均值。</p><h1><span id="mean-reciprocal-rank-mrr">Mean Reciprocal Rank (MRR)</span></h1><p>$MRR=\frac{1}{\mid Q \mid} \sum_{i=1}^{\mid Q \mid} \frac{1}{rank_i}$</p><p>其中|Q|是查询个数，ranki是第i个查询，第一个相关的结果所在的排列位置。</p><p>例如：</p><table><thead><tr><th>Query</th><th>Result</th><th>Correct response</th><th>Rank</th><th>Reciprocal rank</th></tr></thead><tbody><tr><td>cat</td><td>catten,cati,cats</td><td>cats</td><td>3</td><td>1/3</td></tr><tr><td>tori</td><td>torii,tori,toruses</td><td>tori</td><td>2</td><td>1/2</td></tr><tr><td>virus</td><td>viruses,virii,viri</td><td>viruses</td><td>1</td><td>1</td></tr></tbody></table><p>对于三个查询，每个查询的ranki分别为3、2、1。所以，MRR=1/3∗(1/3+1/2+1/1)</p><h1><span id="ndcgprerec的计算较为简单已在csdn中介绍这里省略">NDCG，pre,rec的计算较为简单，已在CSDN中介绍，这里省略。</span></h1>]]></content>
     
     <summary type="html">
     
