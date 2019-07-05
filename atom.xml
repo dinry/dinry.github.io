@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dinry.github.io/"/>
-  <updated>2019-07-05T03:14:45.130Z</updated>
+  <updated>2019-07-05T03:16:04.920Z</updated>
   <id>http://dinry.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://dinry.github.io/temsorflow%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88/"/>
     <id>http://dinry.github.io/temsorflow常用集合/</id>
     <published>2019-07-05T02:55:07.000Z</published>
-    <updated>2019-07-05T03:14:45.130Z</updated>
+    <updated>2019-07-05T03:16:04.920Z</updated>
     
-    <content type="html"><![CDATA[<p>tensorflow 用集合collection组织不同类别的对象，tf.GraphKeys中包含了所有默认集合的名称。</p><p>collection在对应的scope内提供了“零存整取”的思想：任意位置，任意层次的对象，统一提取。</p><p>tf.optimizer只优化tf.GraphKeys.TRAINABLE_VARIABLES中的变量</p><h2><span id="常用集合">常用集合</span></h2><ul><li>Variable集合：模型参数</li><li>summary 集合：监测</li><li>自定义集合</li></ul><h1><span id="variable">Variable</span></h1><p>Variable被收集在tf.GraphKeys.VARIABLES的collection中</p><h2><span id="定义">定义</span></h2><p>k=tf.Variable()<img src="./tensorflow%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88/1.JPG" alt></p><h1><span id="summary">summary</span></h1><p>Summary被收集在名为tf.GraphKeys.SUMMARIES的collection中</p><h2><span id="define">define</span></h2><p>对网络中tensor取值进行监测</p><p>调用tf.scalar_summary系列函数，会向默认的collection中添加一个operation</p><p><img src="./tensorflow%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88/2.JPG" alt></p><h1><span id="自定义">自定义</span></h1><p>tf.add_to_collection(&quot;losses&quot;,l1)losses=tf.get_collection('losses')</p>]]></content>
+    <content type="html"><![CDATA[<p>tensorflow 用集合collection组织不同类别的对象，tf.GraphKeys中包含了所有默认集合的名称。</p><p>collection在对应的scope内提供了“零存整取”的思想：任意位置，任意层次的对象，统一提取。</p><p>tf.optimizer只优化tf.GraphKeys.TRAINABLE_VARIABLES中的变量</p><h2><span id="常用集合">常用集合</span></h2><ul><li>Variable集合：模型参数</li><li>summary 集合：监测</li><li>自定义集合</li></ul><h1><span id="variable">Variable</span></h1><p>Variable被收集在tf.GraphKeys.VARIABLES的collection中</p><h2><span id="定义">定义</span></h2><p>k=tf.Variable()<img src="/tensorflow%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88/1.JPG" alt></p><h1><span id="summary">summary</span></h1><p>Summary被收集在名为tf.GraphKeys.SUMMARIES的collection中</p><h2><span id="define">define</span></h2><p>对网络中tensor取值进行监测</p><p>调用tf.scalar_summary系列函数，会向默认的collection中添加一个operation</p><p><img src="/tensorflow%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88/2.JPG" alt></p><h1><span id="自定义">自定义</span></h1><p>tf.add_to_collection(&quot;losses&quot;,l1)losses=tf.get_collection('losses')</p>]]></content>
     
     <summary type="html">
     
