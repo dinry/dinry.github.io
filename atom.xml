@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dinry.github.io/"/>
-  <updated>2019-07-05T03:23:05.388Z</updated>
+  <updated>2019-07-05T03:47:15.683Z</updated>
   <id>http://dinry.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tensorflow深度学习(2):tf.nn.top_k()</title>
+    <link href="http://dinry.github.io/tensorflow%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-2-tf-nn-top-k/"/>
+    <id>http://dinry.github.io/tensorflow深度学习-2-tf-nn-top-k/</id>
+    <published>2019-07-05T03:42:07.000Z</published>
+    <updated>2019-07-05T03:47:15.683Z</updated>
+    
+    <content type="html"><![CDATA[<h1><span id="introduction">introduction</span></h1><p>def top_k(input, k=1, sorted=True, name=None)</p><p>Finds values and indices of the k largest entries for the last dimension.</p><p>If the input is a vector (rank=1), finds the k largest entries in the vector and outputs their values and indices as vectors.Thus values[j] is the j-th largest entry in input, and its index is indices[j].</p><p>For matrices (resp. higher rank input), computes the top k entries in each row (resp. vector along the last dimension).Thus, values.shape = indices.shape = input.shape[:-1] + [k]</p><p>If two elements are equal, the lower-index element appears first.</p><h1><span id="parameters">parameters</span></h1><p><img src="/tensorflow%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-2-tf-nn-top-k/1.JPG" alt></p><h1><span id="code">code</span></h1><p><img src="/tensorflow%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-2-tf-nn-top-k/2.JPG" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1&gt;&lt;span id=&quot;introduction&quot;&gt;introduction&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;def top_k(input, k=1, sorted=True, name=None)&lt;/p&gt;
+&lt;p&gt;Finds values and indices of the
+      
+    
+    </summary>
+    
+    
+      <category term="tensorflow" scheme="http://dinry.github.io/tags/tensorflow/"/>
+    
+  </entry>
   
   <entry>
     <title>temsorflow常用集合(colection)</title>

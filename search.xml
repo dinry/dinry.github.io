@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>tensorflow深度学习(2):tf.nn.top_k()</title>
+      <link href="/tensorflow%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-2-tf-nn-top-k/"/>
+      <url>/tensorflow%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-2-tf-nn-top-k/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="introduction">introduction</span></h1><p>def top_k(input, k=1, sorted=True, name=None)</p><p>Finds values and indices of the k largest entries for the last dimension.</p><p>If the input is a vector (rank=1), finds the k largest entries in the vector and outputs their values and indices as vectors.Thus values[j] is the j-th largest entry in input, and its index is indices[j].</p><p>For matrices (resp. higher rank input), computes the top k entries in each row (resp. vector along the last dimension).Thus, values.shape = indices.shape = input.shape[:-1] + [k]</p><p>If two elements are equal, the lower-index element appears first.</p><h1><span id="parameters">parameters</span></h1><p><img src="/tensorflow%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-2-tf-nn-top-k/1.JPG" alt></p><h1><span id="code">code</span></h1><p><img src="/tensorflow%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-2-tf-nn-top-k/2.JPG" alt></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> tensorflow </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>temsorflow常用集合(colection)</title>
       <link href="/tensorflow%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88/"/>
       <url>/tensorflow%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88/</url>
