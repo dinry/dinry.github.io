@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>http://dinry.github.io/temsorflow%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88/</loc>
+        <lastmod>2019-07-05T03:14:45.130Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/machine-learning-2/</loc>
+        <lastmod>2019-07-02T06:24:26.420Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://dinry.github.io/machine-learning-1/</loc>
         <lastmod>2019-07-02T05:47:00.271Z</lastmod>
         <changefreq>weekly</changefreq>

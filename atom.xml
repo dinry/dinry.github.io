@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dinry.github.io/"/>
-  <updated>2019-07-02T05:47:00.271Z</updated>
+  <updated>2019-07-05T03:14:45.130Z</updated>
   <id>http://dinry.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>temsorflow常用集合(colection)</title>
+    <link href="http://dinry.github.io/temsorflow%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88/"/>
+    <id>http://dinry.github.io/temsorflow常用集合/</id>
+    <published>2019-07-05T02:55:07.000Z</published>
+    <updated>2019-07-05T03:14:45.130Z</updated>
+    
+    <content type="html"><![CDATA[<p>tensorflow 用集合collection组织不同类别的对象，tf.GraphKeys中包含了所有默认集合的名称。</p><p>collection在对应的scope内提供了“零存整取”的思想：任意位置，任意层次的对象，统一提取。</p><p>tf.optimizer只优化tf.GraphKeys.TRAINABLE_VARIABLES中的变量</p><h2><span id="常用集合">常用集合</span></h2><ul><li>Variable集合：模型参数</li><li>summary 集合：监测</li><li>自定义集合</li></ul><h1><span id="variable">Variable</span></h1><p>Variable被收集在tf.GraphKeys.VARIABLES的collection中</p><h2><span id="定义">定义</span></h2><p>k=tf.Variable()<img src="./tensorflow%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88/1.JPG" alt></p><h1><span id="summary">summary</span></h1><p>Summary被收集在名为tf.GraphKeys.SUMMARIES的collection中</p><h2><span id="define">define</span></h2><p>对网络中tensor取值进行监测</p><p>调用tf.scalar_summary系列函数，会向默认的collection中添加一个operation</p><p><img src="./tensorflow%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88/2.JPG" alt></p><h1><span id="自定义">自定义</span></h1><p>tf.add_to_collection(&quot;losses&quot;,l1)losses=tf.get_collection('losses')</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;tensorflow 用集合collection组织不同类别的对象，tf.GraphKeys中包含了所有默认集合的名称。&lt;/p&gt;
+&lt;p&gt;collection在对应的scope内提供了“零存整取”的思想：任意位置，任意层次的对象，统一提取。&lt;/p&gt;
+&lt;p&gt;tf.optimiz
+      
+    
+    </summary>
+    
+    
+      <category term="tensorflow" scheme="http://dinry.github.io/tags/tensorflow/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习之线性模型推导</title>
+    <link href="http://dinry.github.io/machine-learning-2/"/>
+    <id>http://dinry.github.io/machine-learning-2/</id>
+    <published>2019-07-02T05:50:36.000Z</published>
+    <updated>2019-07-02T06:24:26.420Z</updated>
+    
+    <content type="html"><![CDATA[<p>西瓜书，南瓜书</p><h1><span id="一元线性回归">一元线性回归</span></h1><p>最小二乘法推导</p><h2><span id="b的公式推导3638">b的公式推导（3.6，3.8）</span></h2><p>（二元函数求最值）</p><p>1.由最小二乘法导出损失函数E（w,b）</p><p>2.证明损失函数是关于w,b的凸函数</p><p>3.对损失函数关于B求偏导数</p><p>4.另一接偏导数为0求b</p><p>由最小二乘法导出损失函数：</p><p>$E_{w,b}=\sum_{i=1}^m$</p><h2><span id="w的公式推导3537">w的公式推导（3.5，3.7）</span></h2><h1><span id="多元线性回归">多元线性回归</span></h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;西瓜书，南瓜书&lt;/p&gt;
+&lt;h1&gt;&lt;span id=&quot;一元线性回归&quot;&gt;一元线性回归&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;最小二乘法推导&lt;/p&gt;
+&lt;h2&gt;&lt;span id=&quot;b的公式推导3638&quot;&gt;b的公式推导（3.6，3.8）&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;（二元函数求最值）&lt;/p
+      
+    
+    </summary>
+    
+    
+      <category term="machine learning" scheme="http://dinry.github.io/tags/machine-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>machine learning(1)</title>
