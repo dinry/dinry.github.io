@@ -157,7 +157,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://dinry.github.io/train-loss/1.JPG">
 <meta property="og:image" content="http://dinry.github.io/train-loss/2.JPG">
-<meta property="og:updated_time" content="2019-07-11T14:29:04.105Z">
+<meta property="og:updated_time" content="2019-07-11T14:47:38.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tensorflow loss分析">
 <meta name="twitter:description" content="train loss与test loss结果分析 train loss 不断下降，test loss不断下降，说明网络仍在学习; train loss 不断下降，test loss趋于不变，说明网络过拟合; train loss 趋于不变，test loss不断下降，说明数据集100%有问题; train loss 趋于不变，test loss趋于不变，说明学习遇到瓶颈，需要减小学习率或批量数目;">
@@ -322,7 +322,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">5</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">6</span></a>
 
   </li>
         
@@ -360,7 +360,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">14</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">16</span></a>
 
   </li>
         
@@ -547,7 +547,7 @@
                 
               
 
-              <time title="Created: 2019-07-11 21:19:46 / Modified: 22:29:04" itemprop="dateCreated datePublished" datetime="2019-07-11T21:19:46+08:00">2019-07-11</time>
+              <time title="Created: 2019-07-11 21:19:46 / Modified: 22:47:38" itemprop="dateCreated datePublished" datetime="2019-07-11T21:19:46+08:00">2019-07-11</time>
             
 
             
@@ -618,6 +618,26 @@
 <li>指数级别衰减：需要自己敲定的超参数，是迭代轮数。</li>
 <li>1/t衰减：有着数学形式为的衰减模式，其中是需要自己敲定的超参数，是迭代轮数。</li>
 </ul>
+<h2><span id="超参数的设定与优化">超参数的设定与优化</span></h2>
+<p>神经网络的训练过程中，不可避免地要和很多超参数打交道，需要手动设定，大致包括：</p>
+<p>1.初始学习率
+2.学习率衰减程度
+3.正则化系数/强度(包括l2正则化强度，dropout比例)</p>
+<p>对于大的深层次神经网络而言，我们需要很多的时间去训练。因此在此之前我们花一些时间去做超参数搜索，以确定最佳设定是非常有必要的。最直接的方式就是在框架实现的过程中，设计一个会持续变换超参数实施优化，并记录每个超参数下每一轮完整训练迭代下的验证集状态和效果。实际工程中，神经网络里确定这些超参数，我们一般很少使用n折交叉验证，一般使用一份固定的交叉验证集就可以了。</p>
+<p>一般对超参数的尝试和搜索都是在log域进行的。例如，一个典型的学习率搜索序列就是learning_rate = 10 ** uniform(-6, 1)。我们先生成均匀分布的序列，再以10为底做指数运算，其实我们在正则化系数中也做了一样的策略。比如常见的搜索序列为[0.5, 0.9, 0.95, 0.99]。另外还得注意一点，如果交叉验证取得的最佳超参数结果在分布边缘，要特别注意，也许取的均匀分布范围本身就是不合理的，也许扩充一下这个搜索范围会有更好的参数。</p>
+<h2><span id="模型融合与优化">模型融合与优化：</span></h2>
+<p>实际工程中，一个能有效提高最后神经网络效果的方式是，训练出多个独立的模型，在预测阶段选结果中的众数。模型融合能在一定程度上缓解过拟合的现象，对最后的结果有一定帮助，我们有一些方式可以得到同一个问题的不同独立模型：</p>
+<ul>
+<li>使用不同的初始化参数。先用交叉验证确定最佳的超参数，然后选取不同的初始值进行训练，结果模型能有一定程度的差别。</li>
+<li>选取交叉验证排序靠前的模型。在用交叉验证确定超参数的时候，选取top的部分超参数，分别进行训练和建模。</li>
+<li>选取训练过程中不同时间点的模型。神经网络训练确实是一件非常耗时的事情，因此有些人在模型训练到一定准确度之后，取不同的时间点的模型去做融合。不过比较明显的是，这样模型之间的差异性其实比较小，好处是一次训练也可以有模型融合的收益。</li>
+</ul>
+<p>检查你的初始权重是否合理，在关掉正则化项的系统里，是否可以取得100%的准确度。</p>
+<p>在训练过程中，对损失函数结果做记录，以及训练集和交叉验证集上的准确度。</p>
+<p>最常见的权重更新方式是SGD+Momentum，推荐试试RMSProp自适应学习率更新算法。</p>
+<p>随着时间推进要用不同的方式去衰减学习率。</p>
+<p>用交叉验证等去搜索和找到最合适的超参数。</p>
+<p>记得也做做模型融合的工作，对结果有帮助。</p>
 <h1><span id="loss保持常数的采坑记录">loss保持常数的采坑记录</span></h1>
 <p>1.loss等于87.33这个问题是在对Inception-V3网络不管是fine-tuning还是train的时候遇到的，无论网络迭代多少次，网络的loss一直保持恒定。</p>
 <p>原因（溢出）：</p>
@@ -686,6 +706,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/paper-CFGAN/" rel="prev" title="paper:CFGAN">
+                paper:CFGAN <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -756,7 +780,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -806,7 +830,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -891,7 +917,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">train loss与test loss结果分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">Loss和神经网络训练</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.1.</span> <span class="nav-text">训练前的检查工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.2.</span> <span class="nav-text">监控</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.3.</span> <span class="nav-text">关于参数更新部分的注意点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">loss保持常数的采坑记录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">loss不下降的常见原因</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">train loss与test loss结果分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">Loss和神经网络训练</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.1.</span> <span class="nav-text">训练前的检查工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.2.</span> <span class="nav-text">监控</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.3.</span> <span class="nav-text">关于参数更新部分的注意点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.4.</span> <span class="nav-text">超参数的设定与优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.5.</span> <span class="nav-text">模型融合与优化：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">loss保持常数的采坑记录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">loss不下降的常见原因</span></a></li></ol></div>
             
 
           </div>
