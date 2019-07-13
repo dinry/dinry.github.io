@@ -21,8 +21,15 @@
     </url>
 
     <url>
+        <loc>http://dinry.github.io/categories/deep-learning/</loc>
+        <lastmod>2019-07-12T12:56:57.809Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://dinry.github.io/categories/ML/</loc>
-        <lastmod>2019-07-12T09:07:39.592Z</lastmod>
+        <lastmod>2019-07-13T06:45:57.448Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

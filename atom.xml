@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dinry.github.io/"/>
-  <updated>2019-07-12T09:07:39.592Z</updated>
+  <updated>2019-07-12T12:56:57.809Z</updated>
   <id>http://dinry.github.io/</id>
   
   <author>
@@ -17,13 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>paper:AdamOptimizer</title>
+    <link href="http://dinry.github.io/paper-AdamOptimizer/"/>
+    <id>http://dinry.github.io/paper-AdamOptimizer/</id>
+    <published>2019-07-12T12:20:39.000Z</published>
+    <updated>2019-07-12T12:56:57.809Z</updated>
+    
+    <content type="html"><![CDATA[<h1><span id="paperadam-a-method-for-stochastic-optimization">paper：Adam: A Method for Stochastic Optimization</span></h1><p>论文链接：<img src="https://arxiv.org/abs/1412.6980" alt></p><p><img src="/paper-AdamOptimizer/1.JPG" alt></p><p>如上算法所述，在确定了参数 $\alpha$,$\beta_1$,$\beta_2$和随机目标函数 $f(\theta)$ 之后，我们需要初始化参数向量、一阶矩向量、二阶矩向量和时间步。然后当参数 $\theta$ 没有收敛时，循环迭代地更新各个部分。即时间步 t 加 1、更新目标函数在该时间步上对参数 $\theta$ 所求的梯度、更新偏差的一阶矩估计和二阶原始矩估计，再计算偏差修正的一阶矩估计和偏差修正的二阶矩估计，然后再用以上计算出来的值更新模型的参数 $\theta$。</p><h1><span id="算法">算法</span></h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1&gt;&lt;span id=&quot;paperadam-a-method-for-stochastic-optimization&quot;&gt;paper：Adam: A Method for Stochastic Optimization&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;论文链接：&lt;img src=
+      
+    
+    </summary>
+    
+      <category term="deep learning" scheme="http://dinry.github.io/categories/deep-learning/"/>
+    
+    
+      <category term="tensorflow" scheme="http://dinry.github.io/tags/tensorflow/"/>
+    
+  </entry>
+  
+  <entry>
     <title>西瓜书day5(决策树)</title>
     <link href="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/"/>
     <id>http://dinry.github.io/西瓜书day5/</id>
     <published>2019-07-12T08:44:57.000Z</published>
-    <updated>2019-07-12T09:07:39.592Z</updated>
+    <updated>2019-07-13T06:45:57.448Z</updated>
     
-    <content type="html"><![CDATA[<h1><span id="决策树定义">决策树定义</span></h1><p>决策树是基于输结构来进行决策的一类常见的机器学习分类方法。</p><h1><span id="解决问题">解决问题</span></h1><p>“当前样本属于正类吗？”</p><p>“这是好瓜吗？”</p><p>“它的根蒂是什么形态”</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/1.JPG" alt></p><p>决策过程的最终结论（叶子节点）对应了我们所希望的判定结果：好瓜 or 坏瓜</p><h1><span id="结构">结构</span></h1><p>1.一个根节点和若干个内部节点：分别对应一个属性测试</p><p>2.若干个叶节点：对应决策结果</p><p>j决策树学习的目的是为了产生一棵泛化能力强的决策树，基本流程遵循“分而治之”：</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/2.JPG" alt></p><p>递归返回条件：</p><ul><li>当前节点包含的样本全属于同一类别，无需划分</li><li>当前属性集为空，或是所有样本在所有属性上取值相同，无法划分</li><li>当前节点包含的样本集合为空，不能划分。</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1><span id="决策树定义">决策树定义</span></h1><p>决策树是基于输结构来进行决策的一类常见的机器学习分类方法。</p><h1><span id="解决问题">解决问题</span></h1><p>“当前样本属于正类吗？”</p><p>“这是好瓜吗？”</p><p>“它的根蒂是什么形态”</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/1.JPG" alt></p><p>决策过程的最终结论（叶子节点）对应了我们所希望的判定结果：好瓜 or 坏瓜</p><h1><span id="结构">结构</span></h1><p>1.一个根节点和若干个内部节点：分别对应一个属性测试</p><p>2.若干个叶节点：对应决策结果</p><p>j决策树学习的目的是为了产生一棵泛化能力强的决策树，基本流程遵循“分而治之”：</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/2.JPG" alt></p><p>递归返回条件：</p><ul><li>当前节点包含的样本全属于同一类别，无需划分</li><li>当前属性集为空，或是所有样本在所有属性上取值相同，无法划分</li><li>当前节点包含的样本集合为空，不能划分。</li></ul><h1><span id="id3">ID3</span></h1><p>信息熵：</p><p>熵是度量样本集合纯度最常用的一种指标，代表一个系统中蕴含多少信息量，信息量越大表明一个系统不确定性就越大，就存在越多的可能性，即信息熵越大。</p><p>假定当前样本集合D中第K类样本所占的比例为 $p_k(k=1,2,...,\mid y\mid)$, 则D的信息熵为：</p><p>$Ent(D)=-\sum_{k=1}^{\mid y \mid}p_{k}log_{2}p_{k}$</p><p>信息熵满足下列不等式：</p><p>$0 \leq Ent(D) \leq log_{2}\mid y \mid$ ,</p><p>$0 \leq p_k \leq 1$, $\sum_{k=1}^np_k=1$</p><p>其中$y$表示D中的样本类别数。</p><h2><span id="id3推导max-value">ID3推导(max-value)</span></h2><p>若令 $\mid y \mid=n,p_k=x_k$, 那么信息熵 $Ent(D)$ 可以看作一个n元实值函数，即</p><p>$Ent(D)=f(x_1,...,x_n)=-\sum_{k=1}^{n}x_{k}log_{2}x_{k}$, 其中：$0 \leq p_k \leq 1$, $\sum_{k=1}^np_k=1$.</p><p>引入拉格朗日乘子 $\lambda$求最值：</p><p>$L(x_1,...,x_n,\lambda)=-\sum_{k=1}^{n}x_{k}log_{2}x_{k}+\lambda(\sum_{k=1}^nx_k-1)$</p><p>$\frac{\partial L(x_1,...,x_n,\lambda)}{\partial x_1}=-log_2x_1-x_1 \cdot \frac{1}{x_{1}ln2}+\lambda=0$</p><p>$\lambda=log_2x_1+\frac{1}{ln2}$</p><p>同理：</p><p>$\lambda=log_2x_1+\frac{1}{ln2}=log_2x_2+\frac{1}{ln2}=...=log_2x_n+\frac{1}{ln2}$</p><p>so: $x_1=x_2=...=x_n=\frac{1}{n}$</p><p>最大值与最小值需要验证：</p><ul><li>$x_1=x_2=...=x_n=\frac{1}{n}$ 时：$f=-n \cdot \frac{1}{n}log_2\frac{1}{n}=log_2n$</li><li>$x_1=1,x_2=x_3=...=x_n=0$ 时： $f=0$</li></ul><p>所以为最大值</p><h2><span id="id3推导min-value">ID3推导(min-value)</span></h2><p>Assume:</p><p>$f(x_1,...x_n)=\sum_{k=1}^ng(x_k)$</p><p>$g(x_k)=-\sum_{k=1}^{n}x_{k}log_{2}x_{k}$, $0 \leq p_k \leq 1$</p><p>求 $g(x_1)$ 的最小值，首先求导：</p><p>$\frac{d(g(x_1))}{dx_1}=-log_2x_1-\frac{1}{ln2}$</p><p>$\frac{d^2(g(x_1))}{dx^2}=-\frac{1}{x_1ln2}$</p><p>在定义域$0 \leq p_k \leq 1$， 始终有 $\frac{d^2(g(x_1))}{dx^2}=-\frac{1}{x_1ln2} \leq 0$,所以最小值在边界处$x_1=0 或 x_1=1$取得：$min g(x_1)=0$</p><p>由推理可得$f(0,0,0,0,1,...,0)=0$</p><p>所以：</p><p>$0 \leq Ent(D) \leq log_{2}\mid y \mid$</p><h2><span id="信息增益">信息增益</span></h2><p>假定离散属性有V个可能的取值 {${a^1,a^2,...,a^V}$}, 如果使用特征a来对数据集D进行划分，则会产生V个分支结点，其中第 $v$ 个结点包含了数据集D中所有在特征a上取值为 $a^V$ 的样本总数，记为 $D^v$, 特征对样本集D进行划分的“样本增益”为：</p><p>$Gain(D,a)=Ent(D)-\sum_{v=1}^V \frac{\mid D^V \mid}{\mid D \mid}Ent(C^v)$</p><h2><span id="缺点">缺点</span></h2><p>1.ID3没有考虑连续特征</p><p>2.ID3采用信息增益大的特征优先建立决策树的节点，取值比较多的特征比取值少的特征信息增益大</p><p>3.ID3算法对于缺失值的情况没有做考虑</p><p>4.没有考虑过拟合的情况</p><h1><span id="c45算法">C4.5算法</span></h1><p>增益率：</p><p>弥补ID3偏向于取值较多属性,C4.5算法不直接使用信息增益，而是使用一种叫增益率的方法来选择最优属性进行划分：</p><p>$Gain-ration(D,a)=\frac{Gain(D,a)}{IV(a)}$</p><p>$IV(a)$ 是属性 $a$ 的固有值：</p><p>$IV(a)=-\sum_{v=1}^V \frac{\mid D^v \mid}{\mid D \mid}log_2 \frac{\mid D^v \mid}{D}$</p><p>属性越多，熵越大，对分支过多的情况进行惩罚。</p><h2><span id="缺点">缺点</span></h2><p>1.C4.5生成的是多叉树，生成决策树的效率比较慢</p><p>2.C4.5只能用于分类</p><p>3.C4.5由于使用了熵模型，对数运算耗时。</p><h1><span id="cart">CART</span></h1><p>Gini值：</p><p>度量数据集的纯度，Gini(D)反应了从数据集中随机抽取两个样本,类别标记不一致的概率，数据越小，纯度越高。</p><p>$Gini(D)=\sum_{k=1}^{\mid y \mid}\sum_{k' \neq k}p_kp_{k'}=1-\sum_{k=1}^{\mid y \mid}p_k^2$</p><p>$Gini-index(D,a)=\sum_{v=1}^V \frac{\mid D^v \mid}{\mid D \mid}Gini(D^v)$</p>]]></content>
     
     <summary type="html">
     
