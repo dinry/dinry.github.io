@@ -150,16 +150,25 @@
   <meta name="description" content="决策树定义 决策树是基于输结构来进行决策的一类常见的机器学习分类方法。 解决问题 “当前样本属于正类吗？” “这是好瓜吗？” “它的根蒂是什么形态”  决策过程的最终结论（叶子节点）对应了我们所希望的判定结果：好瓜 or 坏瓜 结构 1.一个根节点和若干个内部节点：分别对应一个属性测试 2.若干个叶节点：对应决策结果 j决策树学习的目的是为了产生一棵泛化能力强的决策树，基本流程遵循“分而治之”：">
 <meta name="keywords" content="西瓜书">
 <meta property="og:type" content="article">
-<meta property="og:title" content="西瓜书day5,day6(决策树)">
+<meta property="og:title" content="西瓜书day5,day6,day7,day8(决策树)">
 <meta property="og:url" content="http://dinry.github.io/西瓜书day5/index.html">
 <meta property="og:site_name" content="Dinry">
 <meta property="og:description" content="决策树定义 决策树是基于输结构来进行决策的一类常见的机器学习分类方法。 解决问题 “当前样本属于正类吗？” “这是好瓜吗？” “它的根蒂是什么形态”  决策过程的最终结论（叶子节点）对应了我们所希望的判定结果：好瓜 or 坏瓜 结构 1.一个根节点和若干个内部节点：分别对应一个属性测试 2.若干个叶节点：对应决策结果 j决策树学习的目的是为了产生一棵泛化能力强的决策树，基本流程遵循“分而治之”：">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/1.JPG">
 <meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/2.JPG">
-<meta property="og:updated_time" content="2019-07-13T06:49:35.422Z">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/3.JPG">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/4.JPG">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/5.JPG">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/6.JPG">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/7.JPG">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/8.JPG">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/9.JPG">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/10.JPG">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/11.JPG">
+<meta property="og:updated_time" content="2019-07-15T06:05:15.300Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="西瓜书day5,day6(决策树)">
+<meta name="twitter:title" content="西瓜书day5,day6,day7,day8(决策树)">
 <meta name="twitter:description" content="决策树定义 决策树是基于输结构来进行决策的一类常见的机器学习分类方法。 解决问题 “当前样本属于正类吗？” “这是好瓜吗？” “它的根蒂是什么形态”  决策过程的最终结论（叶子节点）对应了我们所希望的判定结果：好瓜 or 坏瓜 结构 1.一个根节点和若干个内部节点：分别对应一个属性测试 2.若干个叶节点：对应决策结果 j决策树学习的目的是为了产生一棵泛化能力强的决策树，基本流程遵循“分而治之”：">
 <meta name="twitter:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/1.JPG">
 
@@ -181,7 +190,7 @@
   };
 </script>
 
-  <title>西瓜书day5,day6(决策树) | Dinry</title>
+  <title>西瓜书day5,day6,day7,day8(决策树) | Dinry</title>
   
 
 
@@ -521,7 +530,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">西瓜书day5,day6(决策树)
+          <h1 class="post-title" itemprop="name headline">西瓜书day5,day6,day7,day8(决策树)
 
               
             
@@ -564,7 +573,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-07-13 14:49:35" itemprop="dateModified" datetime="2019-07-13T14:49:35+08:00">2019-07-13</time>
+                <time title="Modified: 2019-07-15 14:05:15" itemprop="dateModified" datetime="2019-07-15T14:05:15+08:00">2019-07-15</time>
               
             
           </span>
@@ -695,6 +704,36 @@
 <p>度量数据集的纯度，Gini(D)反应了从数据集中随机抽取两个样本,类别标记不一致的概率，数据越小，纯度越高。</p>
 <p>$Gini(D)=\sum_{k=1}^{\mid y \mid}\sum_{k' \neq k}p_kp_{k'}=1-\sum_{k=1}^{\mid y \mid}p_k^2$</p>
 <p>$Gini-index(D,a)=\sum_{v=1}^V \frac{\mid D^v \mid}{\mid D \mid}Gini(D^v)$</p>
+<h1><span id="剪枝">剪枝</span></h1>
+<p>减指是决策树学习算法处理过拟合的重要手段。决策树剪枝的基本策略有“预剪枝”和“后剪枝”。预剪枝是对每个节点在划分前进行估计，若不能带来泛化能力的提升，则停止划分并将该节点标记为叶节点。后剪枝则是先从训练集生成一颗完整的决策树，然后自底向上计算泛化能力是否提升，否则标记为叶节点。
+<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/3.JPG" alt></p>
+<h2><span id="预剪枝">预剪枝</span></h2>
+<p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/4.JPG" alt>
+<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/5.JPG" alt></p>
+<h2><span id="后剪枝">后剪枝</span></h2>
+<p>后剪枝先从训练集生成一棵完整的决策树如图4.5，该决策树的验证集精度为42.9%，后剪枝首先考察节点6，然后节点五，节点二，节点三，节点一，计算过程如图。
+<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/6.JPG" alt></p>
+<h2><span id="对比">对比</span></h2>
+<ul>
+<li>后剪枝比预剪枝保留了更多的分支。</li>
+<li>后剪枝欠拟合风险小，泛化能力优于预剪枝决策树</li>
+<li>后剪枝是在生成决策树后进行的，自底向上对非叶节点逐个考察，训练时间与开销都比预剪枝大得多</li>
+</ul>
+<h1><span id="连续与缺失值">连续与缺失值</span></h1>
+<h1><span id="连续值处理在决策树学习中使用连续属性进行决策">连续值处理：在决策树学习中使用连续属性进行决策</span></h1>
+<p>方法：连续属性离散化：（eg,二分法)</p>
+<p>给定样本集$D$ 和连续属性，划分点$t$可以将D分为子集 $D_t^-$ 与 $D_t^+$, $D_t^-$包含在属性 $a$ 上不大于 $t$ 的样本，候选划分集合：</p>
+<p>$T_a={\frac{a^i+a^{i+1}}{2} \mid 1 \leq i \leq n-1}$</p>
+<p>然后我们可以像离散属性一样来选择划分点：</p>
+<p>$Gain(D,a)=max_{t \in T_a}Gain(D,a,t)=max_{t \in T_a}Ent(D)-\sum_{\lambda \in {-,+}}\frac{\mid D_t^{\lambda} \mid}{\mid D \mid}Ent(D_t^{\lambda})$</p>
+<p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/7.JPG" alt>
+<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/8.JPG" alt></p>
+<h1><span id="缺失值处理">缺失值处理</span></h1>
+<p>样本的某些属性值缺失如何进行划分属性的选择呢？</p>
+<p>给定划分属性，若样本在该属性上的值缺失，如何对样本进行划分？</p>
+<p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/9.JPG" alt></p>
+<p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/10.JPG" alt></p>
+<p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/11.JPG" alt></p>
 
       
     </div>
@@ -962,7 +1001,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">决策树定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">解决问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">ID3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.1.</span> <span class="nav-text">ID3推导(max-value)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.2.</span> <span class="nav-text">ID3推导(min-value)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.3.</span> <span class="nav-text">信息增益</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.4.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text">C4.5算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.1.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">6.</span> <span class="nav-text">CART</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">决策树定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">解决问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">ID3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.1.</span> <span class="nav-text">ID3推导(max-value)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.2.</span> <span class="nav-text">ID3推导(min-value)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.3.</span> <span class="nav-text">信息增益</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.4.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text">C4.5算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.1.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">6.</span> <span class="nav-text">CART</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">7.</span> <span class="nav-text">剪枝</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">7.1.</span> <span class="nav-text">预剪枝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">7.2.</span> <span class="nav-text">后剪枝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">7.3.</span> <span class="nav-text">对比</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">8.</span> <span class="nav-text">连续与缺失值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">9.</span> <span class="nav-text">连续值处理：在决策树学习中使用连续属性进行决策</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">10.</span> <span class="nav-text">缺失值处理</span></a></li></ol></div>
             
 
           </div>
