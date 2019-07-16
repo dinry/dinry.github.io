@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dinry.github.io/"/>
-  <updated>2019-07-12T12:56:57.809Z</updated>
+  <updated>2019-07-16T01:15:50.074Z</updated>
   <id>http://dinry.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>西瓜书day9(支持向量机)</title>
+    <link href="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/"/>
+    <id>http://dinry.github.io/西瓜书day9/</id>
+    <published>2019-07-16T00:53:00.000Z</published>
+    <updated>2019-07-16T01:15:50.074Z</updated>
+    
+    <content type="html"><![CDATA[<h1><span id="间隔与支持向量">间隔与支持向量</span></h1><p>分类学习最基本的想法就是基于训练集D在样本空间中找到一个划分超平面，将不同类别的样本分开。<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/1.JPG" alt></p><p>直观来说，应该找位于两类训练样本“正中间”的划分超平面，因为其对训练样本局部扰动的“容忍”性最好。</p><p>在训练样本中，划分超平面可以通过线性方程 $\mathbb{w}^T\mathbb{x}+b=0$ 来描述。其中 $\mathbb{w}=(w_1;w_2;...;d_d)$ 为法向量，决定了超平面的方向；b为位移，决定了超平面与原点之间的距离。样本空间中任意点 $x$ 到超平面$(\mathbb{w},b)$ 的距离可写为：</p><p>$r=\frac{\mid \mathbb{w}^T\mathbb{x}+b \mid}{\mid \mid \mathbb{w} \mid \mid}$.</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/2.JPG" alt></p><h1><span id="支持向量基本型">支持向量基本型</span></h1><p>最大间隔超平面条件等同于最小化如下公式：</p><p>$min_{w,b} \frac{1}{2} \mid \mid \mathbb{w} \mid \mid^2$</p><p>s.t. $y_i(\mathbb{w}^T\mathbb{x}_i+b) \ge 1$, i=1,2,...,m.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1&gt;&lt;span id=&quot;间隔与支持向量&quot;&gt;间隔与支持向量&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;分类学习最基本的想法就是基于训练集D在样本空间中找到一个划分超平面，将不同类别的样本分开。
+&lt;img src=&quot;/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/1.JPG
+      
+    
+    </summary>
+    
+      <category term="ML" scheme="http://dinry.github.io/categories/ML/"/>
+    
+    
+      <category term="西瓜书" scheme="http://dinry.github.io/tags/%E8%A5%BF%E7%93%9C%E4%B9%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>paper:AdamOptimizer</title>
