@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dinry.github.io/"/>
-  <updated>2019-07-20T00:13:44.823Z</updated>
+  <updated>2019-07-20T00:15:11.547Z</updated>
   <id>http://dinry.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/"/>
     <id>http://dinry.github.io/西瓜书day13/</id>
     <published>2019-07-19T23:55:41.000Z</published>
-    <updated>2019-07-20T00:13:44.823Z</updated>
+    <updated>2019-07-20T00:15:11.547Z</updated>
     
-    <content type="html"><![CDATA[<h1><span id="mle根据采样来估计概率分布">MLE：根据采样来估计概率分布</span></h1><p>概率模型的训练过程就是参数估计过程。</p><p>频率主义学派：</p><p>参数虽然未知，但却是客观存在的固定值，因此，可通过优化似然函数等准则来确定参数值</p><p>贝叶斯学派：</p><p>参数是为观察到的随机变量，其本身也可以有分布，因此，可假定参数服从一个先验分布，然后基于观测到的数据来计算参数的后验分布。</p><p>MLE源自频率主义学派。</p><p>$P(D_c \mid \theta_c)=\prod_{x \in D_c}P(x \mid \theta_c)$</p><p>其中 $D_c$ 表示训练集D中第c类样本组成的集合。</p><p>推导：</p><p>$LL(\theta_c)=logP(D_c \mid \theta_c)$$=\sum_{x \in D_c}logP(x \mid \theta_c)$</p><p>$\hat{\theta}<em>c=argmax</em>{\theta_c}LL(\theta_c)$</p><h2><span id="评估">评估</span></h2><p>这种参数化的方法虽然能使类条件概率估计变得相对简单，但估计结果的准确性严重依赖于所假设的概率分布形式是否符合潜在的真实数据分布。</p>]]></content>
+    <content type="html"><![CDATA[<h1><span id="mle根据采样来估计概率分布">MLE：根据采样来估计概率分布</span></h1><p>概率模型的训练过程就是参数估计过程。</p><p>频率主义学派：</p><p>参数虽然未知，但却是客观存在的固定值，因此，可通过优化似然函数等准则来确定参数值</p><p>贝叶斯学派：</p><p>参数是为观察到的随机变量，其本身也可以有分布，因此，可假定参数服从一个先验分布，然后基于观测到的数据来计算参数的后验分布。</p><p>MLE源自频率主义学派。</p><p>$P(D_c \mid \theta_c)=\prod_{x \in D_c}P(x \mid \theta_c)$</p><p>其中 $D_c$ 表示训练集D中第c类样本组成的集合。</p><p>推导：</p><p>$LL(\theta_c)=logP(D_c \mid \theta_c)$$=\sum_{x \in D_c}logP(x \mid \theta_c)$</p><p>$\hat{\theta_c}=argmax_{\theta_c}LL(\theta_c)$</p><h2><span id="评估">评估</span></h2><p>这种参数化的方法虽然能使类条件概率估计变得相对简单，但估计结果的准确性严重依赖于所假设的概率分布形式是否符合潜在的真实数据分布。</p>]]></content>
     
     <summary type="html">
     
