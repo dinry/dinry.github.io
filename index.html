@@ -520,7 +520,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/西瓜书day13/" class="post-title-link" itemprop="url">西瓜书day13（贝叶斯分类器）</a>
+                <a href="/西瓜书day13/" class="post-title-link" itemprop="url">西瓜书day13,day14（贝叶斯分类器）</a>
               
             
           </h1>
@@ -545,12 +545,24 @@
                 
               
 
-              <time title="Created: 2019-07-20 07:55:41 / Modified: 08:15:11" itemprop="dateCreated datePublished" datetime="2019-07-20T07:55:41+08:00">2019-07-20</time>
+              <time title="Created: 2019-07-20 07:55:41" itemprop="dateCreated datePublished" datetime="2019-07-20T07:55:41+08:00">2019-07-20</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-07-21 10:42:16" itemprop="dateModified" datetime="2019-07-21T10:42:16+08:00">2019-07-21</time>
               
             
           </span>
@@ -605,12 +617,10 @@
         
           
             <p>
-              MLE：根据采样来估计概率分布
-概率模型的训练过程就是参数估计过程。
-频率主义学派：
-参数虽然未知，但却是客观存在的固定值，因此，可通过优化似然函数等准则来确定参数值
-贝叶斯学派：
-参数是为观察到的随机变量，其本身也可以有分布，因此，可假定参数服从一个先验分布，然后基于观测到的数据来计算参数的后验分
+              以多分类为例
+贝叶斯判定准则
+为最小化总体风险，只需在每个样本上选择能使条件风险 $R(c \mid x)$ 最小的类别标记，即为： $h^*(x)=argmin_{c \in y}R(c \mid x)=argmax_{c \in y}P(c \mid x)$,
+此时，$h^*$ 为贝叶斯最优分类
               ...
             </p>
           <!--noindex-->

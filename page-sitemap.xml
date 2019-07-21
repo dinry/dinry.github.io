@@ -49,14 +49,14 @@
     </url>
     
     <url>
-        <loc>http://dinry.github.io/about/</loc>
+        <loc>http://dinry.github.io/archive/</loc>
         <lastmod>2019-06-17T08:36:04.666Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://dinry.github.io/archive/</loc>
+        <loc>http://dinry.github.io/about/</loc>
         <lastmod>2019-06-17T08:36:04.666Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
