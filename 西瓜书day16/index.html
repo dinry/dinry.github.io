@@ -147,21 +147,24 @@
 
 
 
-  <meta name="description" content="introduction def top_k(input, k=1, sorted=True, name=None) Finds values and indices of the k largest entries for the last dimension. If the input is a vector (rank=1), finds the k largest entries in t">
-<meta name="keywords" content="tensorflow">
+  <meta name="description" content="神经元模型 神经网络中最基本的成分是神经元模型。 M-P神经元模型  激活函数  感知机与多层网络 感知机 感知机由两层神经元组成，如图，  感知机能够容易的实现逻辑与、或、非运算， $f(\sum_iw_ix_i-\theta)$, 假定f是阶跃函数，有  与：令 $w_1=w_2=1,\theta=2$, 则 $y=f(1 \cdot x_1+1 \cdot x_2-2)$,仅在$x_1=x_">
+<meta name="keywords" content="西瓜书">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tensorflow深度学习(2):tf.nn.top_k()">
-<meta property="og:url" content="http://dinry.github.io/tensorflow深度学习-2-tf-nn-top-k/index.html">
+<meta property="og:title" content="西瓜书day16，day17(神经网络)">
+<meta property="og:url" content="http://dinry.github.io/西瓜书day16/index.html">
 <meta property="og:site_name" content="Dinry">
-<meta property="og:description" content="introduction def top_k(input, k=1, sorted=True, name=None) Finds values and indices of the k largest entries for the last dimension. If the input is a vector (rank=1), finds the k largest entries in t">
+<meta property="og:description" content="神经元模型 神经网络中最基本的成分是神经元模型。 M-P神经元模型  激活函数  感知机与多层网络 感知机 感知机由两层神经元组成，如图，  感知机能够容易的实现逻辑与、或、非运算， $f(\sum_iw_ix_i-\theta)$, 假定f是阶跃函数，有  与：令 $w_1=w_2=1,\theta=2$, 则 $y=f(1 \cdot x_1+1 \cdot x_2-2)$,仅在$x_1=x_">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://dinry.github.io/tensorflow%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-2-tf-nn-top-k/1.JPG">
-<meta property="og:image" content="http://dinry.github.io/tensorflow%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-2-tf-nn-top-k/2.JPG">
-<meta property="og:updated_time" content="2019-07-05T03:47:15.683Z">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/1.JPG">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/2.JPG">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/3.JPG">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/4.JPG">
+<meta property="og:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/5.JPG">
+<meta property="og:updated_time" content="2019-07-24T07:57:03.958Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tensorflow深度学习(2):tf.nn.top_k()">
-<meta name="twitter:description" content="introduction def top_k(input, k=1, sorted=True, name=None) Finds values and indices of the k largest entries for the last dimension. If the input is a vector (rank=1), finds the k largest entries in t">
-<meta name="twitter:image" content="http://dinry.github.io/tensorflow%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-2-tf-nn-top-k/1.JPG">
+<meta name="twitter:title" content="西瓜书day16，day17(神经网络)">
+<meta name="twitter:description" content="神经元模型 神经网络中最基本的成分是神经元模型。 M-P神经元模型  激活函数  感知机与多层网络 感知机 感知机由两层神经元组成，如图，  感知机能够容易的实现逻辑与、或、非运算， $f(\sum_iw_ix_i-\theta)$, 假定f是阶跃函数，有  与：令 $w_1=w_2=1,\theta=2$, 则 $y=f(1 \cdot x_1+1 \cdot x_2-2)$,仅在$x_1=x_">
+<meta name="twitter:image" content="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/1.JPG">
 
 
 
@@ -171,7 +174,7 @@
 
   
   
-  <link rel="canonical" href="http://dinry.github.io/tensorflow深度学习-2-tf-nn-top-k/">
+  <link rel="canonical" href="http://dinry.github.io/西瓜书day16/">
 
 
 
@@ -181,7 +184,7 @@
   };
 </script>
 
-  <title>tensorflow深度学习(2):tf.nn.top_k() | Dinry</title>
+  <title>西瓜书day16，day17(神经网络) | Dinry</title>
   
 
 
@@ -504,7 +507,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://dinry.github.io/tensorflow深度学习-2-tf-nn-top-k/">
+    <link itemprop="mainEntityOfPage" href="http://dinry.github.io/西瓜书day16/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dinry">
@@ -521,7 +524,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">tensorflow深度学习(2):tf.nn.top_k()
+          <h1 class="post-title" itemprop="name headline">西瓜书day16，day17(神经网络)
 
               
             
@@ -547,7 +550,7 @@
                 
               
 
-              <time title="Created: 2019-07-05 11:42:07 / Modified: 11:47:15" itemprop="dateCreated datePublished" datetime="2019-07-05T11:42:07+08:00">2019-07-05</time>
+              <time title="Created: 2019-07-24 15:14:48 / Modified: 15:57:03" itemprop="dateCreated datePublished" datetime="2019-07-24T15:14:48+08:00">2019-07-24</time>
             
 
             
@@ -557,6 +560,24 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ML/" itemprop="url" rel="index"><span itemprop="name">ML</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -586,16 +607,33 @@
       
 
       
-        <h1><span id="introduction">introduction</span></h1>
-<p>def top_k(input, k=1, sorted=True, name=None)</p>
-<p>Finds values and indices of the k largest entries for the last dimension.</p>
-<p>If the input is a vector (rank=1), finds the k largest entries in the vector and outputs their values and indices as vectors.Thus values[j] is the j-th largest entry in input, and its index is indices[j].</p>
-<p>For matrices (resp. higher rank input), computes the top k entries in each row (resp. vector along the last dimension).Thus, values.shape = indices.shape = input.shape[:-1] + [k]</p>
-<p>If two elements are equal, the lower-index element appears first.</p>
-<h1><span id="parameters">parameters</span></h1>
-<p><img src="/tensorflow%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-2-tf-nn-top-k/1.JPG" alt></p>
-<h1><span id="code">code</span></h1>
-<p><img src="/tensorflow%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-2-tf-nn-top-k/2.JPG" alt></p>
+        <h1><span id="神经元模型">神经元模型</span></h1>
+<p>神经网络中最基本的成分是神经元模型。</p>
+<h2><span id="m-p神经元模型">M-P神经元模型</span></h2>
+<p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/1.JPG" alt></p>
+<h2><span id="激活函数">激活函数</span></h2>
+<p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/2.JPG" alt></p>
+<h1><span id="感知机与多层网络">感知机与多层网络</span></h1>
+<h2><span id="感知机">感知机</span></h2>
+<p>感知机由两层神经元组成，如图，
+<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/3.JPG" alt></p>
+<p>感知机能够容易的实现逻辑与、或、非运算， $f(\sum_iw_ix_i-\theta)$, 假定f是阶跃函数，有</p>
+<ul>
+<li>与：令 $w_1=w_2=1,\theta=2$, 则 $y=f(1 \cdot x_1+1 \cdot x_2-2)$,仅在$x_1=x_2=1$ 时，y=1;</li>
+<li>或：令 $w_1=w_2=1,\theta=0.5$, 则 $y=f(1 \cdot x_1+1 \cdot x_2-0.5)$,仅在$x_1=1 or x_2=1$ 时，y=1;</li>
+<li>非：令令 $w_1=-06，w_2=0,\theta=-0.5$, 则 $y=f(-0.6 \cdot x_1+0 \cdot x_2+0.5)$,当$x_1=1$ 时，$y=0$,当 $x_1=0$ 时， $y=1$.</li>
+</ul>
+<p>给定训练数据集，权重与阈值可以通过学习得到。</p>
+<p>感知机学习规则：对训练样例(x,y)，若当前感知机的输出为 $\hat{y}$, 则感知机权重将这样调整：</p>
+<p>$w_i \leftarrow w_i +\Delta w_i$</p>
+<p>$\Delta w_i=\eta(y-\hat{y})x_i$</p>
+<p>其中 $\eta \in (0,1)$ 代表learning rate,.</p>
+<h2><span id="感知机的局限性">感知机的局限性</span></h2>
+<p>感知机只拥有一层功能神经元，学习能力非常有限，只能处理线性可分问题，不能解决抑或问题。
+<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/4.JPG" alt>
+要解决非线性可分问题，需要考虑多层神经元，例如添加一个隐藏层的两层神经元可以解决“异或”问题。
+<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/5.JPG" alt>
+神经网络的学习过程，就是根据训练数据来调整神经元之间的权重以及每个功能神经元的阈值。</p>
 
       
     </div>
@@ -628,7 +666,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/tensorflow/" rel="tag"># tensorflow</a>
+            <a href="/tags/西瓜书/" rel="tag"># 西瓜书</a>
           
         </div>
       
@@ -641,8 +679,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/tensorflow常用集合/" rel="next" title="temsorflow常用集合(colection)">
-                <i class="fa fa-chevron-left"></i> temsorflow常用集合(colection)
+              <a href="/西瓜书day13/" rel="next" title="西瓜书day13,day14,day15（贝叶斯分类器）">
+                <i class="fa fa-chevron-left"></i> 西瓜书day13,day14,day15（贝叶斯分类器）
               </a>
             
           </div>
@@ -650,10 +688,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/西瓜书day1/" rel="prev" title="西瓜书day1（绪论）">
-                西瓜书day1（绪论） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -863,7 +897,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">parameters</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">code</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">神经元模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.1.</span> <span class="nav-text">M-P神经元模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.2.</span> <span class="nav-text">激活函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">感知机与多层网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.1.</span> <span class="nav-text">感知机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.2.</span> <span class="nav-text">感知机的局限性</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dinry.github.io/"/>
-  <updated>2019-07-22T10:56:08.546Z</updated>
+  <updated>2019-07-24T07:57:03.958Z</updated>
   <id>http://dinry.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>西瓜书day16，day17(神经网络)</title>
+    <link href="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/"/>
+    <id>http://dinry.github.io/西瓜书day16/</id>
+    <published>2019-07-24T07:14:48.000Z</published>
+    <updated>2019-07-24T07:57:03.958Z</updated>
+    
+    <content type="html"><![CDATA[<h1><span id="神经元模型">神经元模型</span></h1><p>神经网络中最基本的成分是神经元模型。</p><h2><span id="m-p神经元模型">M-P神经元模型</span></h2><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/1.JPG" alt></p><h2><span id="激活函数">激活函数</span></h2><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/2.JPG" alt></p><h1><span id="感知机与多层网络">感知机与多层网络</span></h1><h2><span id="感知机">感知机</span></h2><p>感知机由两层神经元组成，如图，<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/3.JPG" alt></p><p>感知机能够容易的实现逻辑与、或、非运算， $f(\sum_iw_ix_i-\theta)$, 假定f是阶跃函数，有</p><ul><li>与：令 $w_1=w_2=1,\theta=2$, 则 $y=f(1 \cdot x_1+1 \cdot x_2-2)$,仅在$x_1=x_2=1$ 时，y=1;</li><li>或：令 $w_1=w_2=1,\theta=0.5$, 则 $y=f(1 \cdot x_1+1 \cdot x_2-0.5)$,仅在$x_1=1 or x_2=1$ 时，y=1;</li><li>非：令令 $w_1=-06，w_2=0,\theta=-0.5$, 则 $y=f(-0.6 \cdot x_1+0 \cdot x_2+0.5)$,当$x_1=1$ 时，$y=0$,当 $x_1=0$ 时， $y=1$.</li></ul><p>给定训练数据集，权重与阈值可以通过学习得到。</p><p>感知机学习规则：对训练样例(x,y)，若当前感知机的输出为 $\hat{y}$, 则感知机权重将这样调整：</p><p>$w_i \leftarrow w_i +\Delta w_i$</p><p>$\Delta w_i=\eta(y-\hat{y})x_i$</p><p>其中 $\eta \in (0,1)$ 代表learning rate,.</p><h2><span id="感知机的局限性">感知机的局限性</span></h2><p>感知机只拥有一层功能神经元，学习能力非常有限，只能处理线性可分问题，不能解决抑或问题。<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/4.JPG" alt>要解决非线性可分问题，需要考虑多层神经元，例如添加一个隐藏层的两层神经元可以解决“异或”问题。<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/5.JPG" alt>神经网络的学习过程，就是根据训练数据来调整神经元之间的权重以及每个功能神经元的阈值。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1&gt;&lt;span id=&quot;神经元模型&quot;&gt;神经元模型&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;神经网络中最基本的成分是神经元模型。&lt;/p&gt;
+&lt;h2&gt;&lt;span id=&quot;m-p神经元模型&quot;&gt;M-P神经元模型&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/%E8%A5%BF%E7%93%
+      
+    
+    </summary>
+    
+      <category term="ML" scheme="http://dinry.github.io/categories/ML/"/>
+    
+    
+      <category term="西瓜书" scheme="http://dinry.github.io/tags/%E8%A5%BF%E7%93%9C%E4%B9%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>西瓜书day13,day14,day15（贝叶斯分类器）</title>
