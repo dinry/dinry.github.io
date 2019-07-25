@@ -150,7 +150,7 @@
   <meta name="description" content="路漫漫其修远兮，吾将上下而求索">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Dinry">
-<meta property="og:url" content="http://dinry.github.io/categories/deep-learning/index.html">
+<meta property="og:url" content="http://dinry.github.io/categories/Deep-learning/index.html">
 <meta property="og:site_name" content="Dinry">
 <meta property="og:description" content="路漫漫其修远兮，吾将上下而求索">
 <meta property="og:locale" content="en">
@@ -166,7 +166,7 @@
 
   
   
-  <link rel="canonical" href="http://dinry.github.io/categories/deep-learning/">
+  <link rel="canonical" href="http://dinry.github.io/categories/Deep-learning/">
 
 
 
@@ -176,7 +176,7 @@
   };
 </script>
 
-  <title>Category: deep learning | Dinry</title>
+  <title>Category: Deep learning | Dinry</title>
   
 
 
@@ -521,7 +521,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>deep learning<small>Category</small>
+        <h1>Deep learning<small>Category</small>
         </h1>
       </div>
 
@@ -533,17 +533,95 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/paper-AdamOptimizer/" itemprop="url">
+          <a class="post-title-link" href="/gans-problem/" itemprop="url">
             
-              <span itemprop="name">paper:AdamOptimizer</span>
+              <span itemprop="name">gans problem</span>
             
           </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-12T20:20:39+08:00" content="2019-07-12">
-          07-12
+        <time class="post-time" itemprop="dateCreated" datetime="2019-06-18T21:31:22+08:00" content="2019-06-18">
+          06-18
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+          <a class="post-title-link" href="/gan-application/" itemprop="url">
+            
+              <span itemprop="name">gan application</span>
+            
+          </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-06-18T21:28:59+08:00" content="2019-06-18">
+          06-18
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+          <a class="post-title-link" href="/GAN-theory/" itemprop="url">
+            
+              <span itemprop="name">GAN theory</span>
+            
+          </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-06-18T21:23:27+08:00" content="2019-06-18">
+          06-18
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+          <a class="post-title-link" href="/generate-model/" itemprop="url">
+            
+              <span itemprop="name">generate model</span>
+            
+          </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-06-18T13:54:41+08:00" content="2019-06-18">
+          06-18
         </time>
       </div>
 
@@ -1164,105 +1242,6 @@
                 }
               });
               var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/algolia-search.js?v=7.1.2"></script>
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
-\"search-result-list\">';
               resultItems.forEach(function (result) {
                 searchResultList += result.item;
               })
