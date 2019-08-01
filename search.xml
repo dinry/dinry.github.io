@@ -4,11 +4,86 @@
   
     
     <entry>
-      <title>西瓜书day16，day17,day18(神经网络)</title>
+      <title>神经网络训练问题排查</title>
+      <link href="/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%AE%AD%E7%BB%83%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/"/>
+      <url>/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%AE%AD%E7%BB%83%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="数据标准化">数据标准化</span></h1><p>数据的分布情况如何？数据是否经过适当的缩放？总体上的规则是：</p><ul><li>如果数据是连续值：范围应当在-1到1、0到1，或者呈平均值为0、标准差为1的正态分布。实际的范围不用如此精确，但确保输入数据大致处于上述区间内会有助于训练。缩小过大的输入，放大过小的输入。</li><li>如果数据是离散的类别（以及对于分类问题的输出而言），则通常使用one-hot表示。也就是说，如果有三种类别，那么这三种不同类别的数据将分别以[1,0,0]、[0,1,0]、[0,0,1]的方式表示。</li></ul><p>请注意：训练数据和测试数据的标准化方法必须完全相同，这非常重要。</p><h1><span id="权重初始化">权重初始化</span></h1><p>您需要确保权重不会过大，也不会过小。Xavier权重初始化方法通常是比较好的选择。对于使用修正线性（relu）或带泄露的修正线性（leaky relu）激活函数的网络而言，RELU权重初始化方法比较合适。</p><h1><span id="epoch数量和迭代次数">Epoch数量和迭代次数</span></h1><p>一个epoch周期的定义是完整地遍历数据集一次。DL4J将迭代次数定义为每个微批次中的参数更新次数。</p><p>在训练中，一般应让训练持续多个epoch，而将迭代次数设为一次（.iterations(1)选项）；一般仅在对非常小的数据集进行完整批次的训练时才会采用大于1的迭代次数。</p><p>如果epoch数量太少，网络就没有足够的时间学会合适的参数；epoch数量太多则有可能导致网络对训练数据过拟合。选择epoch数量的方式之一是早停法。早停法还可以避免神经网络发生过拟合（即可以帮助网络更好地适应未曾见过的数据）。</p><h1><span id="学习速率">学习速率</span></h1><p>学习速率是最重要的超参数之一。如果学习速率过高或过低，网络可能学习效果非常差、学习速度非常慢，甚至完全没有进展。学习速率的取值范围一般在0.1到1e-6之间，最理想的速率通常取决于具体的数据（以及网络架构）。一种简单的建议是，一开始可以尝试三种不同的学习速率：1e-1、1e-3、1e-6，先大致了解一下应该设为怎样的值，然后再进一步微调。理想状态下，可以同时以不同的学习速率运行模型，以便节省时间。</p><p>选择合适的学习速率的常用方法是借助DL4J的可视化界面来将训练进程可视化。您需要关注损失随时间变化的情况以及更新值与参数的绝对值之比（通常可以先考虑1:1000左右的比例）。</p><h1><span id="策略与学习速率计划">策略与学习速率计划</span></h1><p>您可以选择为神经网络设定学习速率策略，让学习速率随着时间推移逐渐“放缓”，帮助网络收敛至更接近局部极小值的位置，进而取得更好的学习效果。一种常用的策略是学习速率计划（learning rate schedule）。</p><h1><span id="损失函数">损失函数</span></h1><p>神经网络不同层中的损失函数的作用包括预训练、学习改善权重，以及在分类问题中得出结果（位于输出层上）。（在上述例子中，分类发生在重写段中。）</p><p>网络目的决定了所用的损失函数类型。预训练可选择重构熵函数。分类可选择多类叉熵函数。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Deep learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Deep learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深度学习调参技巧</title>
+      <link href="/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%B0%83%E5%8F%82%E6%8A%80%E5%B7%A7/"/>
+      <url>/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%B0%83%E5%8F%82%E6%8A%80%E5%B7%A7/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="初始化">初始化</span></h1><p>一次惨痛的教训是用normal初始化cnn的参数，最后acc只能到70%多，仅仅改成xavier，acc可以到98%。还有一次给word embedding初始化，最开始使用了TensorFlow中默认的initializer（即glorot_uniform_initializer，也就是大家经常说的无脑使用xavier），训练速度慢不说，结果也不好。改为uniform，训练速度飙升，结果也飙升。所以，初始化就跟黑科技一样，用对了超参都不用调；没用对，跑出来的结果就跟模型有bug一样不忍直视。</p><p>记得刚开始研究深度学习时，做过两个小例子。一个是用tensorflow构建了一个十分简单的只有一个输入层和一个softmax输出层的Mnist手写识别网络，第一次我对权重矩阵W和偏置b采用的是正态分布初始化，一共迭代了20个epoch，当迭代完第一个epoch时，预测的准确度只有10%左右（和随机猜一样，Mnist是一个十分类问题），当迭代完二十个epoch，精度也仅仅达到了60%的样子。然后我仅仅是将权重矩阵W初始化方法改成了全为0的初始化，其他的参数均保持不变，结果在训练完第一个epoch后预测精度就达到了85%以上，最终20个epoch后精度达到92%。另一个例子是回归问题的预测，当时采用的SGD优化器，一开始学习率设定的0.1，模型可以正常训练，只是训练速度有些慢，我试着将学习率调整到0.3，希望可以加速训练速度，结果没迭代几轮loss就变成Nan了。于是从那时起我就深刻的感受到参数调节在深度学习模型训练中的重要意义。</p><p>其实上述问题产生的原因也很好理解，对于参数初始化，因为我们学习的本来就是权重W与偏置b，如果初始化足够好，直接就初始化到最优解，那都不用进行训练了。良好的初始化，可以让参数更接近最优解，这可以大大提高收敛速度，也可以防止落入局部极小。</p><h4><span id="tensorflow常用的初始化方法">tensorflow常用的初始化方法</span></h4><h1><span id="激活函数选择">激活函数选择：</span></h1><p>常用的激活函数有relu、leaky-relu、sigmoid、tanh等。对于输出层，多分类任务选用softmax输出，二分类任务选用sigmoid输出，回归任务选用线性输出。而对于中间隐层，则优先选择relu激活函数（relu激活函数可以有效的解决sigmoid和tanh出现的梯度弥散问题，多次实验表明它会比其他激活函数以更快的速度收敛）。另外，构建序列神经网络（RNN）时要优先选用tanh激活函数。</p><h1><span id="学习率设定">学习率设定：</span></h1><p>一般学习率从0.1或0.01开始尝试。学习率设置太大会导致训练十分不稳定，甚至出现Nan，设置太小会导致损失下降太慢。学习率一般要随着训练进行衰减。衰减系数设0.1，0.3，0.5均可，衰减时机，可以是验证集准确率不再上升时，或固定训练多少个周期以后自动进行衰减。</p><h1><span id="防止过拟合">防止过拟合：</span></h1><p>一般常用的防止过拟合方法有使用L1正则项、L2正则项、dropout、提前终止、数据集扩充等。如果模型在训练集上表现比较好但在测试集上表现欠佳可以选择增大L1或L2正则的惩罚力度（L2正则经验上首选1.0，超过10很少见），或增大dropout的随机失活概率（经验首选0.5）；或者当随着训练的持续在测试集上不增反降时，使用提前终止训练的方法。当然最有效的还是增大训练集的规模，实在难以获得新数据也可以使用数据集增强的方法，比如CV任务可以对数据集进行裁剪、翻转、平移等方法进行数据集增强，这种方法往往都会提高最后模型的测试精度。</p><h1><span id="优化器选择">优化器选择：</span></h1><p>如果数据是稀疏的，就用自适应方法，即 Adagrad, Adadelta, RMSprop, Adam。整体来讲，Adam 是最好的选择。SGD 虽然能达到极小值，但是比其它算法用的时间长，而且可能会被困在鞍点。如果需要更快的收敛，或者是训练更深更复杂的神经网络，需要用一种自适应的算法。</p><h1><span id="残差块与bn层">残差块与BN层</span></h1><p>如果你希望训练一个更深更复杂的网络，那么残差块绝对是一个重要的组件，它可以让你的网络训练的更深。</p><p>BN层具有加速训练速度，有效防止梯度消失与梯度爆炸，具有防止过拟合的效果，所以构建网络时最好要加上这个组件。</p><h1><span id="自动调参方法">自动调参方法：</span></h1><ul><li>Grid Search：网格搜索，在所有候选的参数选择中，通过循环遍历，尝试每一种可能性，表现最好的参数就是最终的结果。其原理就像是在数组里找最大值。缺点是太费时间了，特别像神经网络，一般尝试不了太多的参数组合。</li><li>Random Search：经验上，Random Search比Gird Search更有效。实际操作的时候，一般也是先用Gird Search的方法，得到所有候选参数，然后每次从中随机选择进行训练。另外Random Search往往会和由粗到细的调参策略结合使用，即在效果比较好的参数附近进行更加精细的搜索。</li><li>Bayesian Optimization：贝叶斯优化，考虑到了不同参数对应的 实验结果值，因此更节省时间，贝叶斯调参比Grid Search迭代次数少， 速度快；而且其针对非凸问题依然稳健。</li></ul><h1><span id="深度学习debug的流程策略">深度学习debug的流程策略</span></h1><p>既然消除模型中的错误很难，我们不如先从简单模型入手，然后逐渐增加模型的复杂度。</p><ul><li>从最简单模型入手；</li><li>成功搭建模型，重现结果；</li><li>分解偏差各项，逐步拟合数据；</li><li>用由粗到细随机搜索优化超参数；</li><li>如果欠拟合，就增大模型；如果过拟合，就添加数据或调整。</li></ul><p><img src="https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Deep learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Deep learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python-excel</title>
+      <link href="/python-excel/"/>
+      <url>/python-excel/</url>
+      
+        <content type="html"><![CDATA[<p>python存excel数据</p><pre><code class="language-js">import xlwtimport pdbworkbook=xlwt.Workbook(encoding='utf-8')booksheet=workbook.add_sheet('data', cell_overwrite_ok=True)DATA=(('学号','姓名','年龄','性别','成绩'),      ('1001','A','11','男','12'),      ('1002','B','12','女','22'),      ('1003','C','13','女','32'),      ('1004','D','14','男','52'),      )pdb.set_trace()for i,row in enumerate(DATA):    for j,col in enumerate(row):        booksheet.write(i,j,col)workbook.save('grade.xls')</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python语法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>西瓜书day16，day17,day18,day19,day20(神经网络)</title>
       <link href="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/"/>
       <url>/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/</url>
       
-        <content type="html"><![CDATA[<h1><span id="神经元模型">神经元模型</span></h1><p>神经网络中最基本的成分是神经元模型。</p><h2><span id="m-p神经元模型">M-P神经元模型</span></h2><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/1.JPG" alt></p><h2><span id="激活函数">激活函数</span></h2><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/2.JPG" alt></p><h1><span id="感知机与多层网络">感知机与多层网络</span></h1><h2><span id="感知机">感知机</span></h2><p>感知机由两层神经元组成，如图，<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/3.JPG" alt></p><p>感知机能够容易的实现逻辑与、或、非运算， $f(\sum_iw_ix_i-\theta)$, 假定f是阶跃函数，有</p><ul><li>与：令 $w_1=w_2=1,\theta=2$, 则 $y=f(1 \cdot x_1+1 \cdot x_2-2)$,仅在$x_1=x_2=1$ 时，y=1;</li><li>或：令 $w_1=w_2=1,\theta=0.5$, 则 $y=f(1 \cdot x_1+1 \cdot x_2-0.5)$,仅在$x_1=1 or x_2=1$ 时，y=1;</li><li>非：令令 $w_1=-06，w_2=0,\theta=-0.5$, 则 $y=f(-0.6 \cdot x_1+0 \cdot x_2+0.5)$,当$x_1=1$ 时，$y=0$,当 $x_1=0$ 时， $y=1$.</li></ul><p>给定训练数据集，权重与阈值可以通过学习得到。</p><p>感知机学习规则：对训练样例(x,y)，若当前感知机的输出为 $\hat{y}$, 则感知机权重将这样调整：</p><p>$w_i \leftarrow w_i +\Delta w_i$</p><p>$\Delta w_i=\eta(y-\hat{y})x_i$</p><p>其中 $\eta \in (0,1)$ 代表learning rate,.</p><h2><span id="感知机的局限性">感知机的局限性</span></h2><p>感知机只拥有一层功能神经元，学习能力非常有限，只能处理线性可分问题，不能解决抑或问题。<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/4.JPG" alt>要解决非线性可分问题，需要考虑多层神经元，例如添加一个隐藏层的两层神经元可以解决“异或”问题。<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/5.JPG" alt>神经网络的学习过程，就是根据训练数据来调整神经元之间的权重以及每个功能神经元的阈值。</p><h1><span id="误差逆传播算法bp">误差逆传播算法（BP）</span></h1><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/6.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/7.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/8.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/9.JPG" alt></p>]]></content>
+        <content type="html"><![CDATA[<h1><span id="神经元模型">神经元模型</span></h1><p>神经网络中最基本的成分是神经元模型。</p><h2><span id="m-p神经元模型">M-P神经元模型</span></h2><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/1.JPG" alt></p><h2><span id="激活函数">激活函数</span></h2><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/2.JPG" alt></p><h1><span id="感知机与多层网络">感知机与多层网络</span></h1><h2><span id="感知机">感知机</span></h2><p>感知机由两层神经元组成，如图，<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/3.JPG" alt></p><p>感知机能够容易的实现逻辑与、或、非运算， $f(\sum_iw_ix_i-\theta)$, 假定f是阶跃函数，有</p><ul><li>与：令 $w_1=w_2=1,\theta=2$, 则 $y=f(1 \cdot x_1+1 \cdot x_2-2)$,仅在$x_1=x_2=1$ 时，y=1;</li><li>或：令 $w_1=w_2=1,\theta=0.5$, 则 $y=f(1 \cdot x_1+1 \cdot x_2-0.5)$,仅在$x_1=1 or x_2=1$ 时，y=1;</li><li>非：令令 $w_1=-06，w_2=0,\theta=-0.5$, 则 $y=f(-0.6 \cdot x_1+0 \cdot x_2+0.5)$,当$x_1=1$ 时，$y=0$,当 $x_1=0$ 时， $y=1$.</li></ul><p>给定训练数据集，权重与阈值可以通过学习得到。</p><p>感知机学习规则：对训练样例(x,y)，若当前感知机的输出为 $\hat{y}$, 则感知机权重将这样调整：</p><p>$w_i \leftarrow w_i +\Delta w_i$</p><p>$\Delta w_i=\eta(y-\hat{y})x_i$</p><p>其中 $\eta \in (0,1)$ 代表learning rate,.</p><h2><span id="感知机的局限性">感知机的局限性</span></h2><p>感知机只拥有一层功能神经元，学习能力非常有限，只能处理线性可分问题，不能解决抑或问题。<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/4.JPG" alt>要解决非线性可分问题，需要考虑多层神经元，例如添加一个隐藏层的两层神经元可以解决“异或”问题。<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/5.JPG" alt>神经网络的学习过程，就是根据训练数据来调整神经元之间的权重以及每个功能神经元的阈值。</p><h1><span id="误差逆传播算法bp">误差逆传播算法（BP）</span></h1><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/6.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/7.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/8.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/9.JPG" alt></p><h1><span id="全局最小与局部最小">全局最小与局部最小</span></h1><p>神经网络的训练过程可以看作参数寻优过程，在参数空间中寻找一组最优参数使神经网络在训练集上的误差达到最小。</p><p>局部最优解：参数空间中的某个点，其邻域点的误差函数值均不小于该点的函数值</p><p>全局最小解：参数空间中所有点的误差函数值均不小于该点的函数值</p><p>基于梯度的搜索是使用最为广泛的参数寻优方法</p><h4><span id="局部最小跳出策略">局部最小跳出策略</span></h4><ul><li>以多组不同参数值初始化多个神经网络，取误差最小的参数</li><li>“模拟退火”：以一定概率接受比当前解更差的结果</li><li>随机梯度下降 在计算梯度时加入了随机因素，即使陷入局部极小，也有可能跳出。</li></ul><h1><span id="其他常见的神经网络">其他常见的神经网络</span></h1><h4><span id="rbf">RBF</span></h4><h4><span id="art">ART</span></h4><h4><span id="smo">SMO</span></h4><h4><span id="级联相关网络">级联相关网络</span></h4><h4><span id="elman网络">Elman网络</span></h4><h4><span id="boltzmann">Boltzmann</span></h4><h1><span id="神经网络">神经网络</span></h1>]]></content>
       
       
       <categories>
