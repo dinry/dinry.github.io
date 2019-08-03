@@ -147,17 +147,18 @@
 
 
 
-  <meta name="description" content="路漫漫其修远兮，吾将上下而求索">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Schedule">
-<meta property="og:url" content="http://dinry.github.io/Schedule/index.html">
+  <meta name="description" content="明明按概率，亲测却非常随机 tf.multinomial(logits, num_samples, seed=None, name=None) 从multinomial分布中采样，样本个数是num_samples，每个样本被采样的概率由logits给出 parametrs:   logits: 2-D Tensor with shape [batch_size, num_classes]. Eac">
+<meta name="keywords" content="tensorflow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tf.multinomial">
+<meta property="og:url" content="http://dinry.github.io/tf-multinomial/index.html">
 <meta property="og:site_name" content="Dinry">
-<meta property="og:description" content="路漫漫其修远兮，吾将上下而求索">
+<meta property="og:description" content="明明按概率，亲测却非常随机 tf.multinomial(logits, num_samples, seed=None, name=None) 从multinomial分布中采样，样本个数是num_samples，每个样本被采样的概率由logits给出 parametrs:   logits: 2-D Tensor with shape [batch_size, num_classes]. Eac">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-18T13:39:23.444Z">
+<meta property="og:updated_time" content="2019-08-03T13:56:44.689Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Schedule">
-<meta name="twitter:description" content="路漫漫其修远兮，吾将上下而求索">
+<meta name="twitter:title" content="tf.multinomial">
+<meta name="twitter:description" content="明明按概率，亲测却非常随机 tf.multinomial(logits, num_samples, seed=None, name=None) 从multinomial分布中采样，样本个数是num_samples，每个样本被采样的概率由logits给出 parametrs:   logits: 2-D Tensor with shape [batch_size, num_classes]. Eac">
 
 
 
@@ -167,7 +168,7 @@
 
   
   
-  <link rel="canonical" href="http://dinry.github.io/Schedule/">
+  <link rel="canonical" href="http://dinry.github.io/tf-multinomial/">
 
 
 
@@ -177,7 +178,7 @@
   };
 </script>
 
-  <title>Schedule | Dinry</title>
+  <title>tf.multinomial | Dinry</title>
   
 
 
@@ -480,82 +481,212 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://dinry.github.io/tf-multinomial/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dinry">
+      <meta itemprop="description" content="路漫漫其修远兮，吾将上下而求索">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dinry">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">Schedule
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">tf.multinomial
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-03 21:31:58 / Modified: 21:56:44" itemprop="dateCreated datePublished" datetime="2019-08-03T21:31:58+08:00">2019-08-03</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/deep-learning/" itemprop="url" rel="index"><span itemprop="name">deep learning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>明明按概率，亲测却非常随机</p>
+<p>tf.multinomial(logits, num_samples, seed=None, name=None)</p>
+<p>从multinomial分布中采样，样本个数是num_samples，每个样本被采样的概率由logits给出</p>
+<h4><span id="parametrs">parametrs:</span></h4>
+<ul>
+<li>
+<p>logits: 2-D Tensor with shape [batch_size, num_classes]. Each slice [i, :] represents the unnormalized log probabilities for all classes.2维量，shape是 [batch_size, num_classes]，每一行都是关于种类的未归一化的对数概率</p>
+</li>
+<li>
+<p>num_samples: 0-D. Number of independent samples to draw for each row slice.标量，表示采样的个数，更重要的是，它限制了返回张量中元素的范围{：0，1，2，…，num_samples-1 }</p>
+</li>
+</ul>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">samples = tf.multinomial(tf.log([[<span class="number">10.</span>, <span class="number">10.</span>, <span class="number">10.</span>]]), <span class="number">5</span>)</span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">	sess.run(samples)</span><br><span class="line"></span><br><span class="line"># 运行结果：array([[2, 1, 2, 2, 0]])</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    <div>
+      
         
-      </div>
-      
-      
+
       
     </div>
     
 
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/tensorflow/" rel="tag"># tensorflow</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/tensorflow实现梯度下降各种方法/" rel="next" title="tensorflow实现梯度下降各种方法">
+                <i class="fa fa-chevron-left"></i> tensorflow实现梯度下降各种方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/西瓜书day21/" rel="prev" title="西瓜书day21">
+                西瓜书day21 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-    
-    
-    
   </div>
 
 
@@ -584,8 +715,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -736,6 +876,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">parametrs:</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

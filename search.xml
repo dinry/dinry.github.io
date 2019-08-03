@@ -4,6 +4,69 @@
   
     
     <entry>
+      <title>西瓜书day24</title>
+      <link href="/%E8%A5%BF%E7%93%9C%E4%B9%A6day24/"/>
+      <url>/%E8%A5%BF%E7%93%9C%E4%B9%A6day24/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="主成分分析pca">主成分分析（PCA）</span></h1><p>PCA是一种最常用的降维方法</p><ul><li>最近重构性：样本点到这个超平面的距离都足够近</li><li>最大可分性：样本点在这个超平面上的投影能尽可能分开</li></ul><h4><span id="最近重构性">最近重构性</span></h4><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day24/1.JPG" alt></p><h4><span id="最大可分性">最大可分性</span></h4><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day24/2.JPG" alt></p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day24/3.JPG" alt></p><p>应用拉格朗日乘子法</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day24/4.JPG" alt></p><h4><span id="结果">结果</span></h4><p>降维导致 d-d'个特征值的特征向量被舍弃了，舍弃这部分信息能使样本的采样密度增大，另外，当数据受到噪声影响时，最小的特征值所对应的特征向量往往与噪声有关，将他们舍弃能在一定程度上起到去噪的作用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 西瓜书 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>西瓜书day21</title>
+      <link href="/%E8%A5%BF%E7%93%9C%E4%B9%A6day21/"/>
+      <url>/%E8%A5%BF%E7%93%9C%E4%B9%A6day21/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tf.multinomial</title>
+      <link href="/tf-multinomial/"/>
+      <url>/tf-multinomial/</url>
+      
+        <content type="html"><![CDATA[<p>明明按概率，亲测却非常随机</p><p>tf.multinomial(logits, num_samples, seed=None, name=None)</p><p>从multinomial分布中采样，样本个数是num_samples，每个样本被采样的概率由logits给出</p><h4><span id="parametrs">parametrs:</span></h4><ul><li><p>logits: 2-D Tensor with shape [batch_size, num_classes]. Each slice [i, :] represents the unnormalized log probabilities for all classes.2维量，shape是 [batch_size, num_classes]，每一行都是关于种类的未归一化的对数概率</p></li><li><p>num_samples: 0-D. Number of independent samples to draw for each row slice.标量，表示采样的个数，更重要的是，它限制了返回张量中元素的范围{：0，1，2，…，num_samples-1 }</p></li></ul><p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">samples = tf.multinomial(tf.log([[<span class="number">10.</span>, <span class="number">10.</span>, <span class="number">10.</span>]]), <span class="number">5</span>)</span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">sess.run(samples)</span><br><span class="line"></span><br><span class="line"># 运行结果：array([[2, 1, 2, 2, 0]])</span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> deep learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tensorflow </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>tensorflow实现梯度下降各种方法</title>
       <link href="/tensorflow%E5%AE%9E%E7%8E%B0%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%90%84%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
       <url>/tensorflow%E5%AE%9E%E7%8E%B0%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%90%84%E7%A7%8D%E6%96%B9%E6%B3%95/</url>

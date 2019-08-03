@@ -7,6 +7,30 @@
     </url>
 
     <url>
+        <loc>http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day24/</loc>
+        <lastmod>2019-08-03T14:27:51.510Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day21/</loc>
+        <lastmod>2019-08-03T14:09:55.073Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/tf-multinomial/</loc>
+        <lastmod>2019-08-03T13:56:44.689Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://dinry.github.io/tensorflow%E5%AE%9E%E7%8E%B0%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%90%84%E7%A7%8D%E6%96%B9%E6%B3%95/</loc>
         <lastmod>2019-08-03T04:54:33.110Z</lastmod>
         <changefreq>weekly</changefreq>
