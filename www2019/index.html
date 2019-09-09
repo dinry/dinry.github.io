@@ -147,12 +147,12 @@
 
 
 
-  <meta name="description" content="1.Cross-domain Recommendation Without Sharing User-relevant Data 研究方向：cross-domain recommendation task Goal: combine data from different websites to improve recommendation task Challenge: Despite many">
+  <meta name="description" content="1.Cross-domain Recommendation Without Sharing User-relevant Data 研究方向：cross-domain recommendation Task Goal: combine data from different websites to improve recommendation task Challenge: Despite many">
 <meta property="og:type" content="article">
 <meta property="og:title" content="www2019_recommender system">
 <meta property="og:url" content="http://dinry.github.io/www2019/index.html">
 <meta property="og:site_name" content="Dinry">
-<meta property="og:description" content="1.Cross-domain Recommendation Without Sharing User-relevant Data 研究方向：cross-domain recommendation task Goal: combine data from different websites to improve recommendation task Challenge: Despite many">
+<meta property="og:description" content="1.Cross-domain Recommendation Without Sharing User-relevant Data 研究方向：cross-domain recommendation Task Goal: combine data from different websites to improve recommendation task Challenge: Despite many">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://dinry.github.io/www2019/1.JPG">
 <meta property="og:image" content="http://dinry.github.io/www2019/2.JPG">
@@ -172,10 +172,14 @@
 <meta property="og:image" content="http://dinry.github.io/www2019/16.JPG">
 <meta property="og:image" content="http://dinry.github.io/www2019/17.JPG">
 <meta property="og:image" content="http://dinry.github.io/www2019/18.JPG">
-<meta property="og:updated_time" content="2019-09-09T11:18:49.186Z">
+<meta property="og:image" content="http://dinry.github.io/www2019/19.JPG">
+<meta property="og:image" content="http://dinry.github.io/www2019/20.JPG">
+<meta property="og:image" content="http://dinry.github.io/www2019/21.JPG">
+<meta property="og:image" content="http://dinry.github.io/www2019/22.JPG">
+<meta property="og:updated_time" content="2019-09-09T12:18:37.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="www2019_recommender system">
-<meta name="twitter:description" content="1.Cross-domain Recommendation Without Sharing User-relevant Data 研究方向：cross-domain recommendation task Goal: combine data from different websites to improve recommendation task Challenge: Despite many">
+<meta name="twitter:description" content="1.Cross-domain Recommendation Without Sharing User-relevant Data 研究方向：cross-domain recommendation Task Goal: combine data from different websites to improve recommendation task Challenge: Despite many">
 <meta name="twitter:image" content="http://dinry.github.io/www2019/1.JPG">
 
 
@@ -579,7 +583,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-09-09 19:18:49" itemprop="dateModified" datetime="2019-09-09T19:18:49+08:00">2019-09-09</time>
+                <time title="Modified: 2019-09-09 20:18:37" itemprop="dateModified" datetime="2019-09-09T20:18:37+08:00">2019-09-09</time>
               
             
           </span>
@@ -614,13 +618,13 @@
 
       
         <h1><span id="1cross-domain-recommendation-without-sharing-user-relevant-data">1.Cross-domain Recommendation Without Sharing User-relevant Data</span></h1>
-<h2><span id="研究方向cross-domain-recommendation-task">研究方向：cross-domain recommendation task</span></h2>
-<h2><span id="goal-combine-data-from-different-websites-to-improve-recommendation-task">Goal: combine data from different websites to improve recommendation task</span></h2>
-<h2><span id="challenge">Challenge:</span></h2>
-<p>Despite many research efforts on this task, the main drawback is that they largely assume the data of different systems can be fully shared.</p>
-<h2><span id="methods-natrshort-for-neural-attentive-transfer-recommendation">methods: NATR(short for Neural Attentive Transfer Recommendation)</span></h2>
-<p>To avoid the leak of user privacy during the data sharing process, it consider sharing only the information of the item side, rather than user behavior data. Specifically, we transfer the item embeddings across domains, making it easier for two companies to reach a consensus (e.g., legal policy) on data sharing since the data to be shared is user-irrelevant and has no explicit semantics.</p>
-<h2><span id="step">step:</span></h2>
+<p>研究方向：cross-domain recommendation Task</p>
+<p>Goal: combine data from different websites to improve recommendation task</p>
+<p>Challenge:
+Despite many research efforts on this task, the main drawback is that they largely assume the data of different systems can be fully shared.</p>
+<p>methods: NATR(short for Neural Attentive Transfer Recommendation)
+To avoid the leak of user privacy during the data sharing process, it consider sharing only the information of the item side, rather than user behavior data. Specifically, we transfer the item embeddings across domains, making it easier for two companies to reach a consensus (e.g., legal policy) on data sharing since the data to be shared is user-irrelevant and has no explicit semantics.</p>
+<p>step:</p>
 <p><img src="/www2019/1.JPG" alt>
 Our proposed solution, which has three steps, is illustrated in Figure 1.</p>
 <ul>
@@ -874,6 +878,96 @@ activity, and context across a user’s activity history.</p>
 <p><img src="/www2019/17.JPG" alt></p>
 <h2><span id="framework">framework</span></h2>
 <p><img src="/www2019/18.JPG" alt></p>
+<h1><span id="13modeling-item-specific-temporal-dynamics-of-repeat-consumption-for-recommender-systems">13.Modeling Item-Specific Temporal Dynamics of Repeat Consumption for Recommender Systems</span></h1>
+<h2><span id="abstract">Abstract</span></h2>
+<p>Repeat consumption is a common scenario in daily life, such as
+repurchasing items and revisiting websites, and is a critical factor
+to be taken into consideration for recommender systems. Temporal
+dynamics play important roles in modeling repeat consumption.
+It is noteworthy that for items with distinct lifetimes, consuming
+tendency for the next one fluctuates differently with time. For
+example, users may repurchase milk weekly, but it is possible to
+repurchase mobile phone after a long period of time. Therefore,
+how to adaptively incorporate various temporal patterns of repeat
+consumption into a holistic recommendation model has been a new
+and important problem.</p>
+<p>In this paper, we propose a novel unified model with introducing
+Hawkes Process into Collaborative Filtering (CF). Different
+from most previous work which ignores various time-varying patterns
+of repeat consumption, the model explicitly addresses two
+item-specific temporal dynamics: (1) short-term effect and (2) lifetime
+effect, which is named as Short-Term and Life-Time Repeat
+Consumption (SLRC) model. SLRC learns importance of the two
+factors for each item dynamically by interpretable parameters.</p>
+<h2><span id="contribution">contribution</span></h2>
+<p><img src="/www2019/19.JPG" alt></p>
+<h1><span id="14multi-task-feature-learning-for-knowledge-graph-enhanced-recommendationcross-domain-recommendation">14.Multi-Task Feature Learning for Knowledge Graph Enhanced Recommendation(cross-domain recommendation)</span></h1>
+<h2><span id="abstract">Abstract</span></h2>
+<p>Collaborative filtering often suffers from sparsity and cold start
+problems in real recommendation scenarios, therefore, researchers
+and engineers usually use side information to address the issues
+and improve the performance of recommender systems.</p>
+<p>In this
+paper, we consider knowledge graphs as the source of side information.</p>
+<p>We propose MKR, a Multi-task feature learning approach
+for Knowledge graph enhanced Recommendation. MKR is a deep
+end-to-end framework that utilizes knowledge graph embedding
+task to assist recommendation task.</p>
+<h2><span id="contribution">contribution</span></h2>
+<p>We propose MKR, a Multi-task feature learning approach
+for Knowledge graph enhanced Recommendation. MKR is a deep
+end-to-end framework that utilizes knowledge graph embedding
+task to assist recommendation task. knowledge graph embedding, as shown in theoretical analysis and experiment results.</p>
+<h2><span id="framework">framework</span></h2>
+<p><img src="/www2019/20.JPG" alt></p>
+<h1><span id="15multimodal-review-generation-for-recommender-systems">15.Multimodal Review Generation for Recommender Systems</span></h1>
+<h2><span id="abstract">Abstract</span></h2>
+<p>Key to recommender systems is learning user preferences, which
+are expressed through various modalities. In online reviews, for
+instance, this manifests in numerical rating, textual content, as well
+as visual images. In this work, we hypothesize that modelling these
+modalities jointly would result in a more holistic representation of
+a review towards more accurate recommendations. Therefore, we
+propose Multimodal Review Generation (MRG), a neural approach
+that simultaneously models a rating prediction component and a
+review text generation component. We hypothesize that the shared
+user and item representations would augment the rating prediction
+with richer information from review text, while sensitizing
+the generated review text to sentiment features based on user and
+item of interest. Moreover, when review photos are available, visual
+features could inform the review text generation further. Comprehensive
+experiments on real-life datasets from several major US
+cities show that the proposed model outperforms comparable multimodal
+baselines, while an ablation analysis establishes the relative
+contributions of the respective components of the joint model.</p>
+<h2><span id="contribution">contribution</span></h2>
+<p>We design the MRG model (see Section 3), which
+jointly models rating prediction and text generation at the review
+level by incorporating LSTM cells with a novel fusion gate as a
+kind of soft attention to weigh the relative contributions of sentiment
+features and visual features that provide context to the text
+generation. We also describe the learning and inference algorithms
+respectively.</p>
+<h2><span id="framework">framework</span></h2>
+<p><img src="/www2019/21.JPG" alt></p>
+<h1><span id="16personalized-bundle-list-recommendation">16.Personalized Bundle List Recommendation</span></h1>
+<h2><span id="abstract">Abstract</span></h2>
+<p>Product bundling, offering a combination of items to customers,
+is one of the marketing strategies commonly used in online ecommerce
+and offline retailers. A high-quality bundle generalizes
+frequent items of interest, and diversity across bundles boosts the
+user-experience and eventually increases transaction volume.</p>
+<p>In
+this paper, we formalize the personalized bundle list recommendation
+as a structured prediction problem and propose a bundle
+generation network (BGN), which decomposes the problem into
+quality/diversity parts by the determinantal point processes (DPPs).
+BGN uses a typical encoder-decoder framework with a proposed
+feature-aware softmax to alleviate the inadequate representation
+of traditional softmax, and integrates the masked beam search and
+DPP selection to produce high-quality and diversified bundle list
+with an appropriate bundle size.
+<img src="/www2019/22.JPG" alt></p>
 
       
     </div>
@@ -1134,7 +1228,7 @@ activity, and context across a user’s activity history.</p>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">1.Cross-domain Recommendation Without Sharing User-relevant Data</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.1.</span> <span class="nav-text">研究方向：cross-domain recommendation task</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.2.</span> <span class="nav-text">Goal: combine data from different websites to improve recommendation task</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.3.</span> <span class="nav-text">Challenge:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.4.</span> <span class="nav-text">methods: NATR(short for Neural Attentive Transfer Recommendation)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.5.</span> <span class="nav-text">step:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.6.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.7.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">2.Dual Graph Attention Networks for Deep Latent Representation of Multifaceted Social Effects in Recommender Systems</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">3.Exploiting Ratings, Reviews and Relationships for Item Recommendations in Topic Based Social Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">4.GhostLink: Latent Network Inference for Influence-aware Recommendation.(introduction 写的不错)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.1.</span> <span class="nav-text">Abstract (probabilistic graphical model)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text">5.Graph Neural Networks for Social Recommendation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.3.</span> <span class="nav-text">framework</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.4.</span> <span class="nav-text">performance</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">6.</span> <span class="nav-text">6.Hierarchical Temporal Convolutional Networks for Dynamic Recommender Systems(工程应用)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">6.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">6.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">6.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">7.</span> <span class="nav-text">7.How Intention Informed Recommendations Modulate Choices: A Field Study of SpokenWord Content</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">7.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">7.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">7.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">8.</span> <span class="nav-text">8.How Serendipity Improves User Satisfaction with Recommendations? A Large-Scale User Evaluation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">8.1.</span> <span class="nav-text">Abstract</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">9.</span> <span class="nav-text">9.Improving Outfit Recommendation with Co-supervision of Fashion Generation (图像：衣服类)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">9.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">9.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">9.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">10.</span> <span class="nav-text">10.Jointly Learning Explainable Rules for Recommendation with Knowledge Graph</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">10.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">10.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">10.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">11.</span> <span class="nav-text">11.Jointly Leveraging Intent and Interaction Signals to Predict User Satisfaction with Slate Recommendations.</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">11.1.</span> <span class="nav-text">Abstract</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">12.</span> <span class="nav-text">12.Modeling Heart Rate and Activity Data for Personalized Fitness Recommendation(健康推荐)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">12.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">12.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">12.3.</span> <span class="nav-text">framework</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">1.Cross-domain Recommendation Without Sharing User-relevant Data</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.1.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.2.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">2.Dual Graph Attention Networks for Deep Latent Representation of Multifaceted Social Effects in Recommender Systems</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">3.Exploiting Ratings, Reviews and Relationships for Item Recommendations in Topic Based Social Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">3.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">4.GhostLink: Latent Network Inference for Influence-aware Recommendation.(introduction 写的不错)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.1.</span> <span class="nav-text">Abstract (probabilistic graphical model)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">4.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">5.</span> <span class="nav-text">5.Graph Neural Networks for Social Recommendation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.3.</span> <span class="nav-text">framework</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">5.4.</span> <span class="nav-text">performance</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">6.</span> <span class="nav-text">6.Hierarchical Temporal Convolutional Networks for Dynamic Recommender Systems(工程应用)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">6.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">6.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">6.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">7.</span> <span class="nav-text">7.How Intention Informed Recommendations Modulate Choices: A Field Study of SpokenWord Content</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">7.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">7.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">7.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">8.</span> <span class="nav-text">8.How Serendipity Improves User Satisfaction with Recommendations? A Large-Scale User Evaluation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">8.1.</span> <span class="nav-text">Abstract</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">9.</span> <span class="nav-text">9.Improving Outfit Recommendation with Co-supervision of Fashion Generation (图像：衣服类)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">9.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">9.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">9.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">10.</span> <span class="nav-text">10.Jointly Learning Explainable Rules for Recommendation with Knowledge Graph</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">10.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">10.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">10.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">11.</span> <span class="nav-text">11.Jointly Leveraging Intent and Interaction Signals to Predict User Satisfaction with Slate Recommendations.</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">11.1.</span> <span class="nav-text">Abstract</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">12.</span> <span class="nav-text">12.Modeling Heart Rate and Activity Data for Personalized Fitness Recommendation(健康推荐)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">12.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">12.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">12.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">13.</span> <span class="nav-text">13.Modeling Item-Specific Temporal Dynamics of Repeat Consumption for Recommender Systems</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">13.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">13.2.</span> <span class="nav-text">contribution</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">14.</span> <span class="nav-text">14.Multi-Task Feature Learning for Knowledge Graph Enhanced Recommendation(cross-domain recommendation)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">14.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">14.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">14.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">15.</span> <span class="nav-text">15.Multimodal Review Generation for Recommender Systems</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">15.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">15.2.</span> <span class="nav-text">contribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">15.3.</span> <span class="nav-text">framework</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">16.</span> <span class="nav-text">16.Personalized Bundle List Recommendation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">16.1.</span> <span class="nav-text">Abstract</span></a></li></ol></li></ol></div>
             
 
           </div>
