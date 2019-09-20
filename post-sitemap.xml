@@ -7,8 +7,16 @@
     </url>
 
     <url>
+        <loc>http://dinry.github.io/embedding/</loc>
+        <lastmod>2019-09-20T00:56:22.540Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://dinry.github.io/n-gram/</loc>
-        <lastmod>2019-09-16T13:55:59.245Z</lastmod>
+        <lastmod>2019-09-17T01:03:58.949Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
