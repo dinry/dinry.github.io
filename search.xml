@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>极大似然估计，误差的高斯分布与最小二乘估计的等价性,最优化</title>
+      <link href="/MLE/"/>
+      <url>/MLE/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="极大似然估计">极大似然估计</span></h1><p>假设随机变量 $X-P(x;\theta)$</p><p>现有样本 $x_1$, $x_2$, ... $x_N$</p><p>定义似然函数为 $L=P(x_1;\theta)P(x_2;\theta) ... P(x_N;\theta)$</p><p>对数似然函数为 $\hat{L}=ln[P(x_1;\theta)P(x_2;\theta) ... P(x_N;\theta)]$</p><p>极大似然估计为 max L</p><p>高斯分布 $P(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{\frac{-(x-\mu)^2}{2\sigma^2}}$</p><p>$L=ln[\frac{1}{\sqrt{2\pi}\sigma}e^{\frac{-(x_1-\mu)^2}{2\sigma^2}},\frac{1}{\sqrt{2\pi}\sigma}e^{\frac{-(x_2-\mu)^2}{2\sigma^2}},...,\frac{1}{\sqrt{2\pi}\sigma}e^{\frac{-(x_N-\mu)^2}{2\sigma^2}}]$</p><p>$\frac{\partial L}{\partial \mu}=0  \to \mu=\frac{x_1+x_2+...+x_N}{N}$</p><p>$\frac{\partial L}{\partial \sigma}=0 \to \sigma^2=\frac{\sum_{i=1}^N(x_i-\mu)^2}{N}$ (有偏方差)</p><h1><span id="误差的高斯分布与最小二乘估计的等价性">误差的高斯分布与最小二乘估计的等价性</span></h1><p>$x_1,x_2,...,x_N, x_i \in \mathbb{R}^n$</p><p>$y_1,y_2,...,y_N, y_i \in \mathbb{R}^n$</p><p>$\hat{y_i}=w^\top x_i, w \in \mathbb{R}^n$</p><p>拟合误差： $e_i=y_i - w^\top x_i$</p><p>若设$e_i-\frac{1}{\sqrt{2\pi}}e^{\frac{e_i^2}{2}}$</p><p>似然函数： $L=ln[\frac{1}{\sqrt{2\pi}}e^{\frac{e_1^2}{2}} \frac{1}{\sqrt{2\pi}}e^{\frac{e_2^2}{2}}...\frac{1}{\sqrt{2\pi}}e^{\frac{e_N^2}{2}}]=-Nln\sqrt{2\pi}-\frac{1}{2}(e_1^2+e_2^2+...+e_N^2)$</p><p>最大化L等价于最小化 $e_1^2+e_2^2+...+e_N^2$</p><p>$min(y_1-w^\top x_1)^2+(y_2-w^\top x_2)^2+...+(y_N-w^\top x_N)^2=J$</p><p>$\frac{\partial J}{\partial w}=0 \to \sum_{i=1}^{N}x_iy_i=\sum_{i=1}^N w^\top x_i x_i$</p><h1><span id="无约束优化">无约束优化</span></h1><p>无约束优化问题是机器学习中最普遍，最简单的优化问题： $x^*=min_{x}f(x)$</p><h2><span id="梯度下降">梯度下降</span></h2><p>沿负梯度方向</p><h2><span id="牛顿法">牛顿法</span></h2><p>$f(x_{t+1})=f(x_t)+f^&quot;(x_t)(x_{t+1}-x_t)$</p><h2><span id="拟牛顿">拟牛顿</span></h2><h2><span id="共轭梯度">共轭梯度</span></h2><h2><span id="收敛速度">收敛速度</span></h2><p>梯度下降是一次收敛，牛顿是二次收敛（速度快，但接近最优点才收敛,否则发散）</p><h1><span id="有约束最优化">有约束最优化</span></h1><h2><span id="拉格朗日乘子法约束为等式">拉格朗日乘子法(约束为等式)</span></h2><p>$min_x f(x)$</p><p>$s.t.g(x)=0$</p><p>$L(x,\lambda)=f(x)+\lambda g(x)$</p><h2><span id="kkt-约束为不等式表示一个范围">KKT （约束为不等式，表示一个范围）</span></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 花书 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> deep learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>花书打卡2 （极大似然估计以及优化理论）</title>
+      <link href="/%E8%8A%B1%E4%B9%A6%E6%89%93%E5%8D%A12/"/>
+      <url>/%E8%8A%B1%E4%B9%A6%E6%89%93%E5%8D%A12/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="chapter-3-概率与信息论">Chapter 3: 概率与信息论</span></h1><h2><span id="31-概率的使用">3.1 概率的使用</span></h2><p>机器学习通常必须处理不确定量，有时也要处理随机量，概率用来量化这些不确定性</p><p>不确定性的三种来源：</p><ul><li>被建模系统内在的随机性</li><li>不完全观测</li><li>不完全建模</li></ul><h2><span id="32-随机变量">3.2 随机变量</span></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 花书 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> deep learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python获取交集，并集，差集的方法</title>
+      <link href="/%E8%8E%B7%E5%8F%96%E4%BA%A4%E9%9B%86%EF%BC%8C%E5%B9%B6%E9%9B%86%EF%BC%8C%E5%B7%AE%E9%9B%86%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+      <url>/%E8%8E%B7%E5%8F%96%E4%BA%A4%E9%9B%86%EF%BC%8C%E5%B9%B6%E9%9B%86%EF%BC%8C%E5%B7%AE%E9%9B%86%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="交集">交集</span></h1><p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#方法一:</span><br><span class="line">a=[2,3,4,5]</span><br><span class="line">b=[2,5,8]</span><br><span class="line">tmp = [val for val in a if val in b]</span><br><span class="line">print tmp</span><br><span class="line">#[2, 5]</span><br><span class="line"></span><br><span class="line">#方法二</span><br><span class="line">print list(set(a).intersection(set(b)))</span><br><span class="line"></span><br><span class="line">#方法二比方法一快很多！</span><br><span class="line">```js</span><br></pre></td></tr></table></figure></p><h1><span id="并集">并集</span></h1><p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print list(set(a).union(set(b)))</span><br><span class="line">```js</span><br></pre></td></tr></table></figure></p><h1><span id="获取两个-list-的差集">获取两个 list 的差集</span></h1><p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print list(set(b).difference(set(a))) # b中有而a中没有的      非常高效！</span><br><span class="line">```js</span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Word Embedding</title>
       <link href="/embedding/"/>
       <url>/embedding/</url>
