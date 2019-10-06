@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dinry.github.io/"/>
-  <updated>2019-10-05T06:51:41.691Z</updated>
+  <updated>2019-10-06T08:47:06.777Z</updated>
   <id>http://dinry.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>花书作业3（梯度下降小程序）</title>
+    <link href="http://dinry.github.io/%E8%8A%B1%E4%B9%A6%E4%BD%9C%E4%B8%9A3/"/>
+    <id>http://dinry.github.io/花书作业3/</id>
+    <published>2019-10-06T08:43:50.000Z</published>
+    <updated>2019-10-06T08:47:06.777Z</updated>
+    
+    <content type="html"><![CDATA[<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from mpl_toolkits.mplot3d import Axes3D</span><br><span class="line">def f2(x,y):</span><br><span class="line">    return np.exp(x*x+(y-2)*(y-2))</span><br><span class="line">def hx1(x,y):</span><br><span class="line">    return 2*x*np.exp(x*x+(y-2)*(y-2))</span><br><span class="line">def hx2(x,y):</span><br><span class="line">    return 2*(y-2)*np.exp(x*x+(y-2)*(y-2))</span><br><span class="line">X1 = np.arange(0,1,0.1)</span><br><span class="line">X2 = np.arange(0,1,0.1)</span><br><span class="line">X1, X2 = np.meshgrid(X1, X2) # 生成xv、yv，将X1、X2变成n*m的矩阵，方便后面绘图</span><br><span class="line">#pdb.set_trace()</span><br><span class="line">Y = np.array(list(map(lambda t : f2(t[0],t[1]),zip(X1.flatten(),X2.flatten()))))</span><br><span class="line">Y.shape = X1.shape # 1600的Y图还原成原来的（40,40）</span><br><span class="line"></span><br><span class="line">x1 = 1</span><br><span class="line"></span><br><span class="line">x2 = 1</span><br><span class="line"></span><br><span class="line">alpha = 0.01</span><br><span class="line"></span><br><span class="line">GD_X1 = [x1]</span><br><span class="line"></span><br><span class="line">GD_X2 = [x2]</span><br><span class="line"></span><br><span class="line">GD_Y = [f2(x1, x2)]</span><br><span class="line"></span><br><span class="line">y_change = f2(x1, x2)</span><br><span class="line"></span><br><span class="line">iter_num = 0</span><br><span class="line"></span><br><span class="line">while (y_change &gt; 1e-20):</span><br><span class="line">    tmp_x1 = x1 - alpha * hx1(x1, x2)</span><br><span class="line"></span><br><span class="line">    tmp_x2 = x2 - alpha * hx2(x1, x2)</span><br><span class="line"></span><br><span class="line">    tmp_y = f2(tmp_x1, tmp_x2)</span><br><span class="line"></span><br><span class="line">    f_change = np.absolute(tmp_y - f2(x1, x2))</span><br><span class="line">    y_change=f_change</span><br><span class="line"></span><br><span class="line">    x1 = tmp_x1</span><br><span class="line"></span><br><span class="line">    x2 = tmp_x2</span><br><span class="line"></span><br><span class="line">    GD_X1.append(x1)</span><br><span class="line"></span><br><span class="line">    GD_X2.append(x2)</span><br><span class="line"></span><br><span class="line">    GD_Y.append(tmp_y)</span><br><span class="line"></span><br><span class="line">    iter_num += 1</span><br><span class="line"></span><br><span class="line">print(u&quot;最终结果为:(%.5f, %.5f, %.5f)&quot; % (x1, x2, f2(x1, x2)))</span><br><span class="line"></span><br><span class="line">print(u&quot;迭代过程中X的取值，迭代次数:%d&quot; % iter_num)</span><br><span class="line"></span><br><span class="line">print(GD_X1)</span><br><span class="line"></span><br><span class="line">fig = plt.figure(facecolor=&apos;w&apos;, figsize=(20, 18))</span><br><span class="line"></span><br><span class="line">ax = Axes3D(fig)</span><br><span class="line"></span><br><span class="line">ax.plot_surface(X1, X2, Y, rstride=1, cstride=1, cmap=plt.cm.jet)</span><br><span class="line"></span><br><span class="line">ax.plot(GD_X1, GD_X2, GD_Y, &apos;ko-&apos;)</span><br><span class="line"></span><br><span class="line">ax.set_xlabel(&apos;x&apos;)</span><br><span class="line"></span><br><span class="line">ax.set_ylabel(&apos;y&apos;)</span><br><span class="line"></span><br><span class="line">ax.set_zlabel(&apos;z&apos;)</span><br><span class="line"></span><br><span class="line">ax.set_title(u&apos;函数;\n学习率:%.3f; 最终解:(%.3f, %.3f, %.3f);迭代次数:%d&apos; % (alpha, x1, x2, f2(x1, x2), iter_num))</span><br><span class="line"></span><br><span class="line">plt.show()</span><br><span class="line">```js</span><br></pre></td></tr></table></figure></p><p><img src="/%E8%8A%B1%E4%B9%A6%E4%BD%9C%E4%B8%9A3/1.JPG" alt><img src="/%E8%8A%B1%E4%B9%A6%E4%BD%9C%E4%B8%9A3/2.JPG" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span cl
+      
+    
+    </summary>
+    
+      <category term="花书" scheme="http://dinry.github.io/categories/%E8%8A%B1%E4%B9%A6/"/>
+    
+    
+      <category term="Deep learning" scheme="http://dinry.github.io/tags/Deep-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>极大似然估计，误差的高斯分布与最小二乘估计的等价性,最优化</title>
@@ -510,35 +535,6 @@ booksheet=workbook.add_
     
     
       <category term="tensorflow" scheme="http://dinry.github.io/tags/tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>西瓜书day5,day6,day7,day8(决策树)</title>
-    <link href="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/"/>
-    <id>http://dinry.github.io/西瓜书day5/</id>
-    <published>2019-07-12T08:44:57.000Z</published>
-    <updated>2019-07-15T06:05:15.300Z</updated>
-    
-    <content type="html"><![CDATA[<h1><span id="决策树定义">决策树定义</span></h1><p>决策树是基于输结构来进行决策的一类常见的机器学习分类方法。</p><h1><span id="解决问题">解决问题</span></h1><p>“当前样本属于正类吗？”</p><p>“这是好瓜吗？”</p><p>“它的根蒂是什么形态”</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/1.JPG" alt></p><p>决策过程的最终结论（叶子节点）对应了我们所希望的判定结果：好瓜 or 坏瓜</p><h1><span id="结构">结构</span></h1><p>1.一个根节点和若干个内部节点：分别对应一个属性测试</p><p>2.若干个叶节点：对应决策结果</p><p>j决策树学习的目的是为了产生一棵泛化能力强的决策树，基本流程遵循“分而治之”：</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/2.JPG" alt></p><p>递归返回条件：</p><ul><li>当前节点包含的样本全属于同一类别，无需划分</li><li>当前属性集为空，或是所有样本在所有属性上取值相同，无法划分</li><li>当前节点包含的样本集合为空，不能划分。</li></ul><h1><span id="id3">ID3</span></h1><p>信息熵：</p><p>熵是度量样本集合纯度最常用的一种指标，代表一个系统中蕴含多少信息量，信息量越大表明一个系统不确定性就越大，就存在越多的可能性，即信息熵越大。</p><p>假定当前样本集合D中第K类样本所占的比例为 $p_k(k=1,2,...,\mid y\mid)$, 则D的信息熵为：</p><p>$Ent(D)=-\sum_{k=1}^{\mid y \mid}p_{k}log_{2}p_{k}$</p><p>信息熵满足下列不等式：</p><p>$0 \leq Ent(D) \leq log_{2}\mid y \mid$ ,</p><p>$0 \leq p_k \leq 1$, $\sum_{k=1}^np_k=1$</p><p>其中$y$表示D中的样本类别数。</p><h2><span id="id3推导max-value">ID3推导(max-value)</span></h2><p>若令 $\mid y \mid=n,p_k=x_k$, 那么信息熵 $Ent(D)$ 可以看作一个n元实值函数，即</p><p>$Ent(D)=f(x_1,...,x_n)=-\sum_{k=1}^{n}x_{k}log_{2}x_{k}$, 其中：$0 \leq p_k \leq 1$, $\sum_{k=1}^np_k=1$.</p><p>引入拉格朗日乘子 $\lambda$求最值：</p><p>$L(x_1,...,x_n,\lambda)=-\sum_{k=1}^{n}x_{k}log_{2}x_{k}+\lambda(\sum_{k=1}^nx_k-1)$</p><p>$\frac{\partial L(x_1,...,x_n,\lambda)}{\partial x_1}=-log_2x_1-x_1 \cdot \frac{1}{x_{1}ln2}+\lambda=0$</p><p>$\lambda=log_2x_1+\frac{1}{ln2}$</p><p>同理：</p><p>$\lambda=log_2x_1+\frac{1}{ln2}=log_2x_2+\frac{1}{ln2}=...=log_2x_n+\frac{1}{ln2}$</p><p>so: $x_1=x_2=...=x_n=\frac{1}{n}$</p><p>最大值与最小值需要验证：</p><ul><li>$x_1=x_2=...=x_n=\frac{1}{n}$ 时：$f=-n \cdot \frac{1}{n}log_2\frac{1}{n}=log_2n$</li><li>$x_1=1,x_2=x_3=...=x_n=0$ 时： $f=0$</li></ul><p>所以为最大值</p><h2><span id="id3推导min-value">ID3推导(min-value)</span></h2><p>Assume:</p><p>$f(x_1,...x_n)=\sum_{k=1}^ng(x_k)$</p><p>$g(x_k)=-\sum_{k=1}^{n}x_{k}log_{2}x_{k}$, $0 \leq p_k \leq 1$</p><p>求 $g(x_1)$ 的最小值，首先求导：</p><p>$\frac{d(g(x_1))}{dx_1}=-log_2x_1-\frac{1}{ln2}$</p><p>$\frac{d^2(g(x_1))}{dx^2}=-\frac{1}{x_1ln2}$</p><p>在定义域$0 \leq p_k \leq 1$， 始终有 $\frac{d^2(g(x_1))}{dx^2}=-\frac{1}{x_1ln2} \leq 0$,所以最小值在边界处$x_1=0 或 x_1=1$取得：$min g(x_1)=0$</p><p>由推理可得$f(0,0,0,0,1,...,0)=0$</p><p>所以：</p><p>$0 \leq Ent(D) \leq log_{2}\mid y \mid$</p><h2><span id="信息增益">信息增益</span></h2><p>假定离散属性有V个可能的取值 {${a^1,a^2,...,a^V}$}, 如果使用特征a来对数据集D进行划分，则会产生V个分支结点，其中第 $v$ 个结点包含了数据集D中所有在特征a上取值为 $a^V$ 的样本总数，记为 $D^v$, 特征对样本集D进行划分的“样本增益”为：</p><p>$Gain(D,a)=Ent(D)-\sum_{v=1}^V \frac{\mid D^V \mid}{\mid D \mid}Ent(C^v)$</p><h2><span id="缺点">缺点</span></h2><p>1.ID3没有考虑连续特征</p><p>2.ID3采用信息增益大的特征优先建立决策树的节点，取值比较多的特征比取值少的特征信息增益大</p><p>3.ID3算法对于缺失值的情况没有做考虑</p><p>4.没有考虑过拟合的情况</p><h1><span id="c45算法">C4.5算法</span></h1><p>增益率：</p><p>弥补ID3偏向于取值较多属性,C4.5算法不直接使用信息增益，而是使用一种叫增益率的方法来选择最优属性进行划分：</p><p>$Gain-ration(D,a)=\frac{Gain(D,a)}{IV(a)}$</p><p>$IV(a)$ 是属性 $a$ 的固有值：</p><p>$IV(a)=-\sum_{v=1}^V \frac{\mid D^v \mid}{\mid D \mid}log_2 \frac{\mid D^v \mid}{D}$</p><p>属性越多，熵越大，对分支过多的情况进行惩罚。</p><h2><span id="缺点">缺点</span></h2><p>1.C4.5生成的是多叉树，生成决策树的效率比较慢</p><p>2.C4.5只能用于分类</p><p>3.C4.5由于使用了熵模型，对数运算耗时。</p><h1><span id="cart">CART</span></h1><p>Gini值：</p><p>度量数据集的纯度，Gini(D)反应了从数据集中随机抽取两个样本,类别标记不一致的概率，数据越小，纯度越高。</p><p>$Gini(D)=\sum_{k=1}^{\mid y \mid}\sum_{k' \neq k}p_kp_{k'}=1-\sum_{k=1}^{\mid y \mid}p_k^2$</p><p>$Gini-index(D,a)=\sum_{v=1}^V \frac{\mid D^v \mid}{\mid D \mid}Gini(D^v)$</p><h1><span id="剪枝">剪枝</span></h1><p>减指是决策树学习算法处理过拟合的重要手段。决策树剪枝的基本策略有“预剪枝”和“后剪枝”。预剪枝是对每个节点在划分前进行估计，若不能带来泛化能力的提升，则停止划分并将该节点标记为叶节点。后剪枝则是先从训练集生成一颗完整的决策树，然后自底向上计算泛化能力是否提升，否则标记为叶节点。<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/3.JPG" alt></p><h2><span id="预剪枝">预剪枝</span></h2><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/4.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/5.JPG" alt></p><h2><span id="后剪枝">后剪枝</span></h2><p>后剪枝先从训练集生成一棵完整的决策树如图4.5，该决策树的验证集精度为42.9%，后剪枝首先考察节点6，然后节点五，节点二，节点三，节点一，计算过程如图。<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/6.JPG" alt></p><h2><span id="对比">对比</span></h2><ul><li>后剪枝比预剪枝保留了更多的分支。</li><li>后剪枝欠拟合风险小，泛化能力优于预剪枝决策树</li><li>后剪枝是在生成决策树后进行的，自底向上对非叶节点逐个考察，训练时间与开销都比预剪枝大得多</li></ul><h1><span id="连续与缺失值">连续与缺失值</span></h1><h1><span id="连续值处理在决策树学习中使用连续属性进行决策">连续值处理：在决策树学习中使用连续属性进行决策</span></h1><p>方法：连续属性离散化：（eg,二分法)</p><p>给定样本集$D$ 和连续属性，划分点$t$可以将D分为子集 $D_t^-$ 与 $D_t^+$, $D_t^-$包含在属性 $a$ 上不大于 $t$ 的样本，候选划分集合：</p><p>$T_a={\frac{a^i+a^{i+1}}{2} \mid 1 \leq i \leq n-1}$</p><p>然后我们可以像离散属性一样来选择划分点：</p><p>$Gain(D,a)=max_{t \in T_a}Gain(D,a,t)=max_{t \in T_a}Ent(D)-\sum_{\lambda \in {-,+}}\frac{\mid D_t^{\lambda} \mid}{\mid D \mid}Ent(D_t^{\lambda})$</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/7.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/8.JPG" alt></p><h1><span id="缺失值处理">缺失值处理</span></h1><p>样本的某些属性值缺失如何进行划分属性的选择呢？</p><p>给定划分属性，若样本在该属性上的值缺失，如何对样本进行划分？</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/9.JPG" alt></p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/10.JPG" alt></p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day5/11.JPG" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1&gt;&lt;span id=&quot;决策树定义&quot;&gt;决策树定义&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;决策树是基于输结构来进行决策的一类常见的机器学习分类方法。&lt;/p&gt;
-&lt;h1&gt;&lt;span id=&quot;解决问题&quot;&gt;解决问题&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;“当前样本属于正类吗？”&lt;/p&gt;
-&lt;p&gt;“这是好
-      
-    
-    </summary>
-    
-      <category term="ML" scheme="http://dinry.github.io/categories/ML/"/>
-    
-    
-      <category term="西瓜书" scheme="http://dinry.github.io/tags/%E8%A5%BF%E7%93%9C%E4%B9%A6/"/>
     
   </entry>
   
