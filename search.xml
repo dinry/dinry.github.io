@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>花书第二周--机器学习基本概念</title>
+      <link href="/%E8%8A%B1%E4%B9%A6%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%881%EF%BC%89/"/>
+      <url>/%E8%8A%B1%E4%B9%A6%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%881%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="机器学习算法">机器学习算法</span></h1><ol><li>什么是学习？对于某类任务T和性能度量P，一个计算机程序被认为可以从经验E中学习是指，通过经验E改进后，它在任务P上由性能度量P衡量的性能有所提升。</li><li>什么是机器学习算法？能够从数据中学习的算法</li></ol><h2><span id="11-任务t">1.1 任务T</span></h2><h4><span id="机器学习的任务是什么">机器学习的任务是什么？</span></h4><p>机器学习系统应该如何处理样本，即对严办进行一个复杂的非线性变化从而得到正确的结果</p><p>我们通常会将样本表示成一个向量 $x \in \mathbb{R}^n$, 其中向量的每一个元素是一个特征</p><h4><span id="常见的任务有哪些">常见的任务有哪些？</span></h4><ul><li>分类： $f: \mathbb{R}^n \to {1,...,k}$ （输出离散，输出为概率分布）</li><li>回归： $f: \mathbb{R}^n \to \mathbb{R}$ （输出连续）</li><li>转录：OCR, ASR</li><li>机器翻译： seq2seq</li><li>结构化输出：输出值之间内部密切相关，如语法树</li><li>异常检测</li><li>合成与检测</li><li>缺失值填充</li><li>去噪</li><li>密度估计</li></ul><p>本节重点讲了分类回归问题的区别</p><p>度量：</p><p>分类：precision, recall, auc, roc, f1</p><p>回归: mse</p><h2><span id="12-经验">1.2 经验</span></h2><p>无监督学习：</p><p>含有很多特征的数据集，但是没有label</p><p>监督学习：</p><p>（线性回归，LDA,SVM)数据集有label or tag</p><h1><span id="容量过拟合和欠拟合">容量，过拟合和欠拟合</span></h1><p>训练集：测试集：衡量模型的好坏</p><ul><li><p>underfitting: 参数太少，模型简单</p></li><li><p>appropriate capacity: 泛化能力最好</p></li><li><p>overfitting: 模型复杂，训练集误差小，测试集误差大</p></li></ul><p>模型泛化：模型容量</p><p>泛化误差：测试误差</p><h2><span id="model原则">model原则：</span></h2><ul><li>剃刀原则： 若有多个假设与观察一致，选择最简单的</li><li>没有免费午餐定理：不存在能够在所有可能的分类问题中性能均为最优的算法</li><li>解决方案：尽可能深入了解分布，寻找先验知识</li><li>正则化：降低泛化误差而非训练误差，L1,L2（为什么？）</li></ul><p>$J(w)=MSE_{train}+\lambda w^{\top}w$</p><h2><span id="超参数和验证集">超参数和验证集</span></h2><p>超参数：用于挑选超参数的数据子集成为验证集，通常8：2</p><p>验证集：交叉验证，留出法，k折交叉验证</p><p>实际工作经验：训练集，交叉验证集，测试集</p><p>训练集：训练数据</p><p>交叉验证集：判断学习率是否要调整，何时结束训练，每一个epoch都测试</p><p>一般来讲，训练数据每过一个epoch, 都要在交叉验证集上看一下</p><p>性能：损失函数</p><p>测试集：判断模型的性能好坏，最后用</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 花书 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> deep learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>花书作业3（梯度下降小程序）</title>
       <link href="/%E8%8A%B1%E4%B9%A6%E4%BD%9C%E4%B8%9A3/"/>
       <url>/%E8%8A%B1%E4%B9%A6%E4%BD%9C%E4%B8%9A3/</url>
