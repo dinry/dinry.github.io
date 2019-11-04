@@ -73,7 +73,28 @@
 
     <url>
         <loc>http://dinry.github.io/tags/deep-learning/</loc>
-        <lastmod>2019-10-08T07:37:19.588Z</lastmod>
+        <lastmod>2019-10-21T05:12:04.355Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/tags/paper/</loc>
+        <lastmod>2019-10-28T01:41:44.749Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/tags/MF/</loc>
+        <lastmod>2019-10-31T10:44:39.485Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/tags/KG-rec/</loc>
+        <lastmod>2019-11-04T10:47:23.099Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

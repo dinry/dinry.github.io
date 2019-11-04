@@ -4,6 +4,169 @@
   
     
     <entry>
+      <title>CnGAN  Generative Adversarial Networks for Cross-network user preference generation for non-overlapped users</title>
+      <link href="/CnGAN/"/>
+      <url>/CnGAN/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="intro">Intro</span></h1><p>cross-network Recommendation(are more robust against cold-start and data sparsity issues)</p><h2><span id="problem">problem</span></h2><p>However, despite the growing success of cross-network recommender solutions, the majority of existing solutions can only be applied to users that exist in multiple networks (overlapped users). The remaining non-overlapped users, which form the majority are unable to enjoy the benefits of cross-network solutions.</p><h2><span id="contribution">contribution</span></h2><ul><li>To the best of our knowledge, this is the first attempt to apply a GAN based model to generate missing source network preferences for non-overlapped users.</li><li>We propose CnGAN, a novel GAN based model which includes a novel content loss function and user-based pairwise loss function for the generator and recommender tasks.</li><li>We carry out extensive experiments to demonstrate the effectiveness of CnGAN to conduct recommendations for non-overlapped users and improve the overall quality of recommendations compared to state-of-the-art methods.</li></ul><h1><span id="model">model</span></h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> recommender systems </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Deep Learning Based Recommender System A Survey and New Perspectives</title>
+      <link href="/Survey/"/>
+      <url>/Survey/</url>
+      
+        <content type="html"><![CDATA[<p>This article aimsto provide a comprehensive review of recent research efforts on deep learning-based recommender systems.</p><h1><span id="intro">Intro</span></h1><ul><li>We conduct a comprehensive review for recommendation models based on deep learning techniques and propose a classification scheme to position and organize the current work;</li><li>we provide an overview and summary for the state of the art;</li><li>we discuss the challenges and open issues, and identify the new trends and future directions in this research field to share the vision and expand the horizons of deep learning-based recommender systems research.</li></ul><h1><span id="overview-of-recommender-systems-and-deep-learning">overview of recommender systems and deep Learning</span></h1><ul><li>Introduction to the basic terminology and concepts regarding recommender systems and deep learning techniques.</li><li>The reasons and motivations of introducing deep neural networks into recommender systems.</li></ul><h2><span id="recommender">Recommender</span></h2><ul><li>CF</li><li>CB</li><li>Hrbrid</li></ul><h2><span id="deep-learning-techniques">Deep learning techniques</span></h2><p>In this subsection, we clarify a diverse array of architectural paradigms that are closely related to this survey.</p><ul><li>MLP(The Multilayer Perceptron): a feed-forward neural network with multiple (one or more) hidden layers between the input and output layers.</li><li>AE(An Autoencoder):an unsupervised model attempting to reconstruct its input data in the output layer</li><li>CNN:a special kind of feedforward neural network with convolution layers and pooling operations. It can capture the global and local features and significantly enhances efficiency and accuracy. It performs well in processing data with grid-like topology.</li><li>RNN: is suitable for modelling sequential data. Unlike the feedforward neural network, there are loops and memories in RNN to remember former computations. Variants such as Long Short Term Memory (LSTM) and Gated Recurrent Unit (GRU) networks are often deployed in practice to overcome the vanishing gradient problem.</li><li>RBM：a two-layer neural network consisting of avisible layer and a hidden layer.</li></ul><h2><span id="why-deep-neural-networks-for-recommendation">Why Deep Neural Networks for Recommendation?</span></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> recommender systems </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>RippleNet  Propagating User Preferences on the Knowledge Graph for Recommender Systems</title>
+      <link href="/ripplenet/"/>
+      <url>/ripplenet/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="introduction">introduction</span></h1><p>CF--&gt;sparsity, the cold start--&gt;side information--&gt;knowledge graph</p><h2><span id="kgs-strength">KG's strength</span></h2><ul><li>KG introduces semantic relatedness among items, which can help find their latent connections and improve the precision of recommended items;</li><li>KG consists of relations with various types, which is helpful for extending a user’s interests reasonably and increasing the diversity of recommended items;</li><li>KG connects a user’s historical records andthe recommended ones, thereby bringing explainability to recommendersystems.</li></ul><h2><span id="kgs-categories">KG's categories:</span></h2><ol><li>Embedding-based methods: DKN, CKE, SHINE------Embedding-based methods show high flexibility in utilizing KGto assist recommender systems, but the adopted KGE algorithmsin these methods are usually more suitable for in-graph applicationssuch as link prediction than for recommendation, thusthe learned entity embeddings are less intuitive and effective tocharacterize inter-item relations.</li><li>Path-based methods: explorethe various patterns of connections among items in KG toprovide additional guidance for recommendations. PER, Meta-GraphBased Recommendation.------Path-basedmethods make use of KG in a more natural and intuitive way, butthey rely heavily on manually designed meta-paths, which is hardto optimize in practice. Another concern is that it is impossibleto design hand-crafted meta-paths in certain scenarios (e.g., newsrecommendation) where entities and relations are not within onedomain.</li></ol><h2><span id="ripplenetctr-prediction">RippleNet(CTR prediction)</span></h2><p>The major differencebetween RippleNet and existing literature is that RippleNet combinesthe advantages of the above mentioned two types of methods:(1) RippleNet incorporates the KGE methods into recommendation naturally by preference propagation; (2) RippleNet can automaticallydiscover possible paths from an item in a user’s history to acandidate item, without any sort of hand-crafted design.</p><h2><span id="contribution">contribution</span></h2><ul><li>To the best of our knowledge, this is the first work to combineembedding-based and path-based methods in KG-awarerecommendation.</li><li>We propose RippleNet, an end-to-end framework utilizingKG to assist recommender systems. RippleNet automaticallydiscovers users’ hierarchical potential interests by iterativelypropagating users’ preferences in the KG.</li><li>We conduct experiments on three real-world recommendationscenarios, and the results prove the efficacy</li></ul><p><img src="/ripplenet/1.JPG" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> recommender systems </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> KG+rec </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Algorithms for Non-negative Matrix factorization</title>
+      <link href="/NMF/"/>
+      <url>/NMF/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> recommender systems </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MF </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>matrix factorization techniques for recommender systems</title>
+      <link href="/CF-MF/"/>
+      <url>/CF-MF/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="three-strength-of-mf-conclusion">Three strength of MF (conclusion):</span></h1><ul><li>combining good scalability with predictive accuracy.</li><li>offering much flexibility for modeling various rela-life situation.</li><li>allowing incorporation of additional information.</li><li>lower space complexity.</li></ul><h1><span id="recommender-system-strategies">recommender system strategies</span></h1><ol><li>content-based filtering: which creates a profile for each user or product to characterize its nature. However, it requires gathering external information that miht not be available or easy to collect.</li><li>collaborative filtering: which relies only on past user behaviors (previous transactions or ratings)-without requiring the creation of explicit profiles. Although it is domain free and more accurate than content-based filtering, it suffers from the cold start problem, due to its inability to address the system's new products and users.</li></ol><h1><span id="cf">CF</span></h1><ol><li>the neighborhood methods: computing the relatioships between items or, between users.</li></ol><ul><li>item-based CF: evaluates a user's preference for an item based on ratings of &quot;neighboring&quot; items(tend to get similar ratings when rated by the same user) by the same user</li><li>user-based CF:</li></ul><ol start="2"><li>the latent factor model: tries to explain the ratings by characterizing both items and users on, say, 20 to 100 factors inferred from the ratings patterns.</li></ol><h1><span id="mf">MF</span></h1><p>Some of the most successful realization of latent factor models are based on MF, which characterizes both items and users by vectors of factors infered from item rating patterns( combining good scalabilitywith predictive accuracy and offer flexibility).</p><p>Explicit feedback comprises a sparse matrix. Implicit feedback usually represents a densely filled matrix.</p><h1><span id="a-basic-mf-model">A basic MF model</span></h1><p>Matrix factorization models map both users and itemsto a joint latent factor space of dimensionality $f$, such thatuser-item interactions are modeled as inner products inthat space. Accordingly, each item $i$ is associated with a vector $q_i \in \mathbb{R}^f$, and each user $u$ is associatedwith a vector $p_u \in \mathbb{R}^f$. For a given item$i$, the elements of $q_i$ measure the extent towhich the item possesses those factors,positive or negative. For a given user $u$,the elements of $p_u$ measure the extent ofinterest the user has in items that are highon the corresponding factors, again, positiveor negative. The resulting dot product,$q_i^\top p_u$, captures the interaction between user$u$ and item $i$—the user’s overall interest inthe item’s characteristics.</p><p>loss: $min \sum_{(u,i) \in K}(r_{ui}-q_i^\top p_u)^2+\lambda(\mid \mid q_i \mid \mid^2+\mid \mid p_u \mid \mid^2)$</p><h1><span id="learning-algorithms">learning algorithms</span></h1><ul><li><p>stochastic gradient descent</p></li><li><p>Alternating least squares(ALS)</p></li></ul><h1><span id="adding-biases">Adding biases</span></h1><p>$q_i^\top p_u$ tries to capture the interactions between users and items that produce the different rating values. However, much of the observed variation in rating values is due to effects associated with either users or items, known as biases or intercepts, independent of any interactions.</p><p>For example, CF data exhibits large systematic tendencies for some users to give higher ratings than others, and for some items to receive higher ratings than others. Thus, it is unwise to explain the full rating value by an interaction of the form $q_i^\top p_u$. Instead, the system tries to identify the portion of these values that individual user or item biases can explain. A first-order approximation of the bias involved in rating $b_{ui}=\mu +b_i +b_u$ accounts for the user and item effects.</p><p>loss: $min \sum_{(u,i) \in K}(r_{ui}-\mu-b_u-b_i-q_i^\top p_u)^2+\lambda(\mid \mid q_i \mid \mid^2+\mid \mid p_u \mid \mid^2+b_u^2+b_i^2)$</p><h1><span id="additional-input-sources">Additional input sources</span></h1><p>A way to relieve cold start problem is to incorporate additional sources of information about the users.</p><p>$\hat{r}<em>{ui}=\mu+b_i+b_u+q_i^\top[p_u+\mid N(u) \mid^{-0.5}\sum</em>{i \in N(u)}x_i+\sum_{a \in A(u)}y_a]$</p><h1><span id="temporal-dynamics">temporal dynamics</span></h1><p>preference changes over time.</p><p>$\hat{r}_{ui}(t)=\mu+b_i(t)+b_u(t)+q_i^\top p_u(t)$</p><h1><span id="inputs-with-varying-confidence-levels">inputs with varying confidence levels</span></h1><p>In several setups, not all observed ratings deserve the same weight or confidence.</p><p>$min \sum_{(u,i) \in K}c_{ui}(r_{ui}-\mu-b_u-b_i-q_i^\top p_u)^2+\lambda(\mid \mid q_i \mid \mid^2+\mid \mid p_u \mid \mid^2+b_u^2+b_i^2)$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> recommender systems </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MF </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>推荐系统经典论文</title>
+      <link href="/recsys-paper/"/>
+      <url>/recsys-paper/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="综述类">综述类:</span></h1><p>1、Towards theNext Generation of Recommender Systems: A Survey of the State-of-the-Art andPossible Extensions。最经典的推荐算法综述</p><p>2、Collaborative Filtering Recommender Systems. JB Schafer 关于协同过滤最经典的综述</p><p>3、Hybrid Recommender Systems: Survey and Experiments</p><p>4、项亮的博士论文《动态推荐系统关键技术研究》</p><p>5、个性化推荐系统的研究进展.周涛等</p><p>6、Recommender systems L Lü, M Medo, CH Yeung, YC Zhang, ZK Zhang, T ZhouPhysics Reports 519 (1), 1-49 （https://arxiv.org/abs/1202.1112）个性化推荐系统评价方法综述.周涛等</p><h1><span id="协同过滤">协同过滤：</span></h1><p>1.matrix factorization techniques for recommender systems. Y Koren</p><p>2.Using collaborative filtering to weave an information Tapestry. David Goldberg （协同过滤第一次被提出）</p><p>3.Item-Based Collaborative Filtering Recommendation Algorithms. Badrul Sarwar , George Karypis, Joseph Konstan .etl</p><p>4.Application of Dimensionality Reduction in Recommender System – A Case Study. Badrul M. Sarwar, George Karypis, Joseph A. Konstan etl</p><p>5.Probabilistic Memory-Based Collaborative Filtering. Kai Yu, Anton Schwaighofer, Volker Tresp, Xiaowei Xu,and Hans-Peter Kriegel</p><p>6.Recommendation systems:a probabilistic analysis. Ravi Kumar Prabhakar Raghavan.etl</p><p>7.Amazon.com recommendations: item-to-item collaborative filtering. Greg Linden, Brent Smith, and Jeremy York</p><p>8.Evaluation of Item-Based Top- N Recommendation Algorithms. George Karypis</p><p>9.Probabilistic Matrix Factorization. Ruslan Salakhutdinov</p><p>10.Tensor Decompositions,Alternating Least Squares and other Tales. Pierre Comon, Xavier Luciani, André De Almeida</p><h1><span id="基于内容的推荐">基于内容的推荐：</span></h1><p>1.Content-Based Recommendation Systems. Michael J. Pazzani and Daniel Billsus</p><h1><span id="基于标签的推荐">基于标签的推荐：</span></h1><p>1.Tag-Aware Recommender Systems: A State-of-the-Art Survey. Zi-Ke Zhang(张子柯), Tao Zhou(周 涛), and Yi-Cheng Zhang(张翼成)</p><h1><span id="推荐评估指标">推荐评估指标：</span></h1><p>1、推荐系统评价指标综述. 朱郁筱，吕琳媛</p><p>2、Accurate is not always good：How Accuacy Metrics have hurt Recommender Systems</p><p>3、Evaluating Recommendation Systems. Guy Shani and Asela Gunawardana</p><p>4、Evaluating Collaborative Filtering Recommender Systems. JL Herlocker</p><h1><span id="推荐多样性和新颖性">推荐多样性和新颖性：</span></h1><p>Improving recommendation lists through topic diversification. Cai-Nicolas ZieglerSean M. McNee, Joseph A.Konstan,Georg Lausen</p><p>Fusion-based Recommender System for Improving Serendipity</p><p>Maximizing Aggregate Recommendation Diversity：A Graph-Theoretic Approach</p><p>The Oblivion Problem：Exploiting forgotten items to improve Recommendation diversity</p><p>A Framework for Recommending Collections</p><p>Improving Recommendation Diversity. Keith Bradley and Barry Smyth</p><h1><span id="推荐系统中的隐私性保护">推荐系统中的隐私性保护：</span></h1><p>1、Collaborative Filtering with Privacy. John Canny</p><p>2、Do You Trust Your Recommendations? An Exploration Of Security and Privacy Issues in Recommender Systems. Shyong K “Tony” Lam, Dan Frankowski, and John Ried.</p><p>3、Privacy-Enhanced Personalization. Alfred Kobsa.etl</p><p>4、Differentially Private Recommender Systems：Building Privacy into theNetflix Prize Contenders. Frank McSherry and Ilya Mironov Microsoft Research,Silicon Valley Campus</p><p>5、When being Weak is Brave: Privacy Issues in Recommender Systems. Naren Ramakrishnan, Benjamin J. Keller,and Batul J. Mirza</p><h1><span id="推荐冷启动问题">推荐冷启动问题：</span></h1><p>1.Tied Boltzmann Machines for Cold Start Recommendations. Asela Gunawardana.etl</p><p>2.Pairwise Preference Regression for Cold-start Recommendation. Seung-Taek Park, Wei Chu</p><p>3.Addressing Cold-Start Problem in Recommendation Systems. Xuan Nhat Lam.etl</p><p>4.Methods and Metrics for Cold-Start Recommendations. Andrew I. Schein, Alexandrin P opescul, Lyle H. U ngar</p><p>bandit(老虎机算法,可缓解冷启动问题):</p><p>1、Bandits and Recommender Systems. Jeremie Mary, Romaric Gaudel, Philippe Preux</p><p>2、Multi-Armed Bandit Algorithms and Empirical Evaluation</p><h1><span id="基于社交网络的推荐">基于社交网络的推荐：</span></h1><p>Social Recommender Systems. Ido Guy and David Carmel</p><p>A Social Networ k-Based Recommender System(SNRS). Jianming He and Wesley W. Chu</p><p>Measurement and Analysis of Online Social Networks.</p><p>Referral Web：combining social networks and collaborative filtering</p><h1><span id="基于知识的推荐">基于知识的推荐：</span></h1><p>1、Knowledge-based recommender systems. Robin Burke</p><p>2、Case-Based Recommendation. Barry Smyth</p><p>3、Constraint-based Recommender Systems: Technologies and Research Issues. A. Felfernig. R. Burke</p><h1><span id="其他">其他：</span></h1><p>Trust-aware Recommender Systems. Paolo Massa and Paolo Avesani</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> recommender systems </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> paper </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>graph-attention-networks</title>
+      <link href="/graph-attention-networks/"/>
+      <url>/graph-attention-networks/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Deep learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> deep learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>花书第二周--机器学习基本概念</title>
       <link href="/%E8%8A%B1%E4%B9%A6%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%881%EF%BC%89/"/>
       <url>/%E8%8A%B1%E4%B9%A6%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%881%EF%BC%89/</url>

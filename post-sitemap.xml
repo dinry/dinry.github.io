@@ -7,6 +7,62 @@
     </url>
 
     <url>
+        <loc>http://dinry.github.io/CnGAN/</loc>
+        <lastmod>2019-11-04T10:48:36.188Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/ripplenet/</loc>
+        <lastmod>2019-11-04T10:47:23.099Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/Survey/</loc>
+        <lastmod>2019-11-04T10:46:42.543Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/NMF/</loc>
+        <lastmod>2019-10-31T10:44:39.485Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/CF-MF/</loc>
+        <lastmod>2019-10-29T04:47:33.881Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/recsys-paper/</loc>
+        <lastmod>2019-10-28T01:41:44.749Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/graph-attention-networks/</loc>
+        <lastmod>2019-10-21T05:12:04.355Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://dinry.github.io/%E8%8A%B1%E4%B9%A6%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%881%EF%BC%89/</loc>
         <lastmod>2019-10-08T07:37:19.588Z</lastmod>
         <changefreq>weekly</changefreq>

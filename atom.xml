@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dinry.github.io/"/>
-  <updated>2019-10-08T07:37:19.588Z</updated>
+  <updated>2019-11-04T10:48:36.188Z</updated>
   <id>http://dinry.github.io/</id>
   
   <author>
@@ -15,6 +15,174 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CnGAN  Generative Adversarial Networks for Cross-network user preference generation for non-overlapped users</title>
+    <link href="http://dinry.github.io/CnGAN/"/>
+    <id>http://dinry.github.io/CnGAN/</id>
+    <published>2019-11-02T06:14:12.000Z</published>
+    <updated>2019-11-04T10:48:36.188Z</updated>
+    
+    <content type="html"><![CDATA[<h1><span id="intro">Intro</span></h1><p>cross-network Recommendation(are more robust against cold-start and data sparsity issues)</p><h2><span id="problem">problem</span></h2><p>However, despite the growing success of cross-network recommender solutions, the majority of existing solutions can only be applied to users that exist in multiple networks (overlapped users). The remaining non-overlapped users, which form the majority are unable to enjoy the benefits of cross-network solutions.</p><h2><span id="contribution">contribution</span></h2><ul><li>To the best of our knowledge, this is the first attempt to apply a GAN based model to generate missing source network preferences for non-overlapped users.</li><li>We propose CnGAN, a novel GAN based model which includes a novel content loss function and user-based pairwise loss function for the generator and recommender tasks.</li><li>We carry out extensive experiments to demonstrate the effectiveness of CnGAN to conduct recommendations for non-overlapped users and improve the overall quality of recommendations compared to state-of-the-art methods.</li></ul><h1><span id="model">model</span></h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1&gt;&lt;span id=&quot;intro&quot;&gt;Intro&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;cross-network Recommendation(are more robust against cold-start and data sparsity issues)&lt;/p&gt;
+&lt;h2&gt;
+      
+    
+    </summary>
+    
+      <category term="recommender systems" scheme="http://dinry.github.io/categories/recommender-systems/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Deep Learning Based Recommender System A Survey and New Perspectives</title>
+    <link href="http://dinry.github.io/Survey/"/>
+    <id>http://dinry.github.io/Survey/</id>
+    <published>2019-11-01T01:33:38.000Z</published>
+    <updated>2019-11-04T10:46:42.543Z</updated>
+    
+    <content type="html"><![CDATA[<p>This article aimsto provide a comprehensive review of recent research efforts on deep learning-based recommender systems.</p><h1><span id="intro">Intro</span></h1><ul><li>We conduct a comprehensive review for recommendation models based on deep learning techniques and propose a classification scheme to position and organize the current work;</li><li>we provide an overview and summary for the state of the art;</li><li>we discuss the challenges and open issues, and identify the new trends and future directions in this research field to share the vision and expand the horizons of deep learning-based recommender systems research.</li></ul><h1><span id="overview-of-recommender-systems-and-deep-learning">overview of recommender systems and deep Learning</span></h1><ul><li>Introduction to the basic terminology and concepts regarding recommender systems and deep learning techniques.</li><li>The reasons and motivations of introducing deep neural networks into recommender systems.</li></ul><h2><span id="recommender">Recommender</span></h2><ul><li>CF</li><li>CB</li><li>Hrbrid</li></ul><h2><span id="deep-learning-techniques">Deep learning techniques</span></h2><p>In this subsection, we clarify a diverse array of architectural paradigms that are closely related to this survey.</p><ul><li>MLP(The Multilayer Perceptron): a feed-forward neural network with multiple (one or more) hidden layers between the input and output layers.</li><li>AE(An Autoencoder):an unsupervised model attempting to reconstruct its input data in the output layer</li><li>CNN:a special kind of feedforward neural network with convolution layers and pooling operations. It can capture the global and local features and significantly enhances efficiency and accuracy. It performs well in processing data with grid-like topology.</li><li>RNN: is suitable for modelling sequential data. Unlike the feedforward neural network, there are loops and memories in RNN to remember former computations. Variants such as Long Short Term Memory (LSTM) and Gated Recurrent Unit (GRU) networks are often deployed in practice to overcome the vanishing gradient problem.</li><li>RBM：a two-layer neural network consisting of avisible layer and a hidden layer.</li></ul><h2><span id="why-deep-neural-networks-for-recommendation">Why Deep Neural Networks for Recommendation?</span></h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This article aims
+to provide a comprehensive review of recent research efforts on deep learning-based recommender systems.&lt;/p&gt;
+&lt;h1&gt;&lt;span 
+      
+    
+    </summary>
+    
+      <category term="recommender systems" scheme="http://dinry.github.io/categories/recommender-systems/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RippleNet  Propagating User Preferences on the Knowledge Graph for Recommender Systems</title>
+    <link href="http://dinry.github.io/ripplenet/"/>
+    <id>http://dinry.github.io/ripplenet/</id>
+    <published>2019-10-30T02:41:20.000Z</published>
+    <updated>2019-11-04T10:47:23.099Z</updated>
+    
+    <content type="html"><![CDATA[<h1><span id="introduction">introduction</span></h1><p>CF--&gt;sparsity, the cold start--&gt;side information--&gt;knowledge graph</p><h2><span id="kgs-strength">KG's strength</span></h2><ul><li>KG introduces semantic relatedness among items, which can help find their latent connections and improve the precision of recommended items;</li><li>KG consists of relations with various types, which is helpful for extending a user’s interests reasonably and increasing the diversity of recommended items;</li><li>KG connects a user’s historical records andthe recommended ones, thereby bringing explainability to recommendersystems.</li></ul><h2><span id="kgs-categories">KG's categories:</span></h2><ol><li>Embedding-based methods: DKN, CKE, SHINE------Embedding-based methods show high flexibility in utilizing KGto assist recommender systems, but the adopted KGE algorithmsin these methods are usually more suitable for in-graph applicationssuch as link prediction than for recommendation, thusthe learned entity embeddings are less intuitive and effective tocharacterize inter-item relations.</li><li>Path-based methods: explorethe various patterns of connections among items in KG toprovide additional guidance for recommendations. PER, Meta-GraphBased Recommendation.------Path-basedmethods make use of KG in a more natural and intuitive way, butthey rely heavily on manually designed meta-paths, which is hardto optimize in practice. Another concern is that it is impossibleto design hand-crafted meta-paths in certain scenarios (e.g., newsrecommendation) where entities and relations are not within onedomain.</li></ol><h2><span id="ripplenetctr-prediction">RippleNet(CTR prediction)</span></h2><p>The major differencebetween RippleNet and existing literature is that RippleNet combinesthe advantages of the above mentioned two types of methods:(1) RippleNet incorporates the KGE methods into recommendation naturally by preference propagation; (2) RippleNet can automaticallydiscover possible paths from an item in a user’s history to acandidate item, without any sort of hand-crafted design.</p><h2><span id="contribution">contribution</span></h2><ul><li>To the best of our knowledge, this is the first work to combineembedding-based and path-based methods in KG-awarerecommendation.</li><li>We propose RippleNet, an end-to-end framework utilizingKG to assist recommender systems. RippleNet automaticallydiscovers users’ hierarchical potential interests by iterativelypropagating users’ preferences in the KG.</li><li>We conduct experiments on three real-world recommendationscenarios, and the results prove the efficacy</li></ul><p><img src="/ripplenet/1.JPG" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1&gt;&lt;span id=&quot;introduction&quot;&gt;introduction&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;CF--&amp;gt;sparsity, the cold start--&amp;gt;side information--&amp;gt;knowledge graph&lt;/p&gt;
+&lt;h2&gt;
+      
+    
+    </summary>
+    
+      <category term="recommender systems" scheme="http://dinry.github.io/categories/recommender-systems/"/>
+    
+    
+      <category term="KG+rec" scheme="http://dinry.github.io/tags/KG-rec/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Algorithms for Non-negative Matrix factorization</title>
+    <link href="http://dinry.github.io/NMF/"/>
+    <id>http://dinry.github.io/NMF/</id>
+    <published>2019-10-29T04:56:19.000Z</published>
+    <updated>2019-10-31T10:44:39.485Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="recommender systems" scheme="http://dinry.github.io/categories/recommender-systems/"/>
+    
+    
+      <category term="MF" scheme="http://dinry.github.io/tags/MF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>matrix factorization techniques for recommender systems</title>
+    <link href="http://dinry.github.io/CF-MF/"/>
+    <id>http://dinry.github.io/CF-MF/</id>
+    <published>2019-10-28T01:42:31.000Z</published>
+    <updated>2019-10-29T04:47:33.881Z</updated>
+    
+    <content type="html"><![CDATA[<h1><span id="three-strength-of-mf-conclusion">Three strength of MF (conclusion):</span></h1><ul><li>combining good scalability with predictive accuracy.</li><li>offering much flexibility for modeling various rela-life situation.</li><li>allowing incorporation of additional information.</li><li>lower space complexity.</li></ul><h1><span id="recommender-system-strategies">recommender system strategies</span></h1><ol><li>content-based filtering: which creates a profile for each user or product to characterize its nature. However, it requires gathering external information that miht not be available or easy to collect.</li><li>collaborative filtering: which relies only on past user behaviors (previous transactions or ratings)-without requiring the creation of explicit profiles. Although it is domain free and more accurate than content-based filtering, it suffers from the cold start problem, due to its inability to address the system's new products and users.</li></ol><h1><span id="cf">CF</span></h1><ol><li>the neighborhood methods: computing the relatioships between items or, between users.</li></ol><ul><li>item-based CF: evaluates a user's preference for an item based on ratings of &quot;neighboring&quot; items(tend to get similar ratings when rated by the same user) by the same user</li><li>user-based CF:</li></ul><ol start="2"><li>the latent factor model: tries to explain the ratings by characterizing both items and users on, say, 20 to 100 factors inferred from the ratings patterns.</li></ol><h1><span id="mf">MF</span></h1><p>Some of the most successful realization of latent factor models are based on MF, which characterizes both items and users by vectors of factors infered from item rating patterns( combining good scalabilitywith predictive accuracy and offer flexibility).</p><p>Explicit feedback comprises a sparse matrix. Implicit feedback usually represents a densely filled matrix.</p><h1><span id="a-basic-mf-model">A basic MF model</span></h1><p>Matrix factorization models map both users and itemsto a joint latent factor space of dimensionality $f$, such thatuser-item interactions are modeled as inner products inthat space. Accordingly, each item $i$ is associated with a vector $q_i \in \mathbb{R}^f$, and each user $u$ is associatedwith a vector $p_u \in \mathbb{R}^f$. For a given item$i$, the elements of $q_i$ measure the extent towhich the item possesses those factors,positive or negative. For a given user $u$,the elements of $p_u$ measure the extent ofinterest the user has in items that are highon the corresponding factors, again, positiveor negative. The resulting dot product,$q_i^\top p_u$, captures the interaction between user$u$ and item $i$—the user’s overall interest inthe item’s characteristics.</p><p>loss: $min \sum_{(u,i) \in K}(r_{ui}-q_i^\top p_u)^2+\lambda(\mid \mid q_i \mid \mid^2+\mid \mid p_u \mid \mid^2)$</p><h1><span id="learning-algorithms">learning algorithms</span></h1><ul><li><p>stochastic gradient descent</p></li><li><p>Alternating least squares(ALS)</p></li></ul><h1><span id="adding-biases">Adding biases</span></h1><p>$q_i^\top p_u$ tries to capture the interactions between users and items that produce the different rating values. However, much of the observed variation in rating values is due to effects associated with either users or items, known as biases or intercepts, independent of any interactions.</p><p>For example, CF data exhibits large systematic tendencies for some users to give higher ratings than others, and for some items to receive higher ratings than others. Thus, it is unwise to explain the full rating value by an interaction of the form $q_i^\top p_u$. Instead, the system tries to identify the portion of these values that individual user or item biases can explain. A first-order approximation of the bias involved in rating $b_{ui}=\mu +b_i +b_u$ accounts for the user and item effects.</p><p>loss: $min \sum_{(u,i) \in K}(r_{ui}-\mu-b_u-b_i-q_i^\top p_u)^2+\lambda(\mid \mid q_i \mid \mid^2+\mid \mid p_u \mid \mid^2+b_u^2+b_i^2)$</p><h1><span id="additional-input-sources">Additional input sources</span></h1><p>A way to relieve cold start problem is to incorporate additional sources of information about the users.</p><p>$\hat{r}<em>{ui}=\mu+b_i+b_u+q_i^\top[p_u+\mid N(u) \mid^{-0.5}\sum</em>{i \in N(u)}x_i+\sum_{a \in A(u)}y_a]$</p><h1><span id="temporal-dynamics">temporal dynamics</span></h1><p>preference changes over time.</p><p>$\hat{r}_{ui}(t)=\mu+b_i(t)+b_u(t)+q_i^\top p_u(t)$</p><h1><span id="inputs-with-varying-confidence-levels">inputs with varying confidence levels</span></h1><p>In several setups, not all observed ratings deserve the same weight or confidence.</p><p>$min \sum_{(u,i) \in K}c_{ui}(r_{ui}-\mu-b_u-b_i-q_i^\top p_u)^2+\lambda(\mid \mid q_i \mid \mid^2+\mid \mid p_u \mid \mid^2+b_u^2+b_i^2)$</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1&gt;&lt;span id=&quot;three-strength-of-mf-conclusion&quot;&gt;Three strength of MF (conclusion):&lt;/span&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;combining good scalability with predi
+      
+    
+    </summary>
+    
+      <category term="recommender systems" scheme="http://dinry.github.io/categories/recommender-systems/"/>
+    
+    
+      <category term="MF" scheme="http://dinry.github.io/tags/MF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>推荐系统经典论文</title>
+    <link href="http://dinry.github.io/recsys-paper/"/>
+    <id>http://dinry.github.io/recsys-paper/</id>
+    <published>2019-10-28T01:34:37.000Z</published>
+    <updated>2019-10-28T01:41:44.749Z</updated>
+    
+    <content type="html"><![CDATA[<h1><span id="综述类">综述类:</span></h1><p>1、Towards theNext Generation of Recommender Systems: A Survey of the State-of-the-Art andPossible Extensions。最经典的推荐算法综述</p><p>2、Collaborative Filtering Recommender Systems. JB Schafer 关于协同过滤最经典的综述</p><p>3、Hybrid Recommender Systems: Survey and Experiments</p><p>4、项亮的博士论文《动态推荐系统关键技术研究》</p><p>5、个性化推荐系统的研究进展.周涛等</p><p>6、Recommender systems L Lü, M Medo, CH Yeung, YC Zhang, ZK Zhang, T ZhouPhysics Reports 519 (1), 1-49 （https://arxiv.org/abs/1202.1112）个性化推荐系统评价方法综述.周涛等</p><h1><span id="协同过滤">协同过滤：</span></h1><p>1.matrix factorization techniques for recommender systems. Y Koren</p><p>2.Using collaborative filtering to weave an information Tapestry. David Goldberg （协同过滤第一次被提出）</p><p>3.Item-Based Collaborative Filtering Recommendation Algorithms. Badrul Sarwar , George Karypis, Joseph Konstan .etl</p><p>4.Application of Dimensionality Reduction in Recommender System – A Case Study. Badrul M. Sarwar, George Karypis, Joseph A. Konstan etl</p><p>5.Probabilistic Memory-Based Collaborative Filtering. Kai Yu, Anton Schwaighofer, Volker Tresp, Xiaowei Xu,and Hans-Peter Kriegel</p><p>6.Recommendation systems:a probabilistic analysis. Ravi Kumar Prabhakar Raghavan.etl</p><p>7.Amazon.com recommendations: item-to-item collaborative filtering. Greg Linden, Brent Smith, and Jeremy York</p><p>8.Evaluation of Item-Based Top- N Recommendation Algorithms. George Karypis</p><p>9.Probabilistic Matrix Factorization. Ruslan Salakhutdinov</p><p>10.Tensor Decompositions,Alternating Least Squares and other Tales. Pierre Comon, Xavier Luciani, André De Almeida</p><h1><span id="基于内容的推荐">基于内容的推荐：</span></h1><p>1.Content-Based Recommendation Systems. Michael J. Pazzani and Daniel Billsus</p><h1><span id="基于标签的推荐">基于标签的推荐：</span></h1><p>1.Tag-Aware Recommender Systems: A State-of-the-Art Survey. Zi-Ke Zhang(张子柯), Tao Zhou(周 涛), and Yi-Cheng Zhang(张翼成)</p><h1><span id="推荐评估指标">推荐评估指标：</span></h1><p>1、推荐系统评价指标综述. 朱郁筱，吕琳媛</p><p>2、Accurate is not always good：How Accuacy Metrics have hurt Recommender Systems</p><p>3、Evaluating Recommendation Systems. Guy Shani and Asela Gunawardana</p><p>4、Evaluating Collaborative Filtering Recommender Systems. JL Herlocker</p><h1><span id="推荐多样性和新颖性">推荐多样性和新颖性：</span></h1><p>Improving recommendation lists through topic diversification. Cai-Nicolas ZieglerSean M. McNee, Joseph A.Konstan,Georg Lausen</p><p>Fusion-based Recommender System for Improving Serendipity</p><p>Maximizing Aggregate Recommendation Diversity：A Graph-Theoretic Approach</p><p>The Oblivion Problem：Exploiting forgotten items to improve Recommendation diversity</p><p>A Framework for Recommending Collections</p><p>Improving Recommendation Diversity. Keith Bradley and Barry Smyth</p><h1><span id="推荐系统中的隐私性保护">推荐系统中的隐私性保护：</span></h1><p>1、Collaborative Filtering with Privacy. John Canny</p><p>2、Do You Trust Your Recommendations? An Exploration Of Security and Privacy Issues in Recommender Systems. Shyong K “Tony” Lam, Dan Frankowski, and John Ried.</p><p>3、Privacy-Enhanced Personalization. Alfred Kobsa.etl</p><p>4、Differentially Private Recommender Systems：Building Privacy into theNetflix Prize Contenders. Frank McSherry and Ilya Mironov Microsoft Research,Silicon Valley Campus</p><p>5、When being Weak is Brave: Privacy Issues in Recommender Systems. Naren Ramakrishnan, Benjamin J. Keller,and Batul J. Mirza</p><h1><span id="推荐冷启动问题">推荐冷启动问题：</span></h1><p>1.Tied Boltzmann Machines for Cold Start Recommendations. Asela Gunawardana.etl</p><p>2.Pairwise Preference Regression for Cold-start Recommendation. Seung-Taek Park, Wei Chu</p><p>3.Addressing Cold-Start Problem in Recommendation Systems. Xuan Nhat Lam.etl</p><p>4.Methods and Metrics for Cold-Start Recommendations. Andrew I. Schein, Alexandrin P opescul, Lyle H. U ngar</p><p>bandit(老虎机算法,可缓解冷启动问题):</p><p>1、Bandits and Recommender Systems. Jeremie Mary, Romaric Gaudel, Philippe Preux</p><p>2、Multi-Armed Bandit Algorithms and Empirical Evaluation</p><h1><span id="基于社交网络的推荐">基于社交网络的推荐：</span></h1><p>Social Recommender Systems. Ido Guy and David Carmel</p><p>A Social Networ k-Based Recommender System(SNRS). Jianming He and Wesley W. Chu</p><p>Measurement and Analysis of Online Social Networks.</p><p>Referral Web：combining social networks and collaborative filtering</p><h1><span id="基于知识的推荐">基于知识的推荐：</span></h1><p>1、Knowledge-based recommender systems. Robin Burke</p><p>2、Case-Based Recommendation. Barry Smyth</p><p>3、Constraint-based Recommender Systems: Technologies and Research Issues. A. Felfernig. R. Burke</p><h1><span id="其他">其他：</span></h1><p>Trust-aware Recommender Systems. Paolo Massa and Paolo Avesani</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1&gt;&lt;span id=&quot;综述类&quot;&gt;综述类:&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;1、Towards the
+Next Generation of Recommender Systems: A Survey of the State-of-the-Art and
+Possible E
+      
+    
+    </summary>
+    
+      <category term="recommender systems" scheme="http://dinry.github.io/categories/recommender-systems/"/>
+    
+    
+      <category term="paper" scheme="http://dinry.github.io/tags/paper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>graph-attention-networks</title>
+    <link href="http://dinry.github.io/graph-attention-networks/"/>
+    <id>http://dinry.github.io/graph-attention-networks/</id>
+    <published>2019-10-08T11:18:38.000Z</published>
+    <updated>2019-10-21T05:12:04.355Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Deep learning" scheme="http://dinry.github.io/categories/Deep-learning/"/>
+    
+    
+      <category term="deep learning" scheme="http://dinry.github.io/tags/deep-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>花书第二周--机器学习基本概念</title>
@@ -345,199 +513,6 @@
     
     
       <category term="tensorflow" scheme="http://dinry.github.io/tags/tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>tensorflow中的参数初始化方法</title>
-    <link href="http://dinry.github.io/tensorflow%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%B9%E6%B3%95/"/>
-    <id>http://dinry.github.io/tensorflow中的参数初始化方法/</id>
-    <published>2019-08-03T02:10:57.000Z</published>
-    <updated>2019-08-03T03:08:41.345Z</updated>
-    
-    <content type="html"><![CDATA[<h1><span id="常量初始化">常量初始化</span></h1><p>tf中使用tf.constant_initializer(value)类生成一个初始值为常量value的tensor对象。constant_initializer类的构造函数定义：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def __init__(self, value=<span class="number">0</span>, dtype=dtypes.float32, verify_shape=False):</span><br><span class="line">    self.value = value</span><br><span class="line">    self.dtype = dtypes.as_dtype(dtype)</span><br><span class="line">    self._verify_shape = verify_shape</span><br></pre></td></tr></table></figure></p><ul><li>value：指定的常量</li><li>dtype： 数据类型</li><li>verify_shape： 是否可以调整tensor的形状，默认可以调整</li></ul><p>example:<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">value = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>]</span><br><span class="line">init = tf.constant_initializer(value)</span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">  x = tf.get_variable(<span class="string">'x'</span>, shape=[<span class="number">8</span>], initializer=init)</span><br><span class="line">  x.initializer.run()</span><br><span class="line">  print(x.eval())</span><br><span class="line">#output:</span><br><span class="line">#[ 0.  1.  2.  3.  4.  5.  6.  7.]</span><br></pre></td></tr></table></figure></p><p>神经网络中经常使用常量初始化方法来初始化偏置值</p><p>当初始化一个维数很多的常量时，一个一个指定每个维数上的值很不方便，tf提供了 tf.zeros_initializer() 和 tf.ones_initializer() 类，分别用来初始化全0和全1的tensor对象。</p><p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">init_zeros=tf.zeros_initializer()</span><br><span class="line">init_ones = tf.ones_initializer</span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">  x = tf.get_variable(<span class="string">'x'</span>, shape=[<span class="number">8</span>], initializer=init_zeros)</span><br><span class="line">  y = tf.get_variable(<span class="string">'y'</span>, shape=[<span class="number">8</span>], initializer=init_ones)</span><br><span class="line">  x.initializer.run()</span><br><span class="line">  y.initializer.run()</span><br><span class="line">  print(x.eval())</span><br><span class="line">  print(y.eval())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#output:</span><br><span class="line"># [ 0.  0.  0.  0.  0.  0.  0.  0.]</span><br><span class="line"># [ 1.  1.  1.  1.  1.  1.  1.  1.]</span><br></pre></td></tr></table></figure></p><h1><span id="初始化为正态分布">初始化为正态分布</span></h1><p>初始化参数为正太分布在神经网络中应用的最多，可以初始化为标准正太分布和截断正太分布。</p><p>tf中使用 tf.random_normal_initializer() 类来生成一组符合标准正太分布的tensor。</p><p>tf中使用 tf.truncated_normal_initializer() 类来生成一组符合截断正太分布的tensor。</p><p>tf.random_normal_initializer 类和 tf.truncated_normal_initializer 的构造函数定义：</p><p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def __init__(self, mean=<span class="number">0.0</span>, stddev=<span class="number">1.0</span>, seed=None, dtype=dtypes.float32):</span><br><span class="line">    self.mean = mean</span><br><span class="line">    self.stddev = stddev</span><br><span class="line">    self.seed = seed</span><br><span class="line">    self.dtype = _assert_float_dtype(dtypes.as_dtype(dtype))</span><br></pre></td></tr></table></figure></p><ul><li>mean： 正太分布的均值，默认值0</li><li>stddev： 正太分布的标准差，默认值1</li><li>seed： 随机数种子，指定seed的值可以每次都生成同样的数据</li><li>dtype： 数据类型</li></ul><p>example:<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">init_random = tf.random_normal_initializer(mean=<span class="number">0.0</span>, stddev=<span class="number">1.0</span>, seed=None, dtype=tf.float32)</span><br><span class="line">init_truncated = tf.truncated_normal_initializer(mean=<span class="number">0.0</span>, stddev=<span class="number">1.0</span>, seed=None, dtype=tf.float32)</span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">  x = tf.get_variable(<span class="string">'x'</span>, shape=[<span class="number">10</span>], initializer=init_random)</span><br><span class="line">  y = tf.get_variable(<span class="string">'y'</span>, shape=[<span class="number">10</span>], initializer=init_truncated)</span><br><span class="line">  x.initializer.run()</span><br><span class="line">  y.initializer.run()</span><br><span class="line">  print(x.eval())</span><br><span class="line">  print(y.eval())</span><br><span class="line"></span><br><span class="line">#output:</span><br><span class="line"># [-0.40236568 -0.35864913 -0.94253045 -0.40153521  0.1552504   1.16989613</span><br><span class="line">#   0.43091929 -0.31410623  0.70080078 -0.9620409 ]</span><br><span class="line"># [ 0.18356581 -0.06860946 -0.55245203  1.08850253 -1.13627422 -0.1006074</span><br><span class="line">#   0.65564936  0.03948414  0.86558545 -0.4964745 ]</span><br></pre></td></tr></table></figure></p><h1><span id="初始化为均匀分布">初始化为均匀分布</span></h1><p>tf中使用 tf.random_uniform_initializer 类来生成一组符合均匀分布的tensor。</p><p>tf.random_uniform_initializer类构造函数定义：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">def __init__(self, minval=<span class="number">0</span>, maxval=None, seed=None, dtype=dtypes.float32):</span><br><span class="line">    self.minval = minval</span><br><span class="line">    self.maxval = maxval</span><br><span class="line">    self.seed = seed</span><br><span class="line">    self.dtype = dtypes.as_dtype(dtype)</span><br></pre></td></tr></table></figure></p><ul><li>minval: 最小值</li><li>maxval： 最大值</li><li>seed：随机数种子</li><li>dtype： 数据类型</li></ul><p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">init_uniform = tf.random_uniform_initializer(minval=<span class="number">0</span>, maxval=<span class="number">10</span>, seed=None, dtype=tf.float32)</span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">  x = tf.get_variable(<span class="string">'x'</span>, shape=[<span class="number">10</span>], initializer=init_uniform)</span><br><span class="line">  x.initializer.run()</span><br><span class="line">  print(x.eval())</span><br><span class="line"></span><br><span class="line"># output:</span><br><span class="line"># [ 6.93343639  9.41196823  5.54009819  1.38017178  1.78720832  5.38881063</span><br><span class="line">#   3.39674473  8.12443542  0.62157512  8.36026382]</span><br></pre></td></tr></table></figure></p><p>从输出可以看到，均匀分布生成的随机数并不是从小到大或者从大到小均匀分布的，这里均匀分布的意义是每次从一组服从均匀分布的数里边随机抽取一个数。</p><p>tf中另一个生成均匀分布的类是 tf.uniform_unit_scaling_initializer()，构造函数是：</p><p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def __init__(self, factor=<span class="number">1.0</span>, seed=None, dtype=dtypes.float32):</span><br><span class="line">    self.factor = factor</span><br><span class="line">    self.seed = seed</span><br><span class="line">    self.dtype = _assert_float_dtype(dtypes.as_dtype(dtype))</span><br></pre></td></tr></table></figure></p><p>同样都是生成均匀分布，tf.uniform_unit_scaling_initializer 跟 tf.random_uniform_initializer 不同的地方是前者不需要指定最大最小值，是通过公式计算出来的：</p><p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">max_val = math.sqrt(<span class="number">3</span> / input_size) * factor</span><br><span class="line">min_val = -max_val</span><br></pre></td></tr></table></figure></p><p>input_size是生成数据的维度，factor是系数。<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">init_uniform_unit = tf.uniform_unit_scaling_initializer(factor=<span class="number">1.0</span>, seed=None, dtype=tf.float32)</span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">  x = tf.get_variable(<span class="string">'x'</span>, shape=[<span class="number">10</span>], initializer=init_uniform_unit)</span><br><span class="line">  x.initializer.run()</span><br><span class="line">  print(x.eval())</span><br><span class="line"></span><br><span class="line"># output:</span><br><span class="line"># [-1.65964031  0.59797513 -0.97036457 -0.68957627  1.69274557  1.2614969</span><br><span class="line">#   1.55491126  0.12639415  0.54466736 -1.56159735]</span><br></pre></td></tr></table></figure></p><h1><span id="初始化为变尺度正太-均匀分布">初始化为变尺度正太、均匀分布</span></h1><p>tf中tf.variance_scaling_initializer()类可以生成截断正太分布和均匀分布的tensor，增加了更多的控制参数。构造函数：</p><p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">def __init__(self, scale=<span class="number">1.0</span>,</span><br><span class="line">               mode=<span class="string">"fan_in"</span>,</span><br><span class="line">               distribution=<span class="string">"normal"</span>,</span><br><span class="line">               seed=None,</span><br><span class="line">               dtype=dtypes.float32):</span><br><span class="line">    <span class="keyword">if</span> scale &lt;= <span class="number">0.</span>:</span><br><span class="line">      raise ValueError(<span class="string">"`scale` must be positive float."</span>)</span><br><span class="line">    <span class="keyword">if</span> mode not <span class="keyword">in</span> &#123;<span class="string">"fan_in"</span>, <span class="string">"fan_out"</span>, <span class="string">"fan_avg"</span>&#125;:</span><br><span class="line">      raise ValueError(<span class="string">"Invalid `mode` argument:"</span>, mode)</span><br><span class="line">    distribution = distribution.lower()</span><br><span class="line">    <span class="keyword">if</span> distribution not <span class="keyword">in</span> &#123;<span class="string">"normal"</span>, <span class="string">"uniform"</span>&#125;:</span><br><span class="line">      raise ValueError(<span class="string">"Invalid `distribution` argument:"</span>, distribution)</span><br><span class="line">    self.scale = scale</span><br><span class="line">    self.mode = mode</span><br><span class="line">    self.distribution = distribution</span><br><span class="line">    self.seed = seed</span><br><span class="line">    self.dtype = _assert_float_dtype(dtypes.as_dtype(dtype))</span><br></pre></td></tr></table></figure></p><ul><li>scale: 缩放尺度</li><li>mode： 有3个值可选，分别是 “fan_in”, “fan_out” 和 “fan_avg”，用于控制计算标准差 stddev的值</li><li>distribution： 2个值可选，”normal”或“uniform”，定义生成的tensor的分布是截断正太分布还是均匀分布</li></ul><p>distribution选‘normal’的时候，生成的是截断正太分布，标准差 stddev = sqrt(scale / n), n的取值根据mode的不同设置而不同：</p><ul><li>mode = &quot;fan_in&quot;， n为输入单元的结点数；</li><li>mode = &quot;fan_out&quot;，n为输出单元的结点数；</li><li>mode = &quot;fan_avg&quot;,n为输入和输出单元结点数的平均值;</li></ul><p>distribution选 ‘uniform’，生成均匀分布的随机数tensor，最大值 max_value和 最小值 min_value 的计算公式：</p><p>max_value = sqrt(3 * scale / n)</p><p>min_value = -max_value</p><p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">init_variance_scaling_normal = tf.variance_scaling_initializer(scale=<span class="number">1.0</span>,mode=<span class="string">"fan_in"</span>,</span><br><span class="line">                                                        distribution=<span class="string">"normal"</span>,seed=None,dtype=tf.float32)</span><br><span class="line">init_variance_scaling_uniform = tf.variance_scaling_initializer(scale=<span class="number">1.0</span>,mode=<span class="string">"fan_in"</span>,</span><br><span class="line">                                                        distribution=<span class="string">"uniform"</span>,seed=None,dtype=tf.float32)</span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">  x = tf.get_variable(<span class="string">'x'</span>, shape=[<span class="number">10</span>], initializer=init_variance_scaling_normal)</span><br><span class="line">  y = tf.get_variable(<span class="string">'y'</span>, shape=[<span class="number">10</span>], initializer=init_variance_scaling_uniform)</span><br><span class="line">  x.initializer.run()</span><br><span class="line">  y.initializer.run()</span><br><span class="line">  print(x.eval())</span><br><span class="line">  print(y.eval())</span><br><span class="line"></span><br><span class="line"># output:</span><br><span class="line"># [ 0.55602223  0.36556259  0.39404872 -0.11241052  0.42891756 -0.22287074</span><br><span class="line">#   0.15629818  0.56271428 -0.15364751 -0.03651841]</span><br><span class="line"># [ 0.22965753 -0.1339919  -0.21013224  0.112804   -0.49030468  0.21375734</span><br><span class="line">#   0.24524075 -0.48397955  0.02254289 -0.07996771]</span><br></pre></td></tr></table></figure></p><h1><span id="其他初始化方式">其他初始化方式</span></h1><ul><li>tf.orthogonal_initializer() 初始化为正交矩阵的随机数，形状最少需要是二维的</li><li>tf.glorot_uniform_initializer() 初始化为与输入输出节点数相关的均匀分布随机数</li><li>tf.glorot_normal_initializer（） 初始化为与输入输出节点数相关的截断正太分布随机数</li></ul><p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">init_orthogonal = tf.orthogonal_initializer(gain=<span class="number">1.0</span>, seed=None, dtype=tf.float32)</span><br><span class="line">init_glorot_uniform = tf.glorot_uniform_initializer()</span><br><span class="line">init_glorot_normal = tf.glorot_normal_initializer()</span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">  x = tf.get_variable(<span class="string">'x'</span>, shape=[<span class="number">4</span>,<span class="number">4</span>], initializer=init_orthogonal)</span><br><span class="line">  y = tf.get_variable(<span class="string">'y'</span>, shape=[<span class="number">10</span>], initializer=init_glorot_uniform)</span><br><span class="line">  z = tf.get_variable(<span class="string">'z'</span>, shape=[<span class="number">10</span>], initializer=init_glorot_normal)</span><br><span class="line">  x.initializer.run()</span><br><span class="line">  y.initializer.run()</span><br><span class="line">  z.initializer.run()</span><br><span class="line">  print(x.eval())</span><br><span class="line">  print(y.eval())</span><br><span class="line">  print(z.eval())</span><br><span class="line"></span><br><span class="line"># output:</span><br><span class="line"># [[ 0.41819954  0.38149482  0.82090431  0.07541249]</span><br><span class="line">#  [ 0.41401231  0.21400851 -0.38360971  0.79726893]</span><br><span class="line">#  [ 0.73776144 -0.62585676 -0.06246936 -0.24517137]</span><br><span class="line">#  [ 0.33077344  0.64572859 -0.41839844 -0.54641217]]</span><br><span class="line"># [-0.11182356  0.01995623 -0.0083192  -0.09200105  0.49967837  0.17083591</span><br><span class="line">#   0.37086374  0.09727859  0.51015782 -0.43838671]</span><br><span class="line"># [-0.50223351  0.18181904  0.43594137  0.3390047   0.61405027  0.02597036</span><br><span class="line">#   0.31719241  0.04096413  0.10962497 -0.13165198]</span><br></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1&gt;&lt;span id=&quot;常量初始化&quot;&gt;常量初始化&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;tf中使用tf.constant_initializer(value)类生成一个初始值为常量value的tensor对象。
-constant_initializer类的构造函数定义：
-&lt;figur
-      
-    
-    </summary>
-    
-      <category term="deep learning" scheme="http://dinry.github.io/categories/deep-learning/"/>
-    
-    
-      <category term="tensorflow" scheme="http://dinry.github.io/tags/tensorflow/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>神经网络训练问题排查</title>
-    <link href="http://dinry.github.io/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%AE%AD%E7%BB%83%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/"/>
-    <id>http://dinry.github.io/神经网络训练问题排查/</id>
-    <published>2019-08-01T09:01:14.000Z</published>
-    <updated>2019-08-01T11:06:18.611Z</updated>
-    
-    <content type="html"><![CDATA[<h1><span id="数据标准化">数据标准化</span></h1><p>数据的分布情况如何？数据是否经过适当的缩放？总体上的规则是：</p><ul><li>如果数据是连续值：范围应当在-1到1、0到1，或者呈平均值为0、标准差为1的正态分布。实际的范围不用如此精确，但确保输入数据大致处于上述区间内会有助于训练。缩小过大的输入，放大过小的输入。</li><li>如果数据是离散的类别（以及对于分类问题的输出而言），则通常使用one-hot表示。也就是说，如果有三种类别，那么这三种不同类别的数据将分别以[1,0,0]、[0,1,0]、[0,0,1]的方式表示。</li></ul><p>请注意：训练数据和测试数据的标准化方法必须完全相同，这非常重要。</p><h1><span id="权重初始化">权重初始化</span></h1><p>您需要确保权重不会过大，也不会过小。Xavier权重初始化方法通常是比较好的选择。对于使用修正线性（relu）或带泄露的修正线性（leaky relu）激活函数的网络而言，RELU权重初始化方法比较合适。</p><h1><span id="epoch数量和迭代次数">Epoch数量和迭代次数</span></h1><p>一个epoch周期的定义是完整地遍历数据集一次。DL4J将迭代次数定义为每个微批次中的参数更新次数。</p><p>在训练中，一般应让训练持续多个epoch，而将迭代次数设为一次（.iterations(1)选项）；一般仅在对非常小的数据集进行完整批次的训练时才会采用大于1的迭代次数。</p><p>如果epoch数量太少，网络就没有足够的时间学会合适的参数；epoch数量太多则有可能导致网络对训练数据过拟合。选择epoch数量的方式之一是早停法。早停法还可以避免神经网络发生过拟合（即可以帮助网络更好地适应未曾见过的数据）。</p><h1><span id="学习速率">学习速率</span></h1><p>学习速率是最重要的超参数之一。如果学习速率过高或过低，网络可能学习效果非常差、学习速度非常慢，甚至完全没有进展。学习速率的取值范围一般在0.1到1e-6之间，最理想的速率通常取决于具体的数据（以及网络架构）。一种简单的建议是，一开始可以尝试三种不同的学习速率：1e-1、1e-3、1e-6，先大致了解一下应该设为怎样的值，然后再进一步微调。理想状态下，可以同时以不同的学习速率运行模型，以便节省时间。</p><p>选择合适的学习速率的常用方法是借助DL4J的可视化界面来将训练进程可视化。您需要关注损失随时间变化的情况以及更新值与参数的绝对值之比（通常可以先考虑1:1000左右的比例）。</p><h1><span id="策略与学习速率计划">策略与学习速率计划</span></h1><p>您可以选择为神经网络设定学习速率策略，让学习速率随着时间推移逐渐“放缓”，帮助网络收敛至更接近局部极小值的位置，进而取得更好的学习效果。一种常用的策略是学习速率计划（learning rate schedule）。</p><h1><span id="损失函数">损失函数</span></h1><p>神经网络不同层中的损失函数的作用包括预训练、学习改善权重，以及在分类问题中得出结果（位于输出层上）。（在上述例子中，分类发生在重写段中。）</p><p>网络目的决定了所用的损失函数类型。预训练可选择重构熵函数。分类可选择多类叉熵函数。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1&gt;&lt;span id=&quot;数据标准化&quot;&gt;数据标准化&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;数据的分布情况如何？数据是否经过适当的缩放？总体上的规则是：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果数据是连续值：范围应当在-1到1、0到1，或者呈平均值为0、标准差为1的正态分布。实际的范围不用如此精确
-      
-    
-    </summary>
-    
-      <category term="Deep learning" scheme="http://dinry.github.io/categories/Deep-learning/"/>
-    
-    
-      <category term="Deep learning" scheme="http://dinry.github.io/tags/Deep-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习调参技巧</title>
-    <link href="http://dinry.github.io/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%B0%83%E5%8F%82%E6%8A%80%E5%B7%A7/"/>
-    <id>http://dinry.github.io/深度学习调参技巧/</id>
-    <published>2019-08-01T04:48:50.000Z</published>
-    <updated>2019-08-01T09:02:44.427Z</updated>
-    
-    <content type="html"><![CDATA[<h1><span id="初始化">初始化</span></h1><p>一次惨痛的教训是用normal初始化cnn的参数，最后acc只能到70%多，仅仅改成xavier，acc可以到98%。还有一次给word embedding初始化，最开始使用了TensorFlow中默认的initializer（即glorot_uniform_initializer，也就是大家经常说的无脑使用xavier），训练速度慢不说，结果也不好。改为uniform，训练速度飙升，结果也飙升。所以，初始化就跟黑科技一样，用对了超参都不用调；没用对，跑出来的结果就跟模型有bug一样不忍直视。</p><p>记得刚开始研究深度学习时，做过两个小例子。一个是用tensorflow构建了一个十分简单的只有一个输入层和一个softmax输出层的Mnist手写识别网络，第一次我对权重矩阵W和偏置b采用的是正态分布初始化，一共迭代了20个epoch，当迭代完第一个epoch时，预测的准确度只有10%左右（和随机猜一样，Mnist是一个十分类问题），当迭代完二十个epoch，精度也仅仅达到了60%的样子。然后我仅仅是将权重矩阵W初始化方法改成了全为0的初始化，其他的参数均保持不变，结果在训练完第一个epoch后预测精度就达到了85%以上，最终20个epoch后精度达到92%。另一个例子是回归问题的预测，当时采用的SGD优化器，一开始学习率设定的0.1，模型可以正常训练，只是训练速度有些慢，我试着将学习率调整到0.3，希望可以加速训练速度，结果没迭代几轮loss就变成Nan了。于是从那时起我就深刻的感受到参数调节在深度学习模型训练中的重要意义。</p><p>其实上述问题产生的原因也很好理解，对于参数初始化，因为我们学习的本来就是权重W与偏置b，如果初始化足够好，直接就初始化到最优解，那都不用进行训练了。良好的初始化，可以让参数更接近最优解，这可以大大提高收敛速度，也可以防止落入局部极小。</p><h4><span id="tensorflow常用的初始化方法">tensorflow常用的初始化方法</span></h4><h1><span id="激活函数选择">激活函数选择：</span></h1><p>常用的激活函数有relu、leaky-relu、sigmoid、tanh等。对于输出层，多分类任务选用softmax输出，二分类任务选用sigmoid输出，回归任务选用线性输出。而对于中间隐层，则优先选择relu激活函数（relu激活函数可以有效的解决sigmoid和tanh出现的梯度弥散问题，多次实验表明它会比其他激活函数以更快的速度收敛）。另外，构建序列神经网络（RNN）时要优先选用tanh激活函数。</p><h1><span id="学习率设定">学习率设定：</span></h1><p>一般学习率从0.1或0.01开始尝试。学习率设置太大会导致训练十分不稳定，甚至出现Nan，设置太小会导致损失下降太慢。学习率一般要随着训练进行衰减。衰减系数设0.1，0.3，0.5均可，衰减时机，可以是验证集准确率不再上升时，或固定训练多少个周期以后自动进行衰减。</p><h1><span id="防止过拟合">防止过拟合：</span></h1><p>一般常用的防止过拟合方法有使用L1正则项、L2正则项、dropout、提前终止、数据集扩充等。如果模型在训练集上表现比较好但在测试集上表现欠佳可以选择增大L1或L2正则的惩罚力度（L2正则经验上首选1.0，超过10很少见），或增大dropout的随机失活概率（经验首选0.5）；或者当随着训练的持续在测试集上不增反降时，使用提前终止训练的方法。当然最有效的还是增大训练集的规模，实在难以获得新数据也可以使用数据集增强的方法，比如CV任务可以对数据集进行裁剪、翻转、平移等方法进行数据集增强，这种方法往往都会提高最后模型的测试精度。</p><h1><span id="优化器选择">优化器选择：</span></h1><p>如果数据是稀疏的，就用自适应方法，即 Adagrad, Adadelta, RMSprop, Adam。整体来讲，Adam 是最好的选择。SGD 虽然能达到极小值，但是比其它算法用的时间长，而且可能会被困在鞍点。如果需要更快的收敛，或者是训练更深更复杂的神经网络，需要用一种自适应的算法。</p><h1><span id="残差块与bn层">残差块与BN层</span></h1><p>如果你希望训练一个更深更复杂的网络，那么残差块绝对是一个重要的组件，它可以让你的网络训练的更深。</p><p>BN层具有加速训练速度，有效防止梯度消失与梯度爆炸，具有防止过拟合的效果，所以构建网络时最好要加上这个组件。</p><h1><span id="自动调参方法">自动调参方法：</span></h1><ul><li>Grid Search：网格搜索，在所有候选的参数选择中，通过循环遍历，尝试每一种可能性，表现最好的参数就是最终的结果。其原理就像是在数组里找最大值。缺点是太费时间了，特别像神经网络，一般尝试不了太多的参数组合。</li><li>Random Search：经验上，Random Search比Gird Search更有效。实际操作的时候，一般也是先用Gird Search的方法，得到所有候选参数，然后每次从中随机选择进行训练。另外Random Search往往会和由粗到细的调参策略结合使用，即在效果比较好的参数附近进行更加精细的搜索。</li><li>Bayesian Optimization：贝叶斯优化，考虑到了不同参数对应的 实验结果值，因此更节省时间，贝叶斯调参比Grid Search迭代次数少， 速度快；而且其针对非凸问题依然稳健。</li></ul><h1><span id="深度学习debug的流程策略">深度学习debug的流程策略</span></h1><p>既然消除模型中的错误很难，我们不如先从简单模型入手，然后逐渐增加模型的复杂度。</p><ul><li>从最简单模型入手；</li><li>成功搭建模型，重现结果；</li><li>分解偏差各项，逐步拟合数据；</li><li>用由粗到细随机搜索优化超参数；</li><li>如果欠拟合，就增大模型；如果过拟合，就添加数据或调整。</li></ul><p><img src="https://pcc.cs.byu.edu/2017/10/02/practical-advice-for-building-deep-neural-networks/" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1&gt;&lt;span id=&quot;初始化&quot;&gt;初始化&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;一次惨痛的教训是用normal初始化cnn的参数，最后acc只能到70%多，仅仅改成xavier，acc可以到98%。还有一次给word embedding初始化，最开始使用了TensorFlow中默认的
-      
-    
-    </summary>
-    
-      <category term="Deep learning" scheme="http://dinry.github.io/categories/Deep-learning/"/>
-    
-    
-      <category term="Deep learning" scheme="http://dinry.github.io/tags/Deep-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python-excel</title>
-    <link href="http://dinry.github.io/python-excel/"/>
-    <id>http://dinry.github.io/python-excel/</id>
-    <published>2019-07-25T11:57:58.000Z</published>
-    <updated>2019-07-25T12:42:39.803Z</updated>
-    
-    <content type="html"><![CDATA[<p>python存excel数据</p><pre><code class="language-js">import xlwtimport pdbworkbook=xlwt.Workbook(encoding='utf-8')booksheet=workbook.add_sheet('data', cell_overwrite_ok=True)DATA=(('学号','姓名','年龄','性别','成绩'),      ('1001','A','11','男','12'),      ('1002','B','12','女','22'),      ('1003','C','13','女','32'),      ('1004','D','14','男','52'),      )pdb.set_trace()for i,row in enumerate(DATA):    for j,col in enumerate(row):        booksheet.write(i,j,col)workbook.save('grade.xls')</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;python存excel数据&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;import xlwt
-import pdb
-workbook=xlwt.Workbook(encoding=&#39;utf-8&#39;)
-booksheet=workbook.add_
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://dinry.github.io/categories/python/"/>
-    
-    
-      <category term="python语法" scheme="http://dinry.github.io/tags/python%E8%AF%AD%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>西瓜书day16，day17,day18,day19,day20(神经网络)</title>
-    <link href="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/"/>
-    <id>http://dinry.github.io/西瓜书day16/</id>
-    <published>2019-07-24T07:14:48.000Z</published>
-    <updated>2019-07-27T01:39:36.338Z</updated>
-    
-    <content type="html"><![CDATA[<h1><span id="神经元模型">神经元模型</span></h1><p>神经网络中最基本的成分是神经元模型。</p><h2><span id="m-p神经元模型">M-P神经元模型</span></h2><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/1.JPG" alt></p><h2><span id="激活函数">激活函数</span></h2><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/2.JPG" alt></p><h1><span id="感知机与多层网络">感知机与多层网络</span></h1><h2><span id="感知机">感知机</span></h2><p>感知机由两层神经元组成，如图，<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/3.JPG" alt></p><p>感知机能够容易的实现逻辑与、或、非运算， $f(\sum_iw_ix_i-\theta)$, 假定f是阶跃函数，有</p><ul><li>与：令 $w_1=w_2=1,\theta=2$, 则 $y=f(1 \cdot x_1+1 \cdot x_2-2)$,仅在$x_1=x_2=1$ 时，y=1;</li><li>或：令 $w_1=w_2=1,\theta=0.5$, 则 $y=f(1 \cdot x_1+1 \cdot x_2-0.5)$,仅在$x_1=1 or x_2=1$ 时，y=1;</li><li>非：令令 $w_1=-06，w_2=0,\theta=-0.5$, 则 $y=f(-0.6 \cdot x_1+0 \cdot x_2+0.5)$,当$x_1=1$ 时，$y=0$,当 $x_1=0$ 时， $y=1$.</li></ul><p>给定训练数据集，权重与阈值可以通过学习得到。</p><p>感知机学习规则：对训练样例(x,y)，若当前感知机的输出为 $\hat{y}$, 则感知机权重将这样调整：</p><p>$w_i \leftarrow w_i +\Delta w_i$</p><p>$\Delta w_i=\eta(y-\hat{y})x_i$</p><p>其中 $\eta \in (0,1)$ 代表learning rate,.</p><h2><span id="感知机的局限性">感知机的局限性</span></h2><p>感知机只拥有一层功能神经元，学习能力非常有限，只能处理线性可分问题，不能解决抑或问题。<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/4.JPG" alt>要解决非线性可分问题，需要考虑多层神经元，例如添加一个隐藏层的两层神经元可以解决“异或”问题。<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/5.JPG" alt>神经网络的学习过程，就是根据训练数据来调整神经元之间的权重以及每个功能神经元的阈值。</p><h1><span id="误差逆传播算法bp">误差逆传播算法（BP）</span></h1><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/6.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/7.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/8.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day16/9.JPG" alt></p><h1><span id="全局最小与局部最小">全局最小与局部最小</span></h1><p>神经网络的训练过程可以看作参数寻优过程，在参数空间中寻找一组最优参数使神经网络在训练集上的误差达到最小。</p><p>局部最优解：参数空间中的某个点，其邻域点的误差函数值均不小于该点的函数值</p><p>全局最小解：参数空间中所有点的误差函数值均不小于该点的函数值</p><p>基于梯度的搜索是使用最为广泛的参数寻优方法</p><h4><span id="局部最小跳出策略">局部最小跳出策略</span></h4><ul><li>以多组不同参数值初始化多个神经网络，取误差最小的参数</li><li>“模拟退火”：以一定概率接受比当前解更差的结果</li><li>随机梯度下降 在计算梯度时加入了随机因素，即使陷入局部极小，也有可能跳出。</li></ul><h1><span id="其他常见的神经网络">其他常见的神经网络</span></h1><h4><span id="rbf">RBF</span></h4><h4><span id="art">ART</span></h4><h4><span id="smo">SMO</span></h4><h4><span id="级联相关网络">级联相关网络</span></h4><h4><span id="elman网络">Elman网络</span></h4><h4><span id="boltzmann">Boltzmann</span></h4><h1><span id="神经网络">神经网络</span></h1>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1&gt;&lt;span id=&quot;神经元模型&quot;&gt;神经元模型&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;神经网络中最基本的成分是神经元模型。&lt;/p&gt;
-&lt;h2&gt;&lt;span id=&quot;m-p神经元模型&quot;&gt;M-P神经元模型&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/%E8%A5%BF%E7%93%
-      
-    
-    </summary>
-    
-      <category term="ML" scheme="http://dinry.github.io/categories/ML/"/>
-    
-    
-      <category term="西瓜书" scheme="http://dinry.github.io/tags/%E8%A5%BF%E7%93%9C%E4%B9%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>西瓜书day13,day14,day15（贝叶斯分类器）</title>
-    <link href="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/"/>
-    <id>http://dinry.github.io/西瓜书day13/</id>
-    <published>2019-07-19T23:55:41.000Z</published>
-    <updated>2019-07-22T10:56:08.546Z</updated>
-    
-    <content type="html"><![CDATA[<h1><span id="以多分类为例">以多分类为例</span></h1><h1><span id="贝叶斯判定准则">贝叶斯判定准则</span></h1><p>为最小化总体风险，只需在每个样本上选择能使条件风险 $R(c \mid x)$ 最小的类别标记，即为： $h^*(x)=argmin_{c \in y}R(c \mid x)=argmax_{c \in y}P(c \mid x)$,</p><p>此时，$h^*$ 为贝叶斯最优分类器。条件风险：</p><p>$R(c_i \mid x)=\sum_{j=1}^N \lambda_{ij}P(c_j \mid x)=1-P(c_i \mid x)$,</p><p>$\lambda_{ij}$ 是将一个真实标记为 $c_j$ 的样本误分类为 $c_i$ 所产生的损失。</p><h1><span id="多元正态分布的mle">多元正态分布的MLE</span></h1><p>概率模型的训练过程就是参数估计过程。</p><ul><li><p>频率主义学派：参数虽然未知，但却是客观存在的固定值，因此，可通过优化似然函数等准则来确定参数值</p></li><li><p>贝叶斯学派：参数是为观察到的随机变量，其本身也可以有分布，因此，可假定参数服从一个先验分布，然后基于观测到的数据来计算参数的后验分布。</p></li></ul><p>MLE源自频率主义学派。</p><p>$P(D_c \mid \theta_c)=\prod_{x \in D_c}P(x \mid \theta_c)$</p><p>其中 $D_c$ 表示训练集D中第c类样本组成的集合。</p><p>推导：</p><p>$LL(\theta_c)$</p><p>$=logP(D_c \mid \theta_c)$</p><p>$=\sum_{x \in D_c}logP(x \mid \theta_c)$</p><h2><span id="多元正态分布的概率密度函数">多元正态分布的概率密度函数：</span></h2><p>由于 $P(x \mid \theta_c)=P(x \mid c) -N(\mu_c,\sigma_c^2)$, 那么</p><p>$P(x \mid \theta_c)=\frac{1}{\sqrt{(2\pi)^d\mid\sum_c\mid}}exp(-\frac{1}{2}(x-\mu_c)^T\sum_c^{-1}(x-\mu_c))$</p><p>其中d表示xde维数，$\sum_c=\sigma_c^2$ 为对称正定协方差矩阵，$\mid\sum_c\mid$ 表示行列式，将上式代入对数似然函数可得</p><p>$LL(\theta_c)=\sum_{x \in D_c}ln[\frac{1}{\sqrt{(2\pi)^d\mid\sum_c\mid}}exp(-\frac{1}{2}(x-\mu_c)^T\sum_c^{-1}(x-\mu_c))]$</p><p>$=\sum_{i=1}^Nln[\frac{1}{\sqrt{(2\pi)^d\mid\sum_c\mid}}exp(-\frac{1}{2}(x_i-\mu_c)^T\sum_c^{-1}(x_i-\mu_c))]$</p><p>$=\sum_{i=1}^N{ln\frac{1}{\sqrt{(2\pi)^d}}+ln\frac{1}{\sqrt{\mid \sum_c \mid}}+ln[exp(-\frac{1}{2}(x_i-\mu_c)^T\sum_c^{-1}(x_i-\mu_c))]}$</p><p>$=-\frac{Nd}{2}ln(2\pi)-\frac{N}{2}ln\mid \sum_c\mid-\frac{1}{2}\sum_{i=1}^N(x_i-\mu_c)^T\sum_c^{-1}(x_i-\mu_c))$</p><p>由于参数 $\theta_c$ 的极大似然估计 $\hat{\theta_c}$ 为 $\hat{\theta_c}=argmax_{\theta_c}LL(\theta_c)$，</p><p>对 $LL(\theta_c)$ 关于 $\mu_c$ 求偏导：</p><p>$\frac{\partial LL(\theta_c)}{\partial \mu_c}=-\frac{1}{2}\sum_{i=1}^{N}\frac{\partial (x_i^T-\mu_c^T)\sum_c^{-1}(x_i-\mu_c)}{\partial \mu_c}$</p><p>$=-\frac{1}{2}\sum_{i=1}^{N}\frac{\partial [x_i^T\sum_c^{-1}x_i-x_i^T\sum_c^{-1}\mu_c-\mu_c^T\sum_c^{-1}x_i+\mu_c^T\sum_c^{-1}\mu_c]}{\partial \mu_c}$</p><p>由于 $x_i^T\sum_c^{-1}\mu_c=(x_i^T\sum_c^{-1}\mu_c)^T=\mu_c^T(\sum_c^T)^{-1}x_i=\mu_c^T\sum_c^{-1}x_i$</p><p>$=-\frac{1}{2}\sum_{i=1}^{N}\frac{\partial [x_i^T\sum_c^{-1}x_i-2x_i^T\sum_c^{-1}\mu_c+\mu_c^T\sum_c^{-1}\mu_c]}{\partial \mu_c}$</p><p>$=-\frac{1}{2}\sum_{i=1}^{N}[0-(2x_i^T\sum_c^{-1})^T+(\sum_c^{-1}+(\sum_c^{-1})^T)\mu_c]$</p><p>$=-\frac{1}{2}\sum_{i=1}^{N}[-(2\sum_c^{-1}x_i)+2\sum_c^{-1}\mu_c]$</p><p>$=\sum_{i=1}^{N}\Sigma_c^{-1}x_i-N\Sigma_c^{-1}\mu_c$</p><p>$=0$</p><p>$\hat{\mu_c}=\frac{\sum_{i=1}^Nx_i}{N}$</p><p>对 $LL(\theta_c)$ 关于 $\Sigma_c$ 求偏导：</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/4.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/5.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/6.JPG" alt></p><h2><span id="评估">评估</span></h2><p>这种参数化的方法虽然能使类条件概率估计变得相对简单，但估计结果的准确性严重依赖于所假设的概率分布形式是否符合潜在的真实数据分布。</p><h1><span id="朴素贝叶斯分类器">朴素贝叶斯分类器</span></h1><p>$h^*(x)=argmax P(c \mid x)=argmax \frac{P(c)P(x \mid c)}{P(x)}=argmaxP(c)P(x \mid c)$ ++++++属性条件独立性假设</p><p>属性条件独立性假设定义：$P(x \mid c)=P(x_1,x_2,...,x_d \mid c)=\prod_{i=1}^{d}P(x_i \mid c)$ -----(牺牲准确度换取计算效率)</p><h2><span id="naive-bayes">naive bayes</span></h2><p>$h^*(x)=argmaxP(c)\prod_{i=1}^dP(x_i \mid c)$</p><h2><span id="先验概率-pc">先验概率 $P(c)$</span></h2><p>$P(c)=\frac{\mid D_c \mid}{\mid D \mid}$</p><h2><span id="似然概率-px_i-mid-c">似然概率 $P(x_i \mid c)$</span></h2><h4><span id="连续值">连续值</span></h4><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/2.JPG" alt></p><h4><span id="离散值">离散值</span></h4><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/1.JPG" alt></p><h2><span id="laplacian-correction">Laplacian correction</span></h2><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/3.JPG" alt>拉普拉斯修正避免了因训练集样本不充足而导致概率估值为0的问题，当训练集样本增大，这个误差会被忽略。</p><h1><span id="em算法">EM算法</span></h1><h2><span id="em算法的引入">EM算法的引入</span></h2><h4><span id="为什么需要em">为什么需要EM？</span></h4><p>训练样本含有隐变量Z</p><h2><span id="em算法的例子">EM算法的例子</span></h2><p>《统计学习方法》-三硬币模型  9.1</p><p>迭代求解参数,近似极大化</p><h2><span id="em算法的导出">EM算法的导出</span></h2><h4><span id="jensen-不等式">Jensen 不等式</span></h4><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/7.JPG" alt></p><p>可以将a看作概率，则f表示为期望</p><p>Jensen不等式在概率论中的应用：$\varphi(E[X]) \leq E[\varphi(X)]$</p><h4><span id="推导">推导</span></h4><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/8.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/9.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/10.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/11.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/12.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day13/13.JPG" alt></p><h2><span id="em算法求解例子">EM算法求解例子</span></h2><p>用EM求解三硬币</p><ul><li>E:求Q</li><li>M：寻找参数最大化期望</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1&gt;&lt;span id=&quot;以多分类为例&quot;&gt;以多分类为例&lt;/span&gt;&lt;/h1&gt;
-&lt;h1&gt;&lt;span id=&quot;贝叶斯判定准则&quot;&gt;贝叶斯判定准则&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;为最小化总体风险，只需在每个样本上选择能使条件风险 $R(c \mid x)$ 最小的类别标记，即为： $
-      
-    
-    </summary>
-    
-      <category term="ML" scheme="http://dinry.github.io/categories/ML/"/>
-    
-    
-      <category term="西瓜书" scheme="http://dinry.github.io/tags/%E8%A5%BF%E7%93%9C%E4%B9%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>西瓜书day9,day10,day11,day12(支持向量机)</title>
-    <link href="http://dinry.github.io/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/"/>
-    <id>http://dinry.github.io/西瓜书day9/</id>
-    <published>2019-07-16T00:53:00.000Z</published>
-    <updated>2019-07-19T03:21:05.443Z</updated>
-    
-    <content type="html"><![CDATA[<h1><span id="预备知识">预备知识</span></h1><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/3.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/4.JPG" alt></p><h1><span id="间隔与支持向量">间隔与支持向量</span></h1><p>分类学习最基本的想法就是基于训练集D在样本空间中找到一个划分超平面，将不同类别的样本分开。<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/1.JPG" alt></p><p>直观来说，应该找位于两类训练样本“正中间”的划分超平面，因为其对训练样本局部扰动的“容忍”性最好。</p><p>在训练样本中，划分超平面可以通过线性方程 $\mathbb{w}^T\mathbb{x}+b=0$ 来描述。其中 $\mathbb{w}=(w_1;w_2;...;d_d)$ 为法向量，决定了超平面的方向；b为位移，决定了超平面与原点之间的距离。样本空间中任意点 $x$ 到超平面$(\mathbb{w},b)$ 的距离可写为：</p><p>$r=\frac{\mid \mathbb{w}^T\mathbb{x}+b \mid}{\mid \mid \mathbb{w} \mid \mid}$.</p><p>证明：</p><p>任意取超平面上一个点 $x'$，则点 $x$ 到超平面的距离等于向量 $(x-x')$ 在法向量 $w$（参考预备2）的投影长度（参考预备1）:</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/5.JPG" alt>注意：上式推导过程中，分子之所有取绝对值是由于向量内积可能小于零；另外，由于 $x'$ 是超平上面的点，因此 $\mathbb{w}^T\mathbb{x'}+b=0$，即 $b=-\mathbb{w}^T\mathbb{x'}$。</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/6.JPG" alt></p><p>注意到，距离超平面最近的训练样本可以使上式的等号成立，由6.2知这些训练样本到超平面的距离为：</p><p>$dist=\frac{\mid \mathbb{w}^T\mathbb{x}+b \mid}{\mid \mid \mathbb{w} \mid \mid}=\frac{1}{\mid \mid w \mid \mid}$.</p><p>那么很容易知道，两个异类支持向量到超平面的距离之和是 $\frac{2}{\mid \mid w \mid \mid}$<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/2.JPG" alt></p><h1><span id="支持向量基本型">支持向量基本型</span></h1><p>最大间隔超平面条件等同于最小化如下公式：</p><p>$min_{w,b} \frac{1}{2} \mid \mid \mathbb{w} \mid \mid^2$</p><p>s.t. $y_i(\mathbb{w}^T\mathbb{x}_i+b) \ge 1$, i=1,2,...,m.</p><p>式(6.6)的约束条件意思是训练样本线性可分，也就是说不存在被分类错误的样本，因此也就不存在欠拟合问题；已知优化式(6.6)目标函数是在寻找“最大间隔”的划分超平面，而“最大间隔”划分超平面所产生的分类结果是最鲁棒的，对未见示例的泛化能力最强，因此可将式(6.6)优化目标进一步解释为寻找最不可能过拟合的分类超平面，这一点与正则化不谋而合。</p><h1><span id="对偶问题">对偶问题</span></h1><h2><span id="拉格朗日乘子法">拉格朗日乘子法</span></h2><p>此出假设优化问题一定有解<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/7.JPG" alt></p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/8.JPG" alt></p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/9.JPG" alt></p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/10.JPG" alt></p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/11.JPG" alt></p><h1><span id="核函数">核函数</span></h1><p>使训练样本在高维空间可分的映射函数。<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/12.JPG" alt>$f(x)=\mathbb{w}^T \phi(x)+b$, 此时w的维度与 $\phi(x)$ 同。</p><p>核函数可以分解成两个向量的内积。要想了解某个核函数是如何将原始特征空间映射到更高维的特征空间的，只需要将核函数分解为两个表达形式完全一样的向量 $\phi(x_i)$ 和 $\phi(x_j)$ 即可（有时很难分解）。以下是LIBSVM中的几个核函数：<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/13.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/14.JPG" alt>遗留问题：核函数的几何意义是什么？核矩阵正定核函数就存在？</p><h1><span id="软间隔与正则化">软间隔与正则化</span></h1><p>软间隔的引入：</p><p>在前面的学习中，一直假设训练样本在样本空间或特征空间是线性可分的，要求所有样本都必须正确划分，称为“硬间隔”，然而现实中很难确定核函数使训练样本线性可分，缓解这一问题的方法是允许SVM在一些样本上出错，因此，引入软间隔：允许某些样本不满足约束 $y_i(w^Tx_i+b) \geq 1$<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/15.JPG" alt></p><h2><span id="预备知识替代损失函数">预备知识：替代损失函数</span></h2><ul><li>凸函数</li><li>连续函数<img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/16.JPG" alt><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/19.JPG" alt></li></ul><h2><span id="软间隔优化目标函数">软间隔优化目标函数</span></h2><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/17.JPG" alt></p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/18.JPG" alt></p><p>引入松弛变量后的目标函数</p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/20.JPG" alt></p><p><img src="/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/21.JPG" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1&gt;&lt;span id=&quot;预备知识&quot;&gt;预备知识&lt;/span&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/3.JPG&quot; alt&gt;
-&lt;img src=&quot;/%E8%A5%BF%E7%93%9C%E4%B9%A6day9/4.
-      
-    
-    </summary>
-    
-      <category term="ML" scheme="http://dinry.github.io/categories/ML/"/>
-    
-    
-      <category term="西瓜书" scheme="http://dinry.github.io/tags/%E8%A5%BF%E7%93%9C%E4%B9%A6/"/>
     
   </entry>
   
