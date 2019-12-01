@@ -4,6 +4,57 @@
   
     
     <entry>
+      <title>Gumbel-sofmax</title>
+      <link href="/Gumbel-sofmax/"/>
+      <url>/Gumbel-sofmax/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>entropy</title>
+      <link href="/entropy/"/>
+      <url>/entropy/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>GANs notebook</title>
+      <link href="/notebook/"/>
+      <url>/notebook/</url>
+      
+        <content type="html"><![CDATA[<h1><span id="初识gan">初识GAN</span></h1><ol><li>生成模型与判别模型理解对抗网络，首先要了解生成模型和判别模型。判别模型比较好理解，就像分类一样，有一个判别界限，通过这个判别界限去区分样本。从概率角度分析就是获得样本x属于类别y的概率，是一个条件概率$P（y \mid x)$。而生成模型是需要在整个条件内去产生数据的分布，就像高斯分布一样，需要去拟合整个分布，从概率角度分析就是样本x在整个分布中的产生的概率，即联合概率$P（xy）$。</li></ol><p>原文链接：https://blog.csdn.net/a312863063/article/details/83551569</p><ol start="2"><li>对抗网络思想理解了生成模型和判别模型后，再来理解对抗网络就很直接了，对抗网络只是提出了一种网络结构，总体来说， GANs简单的想法就是用两个模型，一个生成模型，一个判别模型。判别模型用于判断一个给定的图片是不是真实的图片（从数据集里获取的图片），生成模型的任务是去创造一个看起来像真的图片一样的图片。而在开始的时候这两个模型都是没有经过训练的，这两个模型一起对抗训练，生成模型产生一张图片去欺骗判别模型，然后判别模型去判断这张图片是真是假，最终在这两个模型训练的过程中，两个模型的能力越来越强，最终达到稳态。（本书仅介绍GANs在计算机视觉方面的应用，但是GANs的用途很广，不单单是图像，其他方面，譬如文本、语音，或者任何只要含有规律的数据合成，都能用GANs实现。）</li></ol><h1><span id="gans-分类">GANs 分类</span></h1><h2><span id="物理分类">物理分类</span></h2><p>(1)结构变体：eg. cyclegan, stackgan...</p><p>(2)loss variant: WGAN, EBGAN...</p><h2><span id="应用分类">应用分类</span></h2><p>(1)CV</p><p>(2)NLP</p><p>(3)ir</p><h1><span id></span></h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> deep learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> gans </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CnGAN  Generative Adversarial Networks for Cross-network user preference generation for non-overlapped users</title>
       <link href="/CnGAN/"/>
       <url>/CnGAN/</url>

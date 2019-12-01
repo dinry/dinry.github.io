@@ -7,13 +7,6 @@
     </url>
 
     <url>
-        <loc>http://dinry.github.io/categories/deep-learning/</loc>
-        <lastmod>2019-08-03T13:56:44.689Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://dinry.github.io/categories/ML/</loc>
         <lastmod>2019-08-03T14:27:51.510Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -51,6 +44,13 @@
     <url>
         <loc>http://dinry.github.io/categories/recommender-systems/</loc>
         <lastmod>2019-11-04T10:48:36.188Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://dinry.github.io/categories/deep-learning/</loc>
+        <lastmod>2019-11-28T02:32:33.744Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
