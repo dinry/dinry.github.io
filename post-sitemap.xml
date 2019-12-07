@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://dinry.github.io/CDAE/</loc>
+        <lastmod>2019-12-06T12:58:04.320Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://dinry.github.io/Gumbel-sofmax/</loc>
         <lastmod>2019-12-01T05:24:22.538Z</lastmod>
         <changefreq>weekly</changefreq>
